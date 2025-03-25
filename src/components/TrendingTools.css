@@ -1,25 +1,33 @@
 .trending-tools {
-  margin: 40px 0;
+  margin-bottom: 20px;
 }
 
 .trending-tools h2 {
-  font-size: 20px;
-  color: #333;
+  font-size: 24px;
+  color: var(--text-dark);
   margin-bottom: 20px;
-  background-color: #d0d0d0;
-  padding: 10px;
-  border-radius: 5px 5px 0 0;
   text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.trending-tools h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
 }
 
 .trending-tools-container {
-  padding: 25px;
-  background-color: #e5e5e5;
-  border-radius: 0 0 5px 5px;
+  padding: 0;
 }
 
 .top-trending-tool {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -45,7 +53,7 @@
 .trending-tool-logo {
   width: 180px;
   height: 180px;
-  background-color: #f0f0f0;
+  background-color: var(--grey-light);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -54,8 +62,8 @@
   position: absolute;
   top: -10px;
   right: -10px;
-  background: linear-gradient(135deg, #ff9900, #ff6600);
-  color: white;
+  background: var(--primary);
+  color: var(--white);
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -86,7 +94,7 @@
 .trending-tool-name {
   font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: var(--text-dark);
   margin: 0;
 }
 
@@ -102,19 +110,19 @@
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
-  color: white;
+  color: var(--white);
 }
 
 .trending-tool-type {
-  background-color: #4caf50;
+  background-color: var(--success);
 }
 
 .trending-tool-role {
-  background-color: #2196f3;
+  background-color: var(--primary);
 }
 
 .trending-tool-process {
-  background-color: #ff9800;
+  background-color: var(--warning);
 }
 
 .trending-tool-rating {
@@ -129,20 +137,20 @@
 }
 
 .trending-star.filled {
-  color: #ffc107;
+  color: var(--accent);
 }
 
 .trending-likes {
   margin-left: 15px;
   display: flex;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: var(--grey-light);
   padding: 4px 10px;
   border-radius: 20px;
 }
 
 .trending-heart {
-  color: #f44336;
+  color: var(--danger);
   margin-right: 5px;
   font-size: 16px;
 }
@@ -150,13 +158,13 @@
 .trending-likes-count {
   font-size: 14px;
   font-weight: 500;
-  color: #666;
+  color: var(--text-light);
 }
 
 .trending-tool-description {
   font-size: 15px;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-light);
   margin-bottom: 25px;
   flex-grow: 1;
 }
@@ -178,24 +186,24 @@
 }
 
 .trending-tool-visit {
-  background-color: #3498db;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   flex: 1;
 }
 
 .trending-tool-visit:hover {
-  background-color: #2980b9;
+  background-color: var(--primary-dark);
 }
 
 .trending-tool-details {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--grey-light);
+  color: var(--text-dark);
   flex: 1;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
 }
 
 .trending-tool-details:hover {
-  background-color: #e0e0e0;
+  background-color: var(--grey-medium);
 }
 
 @media (max-width: 768px) {

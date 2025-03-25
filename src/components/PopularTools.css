@@ -1,11 +1,25 @@
 .popular-tools {
-  margin: 50px 0;
+  margin-bottom: 30px;
 }
 
 .popular-tools h2 {
-  font-size: 20px;
-  color: #333;
+  font-size: 24px;
+  color: var(--text-dark);
   margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.popular-tools h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
 }
 
 .popular-tools-container {
@@ -21,12 +35,10 @@
   padding: 5px 0 20px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1;
-  padding-left: 5px;
-  padding-right: 5px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .popular-tools-scroll::-webkit-scrollbar {
@@ -49,14 +61,14 @@
 
 .popular-tool-card {
   flex: 0 0 280px;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   padding: 15px;
   display: flex;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.1s, box-shadow 0.1s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .popular-tool-card:hover {
@@ -77,18 +89,18 @@
 
 .popular-tools-container::before {
   left: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0));
+  background: linear-gradient(to right, var(--grey-light), rgba(255,255,255,0));
 }
 
 .popular-tools-container::after {
   right: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0.9), rgba(255,255,255,0));
+  background: linear-gradient(to left, var(--grey-light), rgba(255,255,255,0));
 }
 
 .popular-tool-icon {
   flex: 0 0 40px;
   height: 40px;
-  background-color: #f8f8f8;
+  background-color: var(--grey-light);
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -114,27 +126,27 @@
   font-size: 16px;
   font-weight: 600;
   margin: 0;
-  color: #333;
+  color: var(--text-dark);
 }
 
 .popular-tool-type {
   font-size: 10px;
   padding: 2px 6px;
   border-radius: 3px;
-  color: white;
+  color: var(--white);
   font-weight: 500;
 }
 
 .popular-tool-type.free {
-  background-color: #4caf50;
+  background-color: var(--success);
 }
 
 .popular-tool-type.paid {
-  background-color: #f44336;
+  background-color: var(--danger);
 }
 
 .popular-tool-type.freemium {
-  background-color: #ff9800;
+  background-color: var(--warning);
 }
 
 .popular-tool-rating {
@@ -147,12 +159,12 @@
 }
 
 .popular-star.filled {
-  color: #ffc107;
+  color: var(--accent);
 }
 
 .popular-tool-description {
   font-size: 12px;
-  color: #666;
+  color: var(--text-light);
   margin: 0;
   line-height: 1.4;
 }

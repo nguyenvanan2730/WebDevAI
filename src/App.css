@@ -1,3 +1,24 @@
+/* Global color variables */
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --secondary: #2ecc71;
+  --secondary-dark: #27ae60;
+  --accent: #f39c12;
+  --accent-dark: #e67e22;
+  --dark: #2c3e50;
+  --light: #ecf0f1;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --border: #dddddd;
+  --danger: #e74c3c;
+  --warning: #f39c12;
+  --success: #2ecc71;
+  --grey-light: #f5f5f5;
+  --grey-medium: #e0e0e0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,8 +28,8 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: var(--text-dark);
+  background-color: var(--light);
 }
 
 .container {
@@ -19,7 +40,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primary);
 }
 
 button {
@@ -36,12 +57,34 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 
 .homepage {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Section alternating backgrounds */
+.trending-tools-section {
+  background-color: var(--white);
+  padding: 30px 0;
+}
+
+.tools-filter-section {
+  background-color: var(--grey-light);
+  padding: 30px 0;
+}
+
+.tool-grid-section {
+  background-color: var(--white);
+  padding: 30px 0;
+}
+
+.popular-tools-section {
+  background-color: var(--grey-light);
+  padding: 30px 0;
 }
 
 .App {

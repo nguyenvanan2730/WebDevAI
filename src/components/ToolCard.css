@@ -1,5 +1,5 @@
 .tool-card {
-  background-color: #f5f5f5;
+  background-color: var(--white);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -7,6 +7,12 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .tool-header {
@@ -22,14 +28,15 @@
 .tool-logo {
   width: 50px;
   height: 50px;
-  background-color: #ccc;
+  background-color: var(--grey-light);
   border-radius: 8px;
 }
 
 .tool-name {
   font-size: 16px;
   margin: 0 0 5px;
-  color: #333;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .tool-rating {
@@ -43,12 +50,12 @@
 }
 
 .star.filled {
-  color: #ffc107;
+  color: var(--accent);
 }
 
 .tool-rating-count {
   font-size: 12px;
-  color: #888;
+  color: var(--text-light);
   margin-left: 5px;
 }
 
@@ -65,23 +72,23 @@
   padding: 4px 8px;
   border-radius: 3px;
   font-size: 11px;
-  color: #fff;
+  color: var(--white);
 }
 
 .meta-badge.price {
-  background-color: #4caf50;
+  background-color: var(--success);
 }
 
 .meta-badge.role {
-  background-color: #2196f3;
+  background-color: var(--primary);
 }
 
 .meta-badge.process {
-  background-color: #ff9800;
+  background-color: var(--warning);
 }
 
 .tool-preview {
-  background-color: #eee;
+  background-color: var(--grey-light);
   padding: 15px;
   margin: 0 15px 15px;
   border-radius: 5px;
@@ -92,7 +99,7 @@
 
 .tool-description {
   font-size: 12px;
-  color: #555;
+  color: var(--text-light);
   margin-bottom: 10px;
   line-height: 1.4;
   flex-grow: 1;
@@ -100,17 +107,18 @@
 
 .tool-link {
   align-self: flex-start;
-  background-color: #0077cc;
+  background-color: var(--primary);
   color: white;
   padding: 5px 10px;
   border-radius: 3px;
   font-size: 12px;
   text-decoration: none;
   margin-top: auto;
+  transition: background-color 0.2s;
 }
 
 .tool-link:hover {
-  background-color: #005fa3;
+  background-color: var(--primary-dark);
 }
 
 .tool-footer {
@@ -118,7 +126,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border);
   margin-top: auto;
 }
 
@@ -128,11 +136,11 @@
 }
 
 .tag {
-  background-color: #e0e0e0;
+  background-color: var(--grey-light);
   padding: 3px 6px;
   border-radius: 3px;
   font-size: 10px;
-  color: #666;
+  color: var(--text-light);
 }
 
 .tool-likes {
@@ -141,22 +149,27 @@
 }
 
 .like-button {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  background-color: var(--grey-light);
+  border: 1px solid var(--border);
   border-radius: 3px;
   padding: 3px 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.like-button:hover {
+  background-color: var(--grey-medium);
 }
 
 .heart-icon {
-  color: #f44336;
+  color: var(--danger);
   margin-right: 3px;
   font-size: 12px;
 }
 
 .like-count {
-  color: #666;
+  color: var(--text-light);
 } 

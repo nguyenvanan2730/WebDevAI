@@ -1,7 +1,7 @@
 .footer {
-  background-color: #9c9c9c;
+  background-color: var(--dark);
   padding: 40px 0;
-  color: #fff;
+  color: var(--white);
 }
 
 .footer-content {
@@ -13,6 +13,7 @@
 .footer-copyright p {
   margin: 0 0 10px;
   font-size: 14px;
+  opacity: 0.9;
 }
 
 .footer-links {
@@ -22,20 +23,24 @@
 }
 
 .footer-links a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
 
 .footer-links a:hover {
+  opacity: 1;
   text-decoration: underline;
 }
 
 .footer-credits {
   font-size: 12px;
+  opacity: 0.7;
 }
 
 .divider {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {

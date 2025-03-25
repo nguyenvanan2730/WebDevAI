@@ -16,12 +16,31 @@ function HomePage() {
         title="WEB DEVELOPMENT AI TOOLS" 
         subtitle="All best AI tools using for web development"
       />
-      <div className="container">
-        <TrendingTools />
-        <ToolsFilter />
-        <ToolGrid />
-        <PopularTools />
+      
+      <div className="trending-tools-section">
+        <div className="container">
+          <TrendingTools />
+        </div>
       </div>
+      
+      <div className="tools-filter-section">
+        <div className="container">
+          <ToolsFilter />
+        </div>
+      </div>
+      
+      <div className="tool-grid-section">
+        <div className="container">
+          <ToolGrid />
+        </div>
+      </div>
+      
+      <div className="popular-tools-section">
+        <div className="container">
+          <PopularTools />
+        </div>
+      </div>
+      
       <SubmitSection />
       <Footer />
     </div>
