@@ -9,14 +9,14 @@ function Header() {
         <div className="header-content">
           <div className="logo">
             <Link to="/">
-              <div className="logo-placeholder"></div>
+              <div className="text-logo">WebDevAI</div>
             </Link>
           </div>
           <nav className="navigation">
             <ul>
-              <li><Link to="/" className="nav-item"></Link></li>
-              <li><Link to="/about" className="nav-item"></Link></li>
-              <li><Link to="/contact" className="nav-item login">Login</Link></li>
+              <li><Link to="/about" className="nav-link">About</Link></li>
+              <li><Link to="/contact" className="nav-link">Contact</Link></li>
+              <li><Link to="/submit" className="submit-button">Submit Tool</Link></li>
             </ul>
           </nav>
         </div>

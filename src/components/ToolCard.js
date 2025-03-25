@@ -2,7 +2,17 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import './ToolCard.css';
 
-function ToolCard({ id, name, rating, type, likes = 12 }) {
+function ToolCard({ 
+  id, 
+  name, 
+  rating, 
+  type, 
+  role, 
+  process, 
+  likes = 12, 
+  description, 
+  url 
+}) {
   return (
     <div className="tool-card">
       <div className="tool-header">
@@ -20,12 +30,15 @@ function ToolCard({ id, name, rating, type, likes = 12 }) {
         </div>
       </div>
       
-      <div className="tool-type">
-        <span className="type-badge">{type}</span>
+      <div className="tool-meta">
+        <span className="meta-badge price">{type}</span>
+        <span className="meta-badge role">{role}</span>
+        <span className="meta-badge process">{process}</span>
       </div>
       
       <div className="tool-preview">
-        {/* Preview area */}
+        <p className="tool-description">{description}</p>
+        <a href={url} className="tool-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
       </div>
       
       <div className="tool-footer">
@@ -36,6 +49,7 @@ function ToolCard({ id, name, rating, type, likes = 12 }) {
         </div>
         <div className="tool-likes">
           <button className="like-button">
+            <span className="heart-icon">♥</span>
             <span className="like-count">{likes}</span>
           </button>
         </div>

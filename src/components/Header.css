@@ -1,6 +1,7 @@
 .header {
-  background-color: #9c9c9c;
+  background-color: #2c3e50;
   padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .header-content {
@@ -9,11 +10,12 @@
   align-items: center;
 }
 
-.logo-placeholder {
-  width: 50px;
-  height: 30px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
+/* Text Logo Style */
+.text-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.5px;
 }
 
 .navigation ul {
@@ -21,28 +23,46 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navigation li {
   margin-left: 20px;
 }
 
-.nav-item {
-  display: block;
-  width: 50px;
-  height: 30px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
+.nav-link {
+  color: #fff;
   text-decoration: none;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
 
-.login {
-  background-color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-  text-align: center;
-  color: #333;
-  width: auto;
-  height: auto;
+.nav-link:hover {
+  opacity: 1;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .navigation li {
+    margin-left: 12px;
+  }
+  
+  .nav-link, .submit-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 } 

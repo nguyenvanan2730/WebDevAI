@@ -2,7 +2,6 @@
   background-color: #9c9c9c;
   padding: 40px 0;
   color: #fff;
-  margin-top: 60px;
 }
 
 .footer-content {
@@ -35,21 +34,17 @@
   font-size: 12px;
 }
 
-.submit-section {
-  text-align: center;
+.divider {
+  opacity: 0.7;
 }
 
-.submit-button {
-  display: inline-block;
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 8px 30px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-  background-color: #ccc;
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-credits {
+    text-align: left;
+  }
 } 

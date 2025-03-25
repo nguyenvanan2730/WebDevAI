@@ -4,8 +4,8 @@ import Banner from '../components/Banner';
 import TrendingTools from '../components/TrendingTools';
 import ToolsFilter from '../components/ToolsFilter';
 import ToolGrid from '../components/ToolGrid';
-import Pagination from '../components/Pagination';
 import PopularTools from '../components/PopularTools';
+import SubmitSection from '../components/SubmitSection';
 import Footer from '../components/Footer';
 
 function HomePage() {
@@ -20,9 +20,9 @@ function HomePage() {
         <TrendingTools />
         <ToolsFilter />
         <ToolGrid />
-        <Pagination />
         <PopularTools />
       </div>
+      <SubmitSection />
       <Footer />
     </div>
   );

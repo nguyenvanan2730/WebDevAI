@@ -19,9 +19,6 @@ function Footer() {
             <p>Design by Van An Nguyen</p>
           </div>
         </div>
-        <div className="submit-section">
-          <Link to="/submit" className="submit-button">Submit</Link>
-        </div>
       </div>
     </footer>
   );

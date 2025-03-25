@@ -6,6 +6,7 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .tool-header {
@@ -51,24 +52,65 @@
   margin-left: 5px;
 }
 
-.tool-type {
+.tool-meta {
   padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.type-badge {
+.meta-badge {
   display: inline-block;
-  background-color: #eee;
   padding: 4px 8px;
   border-radius: 3px;
-  font-size: 12px;
-  color: #555;
+  font-size: 11px;
+  color: #fff;
+}
+
+.meta-badge.price {
+  background-color: #4caf50;
+}
+
+.meta-badge.role {
+  background-color: #2196f3;
+}
+
+.meta-badge.process {
+  background-color: #ff9800;
 }
 
 .tool-preview {
-  background-color: #ddd;
-  height: 100px;
-  margin: 15px;
+  background-color: #eee;
+  padding: 15px;
+  margin: 0 15px 15px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tool-description {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.tool-link {
+  align-self: flex-start;
+  background-color: #0077cc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.tool-link:hover {
+  background-color: #005fa3;
 }
 
 .tool-footer {
@@ -77,6 +119,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #eee;
+  margin-top: auto;
 }
 
 .tool-tags {
@@ -108,6 +151,12 @@
   font-size: 12px;
 }
 
+.heart-icon {
+  color: #f44336;
+  margin-right: 3px;
+  font-size: 12px;
+}
+
 .like-count {
-  margin-left: 3px;
+  color: #666;
 } 
