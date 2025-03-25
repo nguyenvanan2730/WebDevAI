@@ -17,6 +17,7 @@
   --success: #2ecc71;
   --grey-light: #f5f5f5;
   --grey-medium: #e0e0e0;
+  --section-alternate: #f0f7fc;
 }
 
 * {
@@ -68,23 +69,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section alternating backgrounds */
 .trending-tools-section {
-  background-color: var(--white);
-  padding: 30px 0;
-}
-
-.tools-filter-section {
-  background-color: var(--grey-light);
-  padding: 30px 0;
+  background-color: var(--section-alternate);
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
 }
 
 .tool-grid-section {
-  background-color: var(--white);
-  padding: 30px 0;
+  background: linear-gradient(to bottom, var(--section-alternate) 0%, rgba(240, 247, 252, 0.5) 100%);
+  padding: 40px 0;
+  border-top: 1px solid rgba(52, 152, 219, 0.1);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
 }
 
 .popular-tools-section {
-  background-color: var(--grey-light);
-  padding: 30px 0;
+  background-color: var(--white);
+  padding: 40px 0;
 }
 
 .App {

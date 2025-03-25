@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import TrendingTools from '../components/TrendingTools';
-import ToolsFilter from '../components/ToolsFilter';
 import ToolGrid from '../components/ToolGrid';
 import PopularTools from '../components/PopularTools';
 import SubmitSection from '../components/SubmitSection';
@@ -20,12 +19,6 @@ function HomePage() {
       <div className="trending-tools-section">
         <div className="container">
           <TrendingTools />
-        </div>
-      </div>
-      
-      <div className="tools-filter-section">
-        <div className="container">
-          <ToolsFilter />
         </div>
       </div>
       

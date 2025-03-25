@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ToolCard from './ToolCard';
 import Pagination from './Pagination';
+import { FaSearch } from 'react-icons/fa';
 import './ToolGrid.css';
+import './ToolsFilter.css';
 
 function ToolGrid() {
   // Sample data for the tools
@@ -657,49 +659,167 @@ function ToolGrid() {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentTools, setCurrentTools] = useState([]);
-  const itemsPerPage = 16;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [roleFilter, setRoleFilter] = useState('');
+  const [processFilter, setProcessFilter] = useState('');
+  const [priceFilter, setPriceFilter] = useState('');
+  const [filteredTools, setFilteredTools] = useState([]);
+  const [isFilterApplied, setIsFilterApplied] = useState(false);
+  
+  const toolsPerPage = 9;
 
-  // Calculate current page of tools
+  // Initialize filtered tools with all tools
   useEffect(() => {
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    setCurrentTools(allTools.slice(indexOfFirstItem, indexOfLastItem));
-  }, [currentPage, allTools]);
+    setFilteredTools(allTools);
+  }, []);
 
-  // Handle page change
+  // Apply filters when user clicks Apply Filters button
+  const handleApplyFilters = () => {
+    let result = [...allTools];
+    
+    // Apply search filter
+    if (searchTerm) {
+      result = result.filter(tool => 
+        tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        tool.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    
+    // Apply role filter
+    if (roleFilter) {
+      result = result.filter(tool => 
+        tool.role.toLowerCase() === roleFilter.toLowerCase()
+      );
+    }
+    
+    // Apply process filter
+    if (processFilter) {
+      result = result.filter(tool => 
+        tool.process.toLowerCase() === processFilter.toLowerCase()
+      );
+    }
+    
+    // Apply price filter
+    if (priceFilter) {
+      result = result.filter(tool => 
+        tool.type.toLowerCase() === priceFilter.toLowerCase()
+      );
+    }
+    
+    setFilteredTools(result);
+    setCurrentPage(1); // Reset to first page when filters change
+    setIsFilterApplied(true);
+  };
+
+  // Reset filters and display all tools
+  const resetFilters = () => {
+    setSearchTerm('');
+    setRoleFilter('');
+    setProcessFilter('');
+    setPriceFilter('');
+    setFilteredTools(allTools);
+    setIsFilterApplied(false);
+  };
+
+  // Get current tools
+  const indexOfLastTool = currentPage * toolsPerPage;
+  const indexOfFirstTool = indexOfLastTool - toolsPerPage;
+  const currentTools = filteredTools.slice(indexOfFirstTool, indexOfLastTool);
+
+  // Change page
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    // Scroll to top of the grid when page changes
-    window.scrollTo({
-      top: document.querySelector('.tool-grid').offsetTop - 100,
-      behavior: 'smooth'
-    });
   };
 
   return (
     <div className="tool-grid-container">
-      <div className="tool-grid">
-        {currentTools.map(tool => (
-          <div key={tool.id} className="tool-grid-item">
-            <ToolCard 
-              id={tool.id}
-              name={tool.name}
-              rating={tool.rating}
-              type={tool.type}
-              role={tool.role}
-              process={tool.process}
-              likes={tool.likes}
-              description={tool.description}
-              url={tool.url}
-            />
+      <div className="tools-filter">
+        <div className="filter-row">
+          <div className="filter-input">
+            <label>Search</label>
+            <div style={{ position: 'relative' }}>
+              <input 
+                type="text" 
+                placeholder="Search for tools..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <span className="search-icon"><FaSearch /></span>
+            </div>
           </div>
-        ))}
+          <div className="filter-input">
+            <label>Role</label>
+            <select 
+              value={roleFilter}
+              onChange={(e) => setRoleFilter(e.target.value)}
+            >
+              <option value="">All Roles</option>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="product-manager">Product Manager</option>
+              <option value="tester">Tester</option>
+              <option value="devops">DevOps</option>
+              <option value="marketer">Marketer</option>
+              <option value="analyst">Analyst</option>
+            </select>
+          </div>
+        </div>
+        <div className="filter-row">
+          <div className="filter-input">
+            <label>Process</label>
+            <select 
+              value={processFilter}
+              onChange={(e) => setProcessFilter(e.target.value)}
+            >
+              <option value="">All Processes</option>
+              <option value="research">Research</option>
+              <option value="planning">Planning</option>
+              <option value="design">Design</option>
+              <option value="development">Development</option>
+              <option value="testing">Testing</option>
+              <option value="deployment">Deployment</option>
+              <option value="maintenance">Maintenance</option>
+            </select>
+          </div>
+          <div className="filter-input">
+            <label>Price</label>
+            <select 
+              value={priceFilter}
+              onChange={(e) => setPriceFilter(e.target.value)}
+            >
+              <option value="">All Prices</option>
+              <option value="free">Free</option>
+              <option value="paid">Paid</option>
+              <option value="freemium">Freemium</option>
+            </select>
+          </div>
+        </div>
+        <div className="filter-buttons">
+          <button className="filter-button reset-button" onClick={resetFilters}>Reset</button>
+          <button className="filter-button apply-button" onClick={handleApplyFilters}>Apply Filters</button>
+        </div>
       </div>
+
+      <h2 className="section-title">All AI Tools</h2>
+      
+      <div className="tool-grid">
+        {currentTools.length > 0 ? (
+          currentTools.map(tool => (
+            <ToolCard key={tool.id} tool={tool} />
+          ))
+        ) : (
+          <div className="no-tools-message">
+            <p>No tools found matching your search criteria.</p>
+            <button className="reset-search-button" onClick={resetFilters}>Reset Filters</button>
+          </div>
+        )}
+      </div>
+      
       <Pagination 
-        totalItems={allTools.length} 
-        itemsPerPage={itemsPerPage} 
-        onPageChange={handlePageChange} 
+        itemsPerPage={toolsPerPage} 
+        totalItems={filteredTools.length} 
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
       />
     </div>
   );

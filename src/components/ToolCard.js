@@ -2,17 +2,19 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import './ToolCard.css';
 
-function ToolCard({ 
-  id, 
-  name, 
-  rating, 
-  type, 
-  role, 
-  process, 
-  likes = 12, 
-  description, 
-  url 
-}) {
+function ToolCard({ tool }) {
+  const { 
+    id, 
+    name, 
+    rating, 
+    type, 
+    role, 
+    process, 
+    likes = 12, 
+    description, 
+    url 
+  } = tool;
+  
   return (
     <div className="tool-card">
       <div className="tool-header">

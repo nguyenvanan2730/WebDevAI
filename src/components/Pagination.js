@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Pagination.css';
 
-function Pagination({ totalItems, itemsPerPage = 16, onPageChange }) {
-  const [currentPage, setCurrentPage] = useState(1);
-  
+function Pagination({ totalItems, itemsPerPage = 9, currentPage = 1, onPageChange }) {
   // Calculate total number of pages
   const totalPages = Math.ceil(totalItems / itemsPerPage) || 1; // Ensure at least 1 page
   
@@ -55,7 +53,6 @@ function Pagination({ totalItems, itemsPerPage = 16, onPageChange }) {
     
     // Make sure page is within bounds
     if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
       if (onPageChange) {
         onPageChange(page);
       }
@@ -75,6 +72,9 @@ function Pagination({ totalItems, itemsPerPage = 16, onPageChange }) {
       handlePageChange(currentPage - 1);
     }
   };
+  
+  // If there's only one page, don't render pagination
+  if (totalPages <= 1) return null;
   
   const pageNumbers = getPageNumbers();
   
