@@ -1,0 +1,113 @@
+.tool-card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-header {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+
+.tool-logo-container {
+  margin-right: 10px;
+}
+
+.tool-logo {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.tool-name {
+  font-size: 16px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.tool-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.tool-rating-count {
+  font-size: 12px;
+  color: #888;
+  margin-left: 5px;
+}
+
+.tool-type {
+  padding: 0 15px;
+}
+
+.type-badge {
+  display: inline-block;
+  background-color: #eee;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #555;
+}
+
+.tool-preview {
+  background-color: #ddd;
+  height: 100px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.tool-footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+
+.tool-tags {
+  display: flex;
+  gap: 5px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: #666;
+}
+
+.tool-likes {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.like-count {
+  margin-left: 3px;
+} 

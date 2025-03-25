@@ -1,0 +1,33 @@
+.popular-tools {
+  margin: 50px 0;
+}
+
+.popular-tools h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popular-tools-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.popular-tool-item {
+  flex: 1;
+  height: 100px;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .popular-tools-grid {
+    flex-wrap: wrap;
+  }
+  
+  .popular-tool-item {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+} 

@@ -1,0 +1,19 @@
+.trending-tools {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.trending-tools h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  background-color: #d0d0d0;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.trending-tools-container {
+  height: 150px;
+  background-color: #e5e5e5;
+  border-radius: 0 0 5px 5px;
+} 

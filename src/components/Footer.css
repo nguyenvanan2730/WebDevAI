@@ -1,0 +1,55 @@
+.footer {
+  background-color: #9c9c9c;
+  padding: 40px 0;
+  color: #fff;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-copyright p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credits {
+  font-size: 12px;
+}
+
+.submit-section {
+  text-align: center;
+}
+
+.submit-button {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 8px 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #ccc;
+} 
