@@ -114,8 +114,14 @@
   flex-grow: 1;
 }
 
+.tool-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
 .tool-link {
-  align-self: flex-start;
+  flex: 1;
   background-color: var(--primary);
   color: white;
   padding: 8px 15px;
@@ -123,7 +129,7 @@
   font-size: 12px;
   font-weight: 500;
   text-decoration: none;
-  margin-top: auto;
+  text-align: center;
   transition: background-color 0.2s, transform 0.2s;
   box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './ToolCard.css';
 
 function ToolCard({ tool }) {
@@ -30,7 +30,6 @@ function ToolCard({ tool }) {
             <span className="tool-rating-count">({rating}.0)</span>
           </div>
         </div>
-
       </div>
       
       <div className="tool-meta">
@@ -39,7 +38,10 @@ function ToolCard({ tool }) {
       
       <div className="tool-preview">
         <p className="tool-description">{description}</p>
-        <a href={url} className="tool-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        <div className="tool-actions">
+          <Link to={`/tool/${id}`} className="tool-link">View Details</Link>
+          <a href={url} className="tool-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        </div>
       </div>
       
       <div className="tool-footer">
