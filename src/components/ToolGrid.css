@@ -21,6 +21,10 @@
   background-color: var(--primary);
 }
 
+.filter-summary {
+  margin: 20px 0;
+}
+
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

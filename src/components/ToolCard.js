@@ -30,12 +30,11 @@ function ToolCard({ tool }) {
             <span className="tool-rating-count">({rating}.0)</span>
           </div>
         </div>
+
       </div>
       
       <div className="tool-meta">
         <span className="meta-badge price">{type}</span>
-        <span className="meta-badge role">{role}</span>
-        <span className="meta-badge process">{process}</span>
       </div>
       
       <div className="tool-preview">
@@ -45,9 +44,8 @@ function ToolCard({ tool }) {
       
       <div className="tool-footer">
         <div className="tool-tags">
-          <span className="tag">AI</span>
-          <span className="tag">Dev</span>
-          <span className="tag">Prod</span>
+          <span className="tag hashtag">#{role.toLowerCase()}</span>
+          <span className="tag hashtag">#{process.toLowerCase()}</span>
         </div>
         <div className="tool-likes">
           <button className="like-button">
