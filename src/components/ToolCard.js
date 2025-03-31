@@ -15,36 +15,54 @@ function ToolCard({ tool }) {
     url 
   } = tool;
   
+  const getPriceTypeClass = (type) => {
+    switch (type.toLowerCase()) {
+      case 'free':
+        return 'tool-type-free';
+      case 'freemium':
+        return 'tool-type-freemium';
+      case 'premium':
+      case 'paid':
+        return 'tool-type-premium';
+      default:
+        return 'tool-type-default';
+    }
+  };
+
   return (
     <div className="tool-card">
-      <div className="tool-header">
-        <div className="tool-logo-container">
-          <div className="tool-logo"></div>
-        </div>
-        <div className="tool-info">
-          <h3 className="tool-name">{name}</h3>
-          <div className="tool-rating">
-            {[...Array(5)].map((_, i) => (
-              <span key={i} className={`star ${i < rating ? 'filled' : ''}`}>★</span>
-            ))}
-            <span className="tool-rating-count">({rating}.0)</span>
+      {/* Card Header */}
+      <div className="card-header">
+        <div className="tool-header">
+          <div className="tool-logo-container">
+            <div className="tool-logo"></div>
           </div>
+          <div className="tool-info">
+            <h3 className="tool-name-home-page">{name}</h3>
+            <div className="tool-rating">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className={`star ${i < rating ? 'filled' : ''}`}>★</span>
+              ))}
+              <span className="tool-rating-count">({rating}.0)</span>
+            </div>
+          </div>
+          <span className={`tool-type ${getPriceTypeClass(type)}`}>
+            {type}
+          </span>
         </div>
       </div>
-      
-      <div className="tool-meta">
-        <span className="meta-badge price">{type}</span>
-      </div>
-      
-      <div className="tool-preview">
+
+      {/* Card Content */}
+      <div className="card-content">
         <p className="tool-description">{description}</p>
         <div className="tool-actions">
           <Link to={`/tool/${id}`} className="tool-link">View Details</Link>
-          <a href={url} className="tool-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
+          <a href={url} className="tool-link visit-website-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
         </div>
       </div>
       
-      <div className="tool-footer">
+      {/* Card Footer */}
+      <div className="card-footer">
         <div className="tool-tags">
           <span className="tag hashtag">#{role.toLowerCase()}</span>
           <span className="tag hashtag">#{process.toLowerCase()}</span>
