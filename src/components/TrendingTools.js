@@ -3,12 +3,27 @@ import { Link } from 'react-router-dom';
 import './TrendingTools.css';
 
 function TrendingTools() {
+  // Add the getPriceTypeClass function
+  const getPriceTypeClass = (type) => {
+    switch (type.toLowerCase()) {
+      case 'free':
+        return 'trending-tool-type-free';
+      case 'freemium':
+        return 'trending-tool-type-freemium';
+      case 'premium':
+      case 'paid':
+        return 'trending-tool-type-premium';
+      default:
+        return 'trending-tool-type-default';
+    }
+  };
+
   // The single most trending tool (with highest likes)
   const topTrendingTool = { 
     id: 1, 
     name: 'ChatGPT', 
     rating: 5, 
-    type: 'Freemium', 
+    type: 'Paid', 
     role: 'Developer',
     process: 'Development',
     likes: 512,
@@ -33,9 +48,9 @@ function TrendingTools() {
               <div className="trending-tool-header">
                 <h3 className="trending-tool-name">{topTrendingTool.name}</h3>
                 <div className="trending-tool-meta">
-                  <span className="trending-tool-type">{topTrendingTool.type}</span>
-                  <span className="trending-tool-role">{topTrendingTool.role}</span>
-                  <span className="trending-tool-process">{topTrendingTool.process}</span>
+                  <span className={`trending-tool-type ${getPriceTypeClass(topTrendingTool.type)}`}>
+                    {topTrendingTool.type}
+                  </span>
                 </div>
               </div>
               
