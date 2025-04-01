@@ -25,7 +25,8 @@
 .popular-tools-container {
   position: relative;
   overflow: hidden;
-  padding: 10px 0;
+  padding: 40px 0;
+  background-color: var(--white);
 }
 
 .popular-tools-scroll {
@@ -61,7 +62,9 @@
 
 .popular-tool-card {
   flex: 0 0 280px;
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  background: linear-gradient(135deg, #d4d9dd, #e9ecef);
+  border-radius: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   padding: 15px;
