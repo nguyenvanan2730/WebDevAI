@@ -14,6 +14,14 @@ function AIToolDetailPage() {
   const [reviews, setReviews] = useState([]);
   const [relatedTools, setRelatedTools] = useState([]);
 
+  // Function to get the icon path based on tool name
+  const getToolIconPath = (name) => {
+    if (!name) return '';
+    // Convert to lowercase and remove spaces/special chars
+    const formattedName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return `/icon/${formattedName}.png`;
+  };
+
   useEffect(() => {
     // Find the tool with the matching ID
     const toolId = parseInt(id);
@@ -87,7 +95,12 @@ function AIToolDetailPage() {
           <div className="tool-detail-header">
             <div className="tool-header-left">
               <div className="tool-logo">
-                {/* Placeholder for logo */}
+                <img 
+                  src={getToolIconPath(tool.name)} 
+                  alt={`${tool.name} icon`}
+                  className="tool-logo-image"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
               </div>
               <div className="tool-header-info">
                 <h1 className="tool-name">{tool.name}</h1>
@@ -150,7 +163,14 @@ function AIToolDetailPage() {
                     <div key={relatedTool.id} className="simplified-tool-card">
                       <div className="tool-header">
                         <div className="tool-logo-container">
-                          <div className="tool-logo"></div>
+                          <div className="tool-logo">
+                            <img 
+                              src={getToolIconPath(relatedTool.name)} 
+                              alt={`${relatedTool.name} icon`}
+                              className="tool-logo-image"
+                              onError={(e) => { e.target.style.display = 'none'; }}
+                            />
+                          </div>
                         </div>
                         <div className="tool-info">
                           <h3 className="tool-name">{relatedTool.name}</h3>

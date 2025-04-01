@@ -8,6 +8,14 @@ function PopularTools() {
   const scrollContainerRef = useRef(null);
   const [popularTools, setPopularTools] = useState([]);
   
+  // Function to get the icon path based on tool name
+  const getToolIconPath = (name) => {
+    if (!name) return '';
+    // Convert to lowercase and remove spaces/special chars
+    const formattedName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return `/icon/${formattedName}.png`;
+  };
+
   // Get popular tools based on rating and likes
   useEffect(() => {
     if (toolsData && toolsData.length > 0) {
@@ -18,36 +26,8 @@ function PopularTools() {
         return scoreB - scoreA;
       });
       
-      // Take top 8 tools and add icon based on role
-      const top8Tools = sortedTools.slice(0, 8).map(tool => {
-        let icon = '🔧'; // Default icon
-        
-        // Assign icons based on role
-        switch(tool.role.toLowerCase()) {
-          case 'developer':
-            icon = '💻';
-            break;
-          case 'designer':
-            icon = '🎨';
-            break;
-          case 'marketer':
-            icon = '📊';
-            break;
-          case 'product manager':
-            icon = '📝';
-            break;
-          case 'analyst':
-            icon = '📈';
-            break;
-          default:
-            icon = '🔧';
-        }
-        
-        return {
-          ...tool,
-          icon
-        };
-      });
+      // Take top 8 tools
+      const top8Tools = sortedTools.slice(0, 8);
       
       setPopularTools(top8Tools);
     }
@@ -156,7 +136,14 @@ function PopularTools() {
         >
           {popularTools.map(tool => (
             <Link to={`/tools/${tool.id}`} key={tool.id} className="popular-tool-card">
-              <div className="popular-tool-icon">{tool.icon}</div>
+              <div className="popular-tool-icon">
+                <img 
+                  src={getToolIconPath(tool.name)} 
+                  alt={`${tool.name} icon`}
+                  className="popular-tool-image"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              </div>
               <div className="popular-tool-content">
                 <div className="popular-tool-header">
                   <h3 className="popular-tool-name">{tool.name}</h3>

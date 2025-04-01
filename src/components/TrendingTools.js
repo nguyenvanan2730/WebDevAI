@@ -31,6 +31,14 @@ function TrendingTools() {
     }
   };
 
+  // Function to get the icon path based on tool name
+  const getToolIconPath = (name) => {
+    if (!name) return '';
+    // Convert to lowercase and remove spaces/special chars
+    const formattedName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return `/icon/${formattedName}.png`;
+  };
+
   // Loading state
   if (!topTrendingTool) {
     return (
@@ -48,7 +56,14 @@ function TrendingTools() {
         <div className="top-trending-tool">
           <div className="trending-tool-main">
             <div className="trending-tool-logo-container">
-              <div className="trending-tool-logo"></div>
+              <div className="trending-tool-logo">
+                <img 
+                  src={getToolIconPath(topTrendingTool.name)} 
+                  alt={`${topTrendingTool.name} icon`} 
+                  className="trending-tool-icon"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              </div>
               <div className="trending-tool-badge">
                 <span className="trending-crown">👑</span>
                 <span className="trending-text">Top Trending</span>

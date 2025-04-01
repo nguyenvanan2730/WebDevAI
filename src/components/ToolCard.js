@@ -15,6 +15,13 @@ function ToolCard({ tool }) {
     url 
   } = tool;
   
+  // Function to get icon based on tool name
+  const getToolIconPath = (toolName) => {
+    // Convert tool name to lowercase and remove spaces/special chars for filename matching
+    const formattedName = toolName.toLowerCase().replace(/\s+/g, '');
+    return `/icon/${formattedName}.png`;
+  };
+  
   const getPriceTypeClass = (type) => {
     switch (type.toLowerCase()) {
       case 'free':
@@ -35,7 +42,17 @@ function ToolCard({ tool }) {
       <div className="card-header">
         <div className="tool-header">
           <div className="tool-logo-container">
-            <div className="tool-logo"></div>
+            <div className="tool-logo">
+              <img 
+                src={getToolIconPath(name)} 
+                alt={`${name} icon`}
+                className="tool-icon"
+                onError={(e) => {
+                  // If icon not found, show a placeholder or fallback to the background
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
           </div>
           <div className="tool-info">
             <h3 className="tool-name-home-page">{name}</h3>
