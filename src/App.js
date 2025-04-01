@@ -5,6 +5,8 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import SubmitToolPage from './pages/SubmitToolPage';
 import AIToolDetailPage from './pages/AIToolDetailPage';
+import ToolGrid from './components/ToolGrid';
+// import ToolDetail from './components/ToolDetail'; // No longer needed
 import './App.css';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/submit-tool" element={<SubmitToolPage />} />
         <Route path="/tool/:id" element={<AIToolDetailPage />} />
+        <Route path="/tools/:id" element={<AIToolDetailPage />} /> {/* Now using AIToolDetailPage for both routes */}
       </Routes>
     </Router>
   );

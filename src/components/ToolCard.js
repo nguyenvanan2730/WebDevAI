@@ -56,7 +56,7 @@ function ToolCard({ tool }) {
       <div className="card-content">
         <p className="tool-description">{description}</p>
         <div className="tool-actions">
-          <Link to={`/tool/${id}`} className="tool-link">View Details</Link>
+          <Link to={`/tools/${id}`} className="tool-link">View Details</Link>
           <a href={url} className="tool-link visit-website-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
         </div>
       </div>

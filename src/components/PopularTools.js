@@ -1,78 +1,57 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './PopularTools.css';
+import toolsData from './toolsData.json'; // Import the tools data
 
 function PopularTools() {
   // Reference to the scrolling container
   const scrollContainerRef = useRef(null);
+  const [popularTools, setPopularTools] = useState([]);
   
-  // Sample data for popular tools (random selection)
-  const popularTools = [
-    { 
-      id: 7, 
-      name: 'Notion AI', 
-      rating: 4, 
-      type: 'Paid',
-      description: 'Smart assistant for your workspace',
-      icon: '📝'
-    },
-    { 
-      id: 11, 
-      name: 'Canva AI', 
-      rating: 4, 
-      type: 'Freemium',
-      description: 'Design with AI-powered suggestions',
-      icon: '🎨'
-    },
-    { 
-      id: 14, 
-      name: 'Perplexity AI', 
-      rating: 5, 
-      type: 'Free',
-      description: 'AI-powered search & answers',
-      icon: '🔍'
-    },
-    { 
-      id: 8, 
-      name: 'Jasper', 
-      rating: 4, 
-      type: 'Paid',
-      description: 'AI content creation platform',
-      icon: '✍️'
-    },
-    { 
-      id: 3, 
-      name: 'Midjourney', 
-      rating: 4, 
-      type: 'Paid',
-      description: 'Create stunning AI art',
-      icon: '🖼️'
-    },
-    { 
-      id: 6, 
-      name: 'Cursor', 
-      rating: 5, 
-      type: 'Free',
-      description: 'AI-powered code editor',
-      icon: '💻'
-    },
-    { 
-      id: 16, 
-      name: 'Gamma', 
-      rating: 4, 
-      type: 'Freemium',
-      description: 'AI presentation creator',
-      icon: '📊'
-    },
-    { 
-      id: 10, 
-      name: 'Grammarly', 
-      rating: 5, 
-      type: 'Freemium',
-      description: 'AI writing assistant',
-      icon: '✅'
+  // Get popular tools based on rating and likes
+  useEffect(() => {
+    if (toolsData && toolsData.length > 0) {
+      // Sort tools by a combination of rating and likes
+      const sortedTools = [...toolsData].sort((a, b) => {
+        const scoreA = a.rating * 20 + a.likes / 50; // Weight formula
+        const scoreB = b.rating * 20 + b.likes / 50;
+        return scoreB - scoreA;
+      });
+      
+      // Take top 8 tools and add icon based on role
+      const top8Tools = sortedTools.slice(0, 8).map(tool => {
+        let icon = '🔧'; // Default icon
+        
+        // Assign icons based on role
+        switch(tool.role.toLowerCase()) {
+          case 'developer':
+            icon = '💻';
+            break;
+          case 'designer':
+            icon = '🎨';
+            break;
+          case 'marketer':
+            icon = '📊';
+            break;
+          case 'product manager':
+            icon = '📝';
+            break;
+          case 'analyst':
+            icon = '📈';
+            break;
+          default:
+            icon = '🔧';
+        }
+        
+        return {
+          ...tool,
+          icon
+        };
+      });
+      
+      setPopularTools(top8Tools);
     }
-  ];
+  }, []);
 
   // Auto-scroll effect
   useEffect(() => {
@@ -153,7 +132,19 @@ function PopularTools() {
         scrollContainer.removeEventListener('mouseleave', resumeAnimation);
       }
     };
-  }, []);
+  }, [popularTools]); // Add popularTools as dependency to restart animation when data loads
+
+  // Loading state
+  if (popularTools.length === 0) {
+    return (
+      <section className="popular-tools">
+        <h2>Popular tools</h2>
+        <div className="popular-tools-container">
+          <div className="loading">Loading popular tools...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="popular-tools">
@@ -164,7 +155,7 @@ function PopularTools() {
           ref={scrollContainerRef}
         >
           {popularTools.map(tool => (
-            <Link to={`/tool/${tool.id}`} key={tool.id} className="popular-tool-card">
+            <Link to={`/tools/${tool.id}`} key={tool.id} className="popular-tool-card">
               <div className="popular-tool-icon">{tool.icon}</div>
               <div className="popular-tool-content">
                 <div className="popular-tool-header">

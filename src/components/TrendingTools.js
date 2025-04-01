@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './TrendingTools.css';
+import toolsData from './toolsData.json'; // Import the tools data
 
 function TrendingTools() {
+  const [topTrendingTool, setTopTrendingTool] = useState(null);
+
+  // Find the tool with the highest likes
+  useEffect(() => {
+    if (toolsData && toolsData.length > 0) {
+      // Sort tools by likes in descending order
+      const sortedTools = [...toolsData].sort((a, b) => b.likes - a.likes);
+      // Set the top trending tool
+      setTopTrendingTool(sortedTools[0]);
+    }
+  }, []);
+
   // Add the getPriceTypeClass function
   const getPriceTypeClass = (type) => {
     switch (type.toLowerCase()) {
@@ -18,18 +31,16 @@ function TrendingTools() {
     }
   };
 
-  // The single most trending tool (with highest likes)
-  const topTrendingTool = { 
-    id: 1, 
-    name: 'ChatGPT', 
-    rating: 5, 
-    type: 'Paid', 
-    role: 'Developer',
-    process: 'Development',
-    likes: 512,
-    description: 'ChatGPT is an AI-powered assistant that helps with text generation, coding, answering questions, and content creation. It excels at understanding context and providing human-like responses across a wide range of topics and tasks.',
-    url: 'https://chat.openai.com'
-  };
+  // Loading state
+  if (!topTrendingTool) {
+    return (
+      <section className="trending-tools">
+        <div className="trending-tools-container">
+          <div className="loading">Loading trending tool...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="trending-tools">
@@ -70,7 +81,7 @@ function TrendingTools() {
                 <a href={topTrendingTool.url} target="_blank" rel="noopener noreferrer" className="trending-tool-visit">
                   Visit Website
                 </a>
-                <Link to={`/tool/${topTrendingTool.id}`} className="trending-tool-details">
+                <Link to={`/tools/${topTrendingTool.id}`} className="trending-tool-details">
                   View Details
                 </Link>
               </div>
