@@ -9,13 +9,13 @@ import allTools from './toolsData.json'; // Import the tools data
 function ToolGrid() {
   // Define the complete list of roles and processes
   const allRoles = [
-    "Marketers", 
-    "Developers", 
-    "Designers", 
-    "Product Managers", 
-    "Testers", 
+    "Marketer", 
+    "Developer", 
+    "Designer", 
+    "Product Manager", 
+    "Tester", 
     "DevOps", 
-    "Analysts"
+    "Analyst"
   ];
   
   const allProcesses = [

@@ -1,0 +1,106 @@
+[
+    { 
+      "id": 1, 
+      "name": "DeepSeek", 
+      "rating": 5, 
+      "type": "Free", 
+      "role": ["Developer", "Designer"],
+      "process": ["Development", "Testing"],
+      "likes": 235,
+      "description": "DeepSeek is an advanced AI coding assistant that helps developers write, debug, and understand code across multiple programming languages.",
+      "url": "https://deepseek.com",
+      "logoUrl": "https://deepseek.com/logo.png",
+      "summary": "DeepSeek is a powerful AI coding assistant that helps developers write and understand code across multiple programming languages. It uses advanced machine learning to provide intelligent code suggestions and explanations.",
+      "keyFeatures": [
+        "AI-powered code completion that intelligently suggests relevant code snippets based on context, dramatically reducing development time and cognitive load for programmers.",
+        "Multi-language support covering over 40 programming languages with specialized understanding of syntax, libraries, and frameworks for each language ecosystem.",
+        "Code explanation and documentation capabilities that break down complex functions and algorithms into understandable components with natural language descriptions.",
+        "Bug detection and fixing mechanisms that identify potential errors in your code and suggest optimized solutions before runtime issues occur.",
+        "Learning resources integration that connects developers with relevant documentation, tutorials, and community solutions while coding to accelerate learning and problem-solving."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Revolutionized my coding workflow",
+          "body": "DeepSeek has completely transformed how I write code. The intelligent suggestions and explanations have helped me become a more efficient developer.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Alex Johnson",
+            "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for learning new languages",
+          "body": "As someone who frequently switches between programming languages, DeepSeek has been invaluable in helping me adapt quickly to different syntax and patterns.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sarah Williams",
+            "avatar": "https://randomuser.me/api/portraits/women/45.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent debugging assistant",
+          "body": "The ability to explain code and identify potential bugs has saved me countless hours of debugging. Highly recommended for developers of all levels.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Michael Chen",
+            "avatar": "https://randomuser.me/api/portraits/men/67.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ChatGPT",
+      "rating": 5,
+      "type": "Freemium",
+      "role": ["Developer","Analyst"],
+      "process": ["Research", "Planning"],
+      "likes": 512,
+      "description": "ChatGPT is an AI assistant specialized in web development, helping with code generation, debugging, technical research, and creating comprehensive documentation.",
+      "url": "https://chat.openai.com",
+      "logoUrl": "https://chat.openai.com/logo.png",
+      "summary": "ChatGPT enhances web development productivity through intelligent code generation, efficient debugging, and deep technical insights. It supports developers, product managers, and analysts by simplifying complex coding tasks and accelerating technical research.",
+      "keyFeatures": [
+        "Code generation and debugging capabilities supporting JavaScript, HTML/CSS, React, and backend frameworks, streamlining the web development process.",
+        "Technical research assistance, providing accurate and detailed explanations of complex web technologies, frameworks, and APIs.",
+        "Automated content creation for technical documentation, tutorials, and guides, enhancing team productivity.",
+        "Interactive troubleshooting to quickly resolve coding issues through conversational guidance and context-aware suggestions.",
+        "Up-to-date insights on web development best practices, trends, and emerging technologies."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Essential coding companion",
+          "body": "ChatGPT significantly speeds up my web development workflow with precise code suggestions and debugging help. It's indispensable for day-to-day coding.",
+          "rating": 5,
+          "reviewer": {
+            "name": "David Kim",
+            "avatar": "https://randomuser.me/api/portraits/men/42.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Fantastic for exploring frameworks",
+          "body": "ChatGPT clearly explains complex frameworks, making learning new web technologies quicker and easier.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emily Rodriguez",
+            "avatar": "https://randomuser.me/api/portraits/women/33.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Highly effective, with occasional checks",
+          "body": "Incredibly helpful for coding tasks, though occasionally it's important to verify some technical details manually.",
+          "rating": 4,
+          "reviewer": {
+            "name": "James Wilson",
+            "avatar": "https://randomuser.me/api/portraits/men/55.jpg"
+          }
+        }
+      ]
+    }
+] 

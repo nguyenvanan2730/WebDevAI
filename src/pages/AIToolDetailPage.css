@@ -143,6 +143,13 @@
   color: var(--text-light);
   font-size: 14px;
   gap: 5px;
+  color: #666;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.rating-count:hover {
+  color: #333;
 }
 
 .visit-site-btn {

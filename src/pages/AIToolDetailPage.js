@@ -47,16 +47,23 @@ function AIToolDetailPage() {
   }, [id]);
 
   const renderStars = (rating) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      stars.push(
-        <FaStar 
-          key={i} 
-          className={i <= rating ? 'star filled' : 'star'} 
-        />
-      );
-    }
-    return stars;
+    return (
+      <div className="stars">
+        {[...Array(5)].map((_, index) => (
+          <FaStar
+            key={index}
+            className={`star ${index < rating ? 'filled' : 'empty'}`}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  const scrollToReviews = () => {
+    document.querySelector('#reviews-section').scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
   };
 
   if (loading) {
@@ -105,17 +112,25 @@ function AIToolDetailPage() {
               <div className="tool-header-info">
                 <h1 className="tool-name">{tool.name}</h1>
                 <div className="tool-meta">
+                  <div className="tags">
+                    {tool.tags && tool.tags.map((tag, index) => (
+                      <span key={index} className="tag">#{tag}</span>
+                    ))}
+                  </div>
                   <span className="meta-badge price">{tool.type}</span>
-                  <span className="meta-tag">#{tool.role}</span>
                 </div>
                 <div className="tool-rating-container">
-                  <div className="tool-rating">
+                  <div className="rating-stars">
                     {renderStars(tool.rating)}
-                    <span className="rating-value">{tool.rating}</span>
                   </div>
-                  <div className="rating-count">
-                    <FaMobile /> {reviews.length}
-                  </div>
+                  <span 
+                    className="rating-count"
+                    onClick={scrollToReviews}
+                    style={{ cursor: 'pointer' }}
+                    title="Click to see reviews"
+                  >
+                    ({tool.reviews ? tool.reviews.length : 0} reviews)
+                  </span>
                 </div>
                 <a href={tool.url} target="_blank" rel="noopener noreferrer" className="visit-site-btn">
                   Visit Site <FaExternalLinkAlt />
@@ -198,7 +213,7 @@ function AIToolDetailPage() {
           </div>
 
           {/* Full-width Reviews Section */}
-          <section className="detail-section full-width-section">
+          <section id="reviews-section" className="detail-section full-width-section">
             <h2 className="section-title">Latest reviews</h2>
             <div className="reviews-container">
               {reviews.length > 0 ? (
