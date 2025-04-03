@@ -342,14 +342,14 @@ function AIToolDetailPage() {
                           <span className={`tool-type ${getPriceTypeClass(relatedTool.type)}`}>
                             {relatedTool.type}
                           </span>
-                          <div className="tool-tags">
+                          {/* <div className="tool-tags">
                             {relatedTool.role && (
                               <span className="tag role">Role: {Array.isArray(relatedTool.role) ? relatedTool.role.join(', ') : relatedTool.role}</span>
                             )}
                             {relatedTool.process && (
                               <span className="tag process">Process: {Array.isArray(relatedTool.process) ? relatedTool.process.join(', ') : relatedTool.process}</span>
                             )}
-                          </div>
+                          </div> */}
                         </div>
                         
                         <div className="tool-preview">
