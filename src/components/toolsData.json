@@ -10,6 +10,7 @@
       "description": "DeepSeek is an advanced AI coding assistant that helps developers write, debug, and understand code across multiple programming languages.",
       "url": "https://deepseek.com",
       "logoUrl": "https://deepseek.com/logo.png",
+      "youtubeVideoId": "qXeF3dXxZtY",
       "summary": "DeepSeek is a powerful AI coding assistant that helps developers write and understand code across multiple programming languages. It uses advanced machine learning to provide intelligent code suggestions and explanations.",
       "keyFeatures": [
         "AI-powered code completion that intelligently suggests relevant code snippets based on context, dramatically reducing development time and cognitive load for programmers.",
@@ -62,6 +63,7 @@
       "description": "ChatGPT is an AI assistant specialized in web development, helping with code generation, debugging, technical research, and creating comprehensive documentation.",
       "url": "https://chat.openai.com",
       "logoUrl": "https://chat.openai.com/logo.png",
+      "youtubeVideoId": "e0aKI2GGZNg",
       "summary": "ChatGPT enhances web development productivity through intelligent code generation, efficient debugging, and deep technical insights. It supports developers, product managers, and analysts by simplifying complex coding tasks and accelerating technical research.",
       "keyFeatures": [
         "Code generation and debugging capabilities supporting JavaScript, HTML/CSS, React, and backend frameworks, streamlining the web development process.",
@@ -74,7 +76,7 @@
         {
           "id": 1,
           "title": "Essential coding companion",
-          "body": "ChatGPT significantly speeds up my web development workflow with precise code suggestions and debugging help. It’s indispensable for day-to-day coding.",
+          "body": "ChatGPT significantly speeds up my web development workflow with precise code suggestions and debugging help. It's indispensable for day-to-day coding.",
           "rating": 5,
           "reviewer": {
             "name": "David Kim",
@@ -114,6 +116,7 @@
       "description": "Midjourney is a generative AI tool that turns text prompts into high-quality visuals, helping web designers and product teams create engaging UI concepts, hero images, and illustrations for digital products.",
       "url": "https://midjourney.com",
       "logoUrl": "https://midjourney.com/logo.png",
+      "youtubeVideoId": "VPGPrPvPrzw",
       "summary": "Midjourney empowers web designers and digital creators by generating stunning visuals from simple text descriptions. It accelerates ideation for UI/UX design, marketing content, and landing page assets by delivering unique, high-resolution images tailored to your creative vision.",
       "keyFeatures": [
         "AI-driven text-to-image generation that helps designers rapidly prototype visual content for websites, product pages, and marketing banners.",
@@ -126,7 +129,7 @@
         {
           "id": 1,
           "title": "Essential for visual prototyping",
-          "body": "Midjourney helps me create beautiful header illustrations and UI concepts for websites in minutes. It’s a huge boost to my design workflow.",
+          "body": "Midjourney helps me create beautiful header illustrations and UI concepts for websites in minutes. It's a huge boost to my design workflow.",
           "rating": 5,
           "reviewer": {
             "name": "Lisa Chen",
@@ -166,6 +169,7 @@
       "description": "GitHub Copilot is an AI-powered coding assistant that helps web developers write, refactor, and optimize code faster with real-time suggestions based on context.",
       "url": "https://github.com/features/copilot",
       "logoUrl": "https://github.com/features/copilot/logo.png",
+      "youtubeVideoId": "4RQh6qOUbPw",
       "summary": "GitHub Copilot accelerates web development by providing intelligent code completions for front-end and back-end technologies. From writing components in React to building REST APIs, it boosts productivity and helps teams ship faster.",
       "keyFeatures": [
         "Real-time, context-aware code suggestions for JavaScript, TypeScript, HTML, CSS, Node.js, and more—tailored for modern web development.",
@@ -218,6 +222,7 @@
       "description": "Figma AI enhances web design workflows by offering smart layout suggestions, component automation, and design system consistency, all within the Figma environment.",
       "url": "https://figma.com",
       "logoUrl": "https://figma.com/logo.png",
+      "youtubeVideoId": "EQXqHYBtHJg",
       "summary": "Figma AI supercharges the Figma design tool with intelligent features to help UI/UX designers and product managers create responsive, user-friendly web interfaces. It saves time by suggesting layouts, refining design components, and maintaining system-wide consistency.",
       "keyFeatures": [
         "AI-generated layout suggestions that streamline wireframing and help align elements visually for responsive web designs.",
@@ -270,6 +275,7 @@
       "description": "Cursor is an AI-enhanced code editor that helps web developers understand, refactor, and generate code using natural language within a modern, intuitive IDE.",
       "url": "https://cursor.com",
       "logoUrl": "https://cursor.com/logo.png",
+      "youtubeVideoId": "zsz7ZBUU0qE",
       "summary": "Cursor is a next-gen code editor designed for modern web development. With built-in AI capabilities, it helps developers write, explain, refactor, and search code using natural language, making it an ideal tool for both frontend and backend web projects.",
       "keyFeatures": [
         "Natural language coding support that allows web developers to describe what they want in plain English and receive functioning HTML, CSS, JavaScript, or backend code as output.",
@@ -322,6 +328,7 @@
       "description": "Notion AI boosts team productivity during the web development planning phase by assisting with drafting specs, summarizing meeting notes, generating ideas, and maintaining organized project documentation.",
       "url": "https://notion.so",
       "logoUrl": "https://notion.so/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "Notion AI is an AI-powered workspace tool that enhances project planning for web development teams. It helps product managers and developers streamline documentation, generate structured feature specs, and summarize meetings—keeping everything aligned and clear across the team.",
       "keyFeatures": [
         "Specification drafting using natural language input to turn rough ideas into structured product requirements, epics, and feature outlines.",
@@ -374,6 +381,7 @@
       "description": "Jasper is an AI content generation platform tailored for marketers and web teams to produce high-performing content for websites, landing pages, blogs, and ads.",
       "url": "https://jasper.ai",
       "logoUrl": "https://jasper.ai/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "Jasper enhances the web development workflow by helping marketers and product teams generate persuasive and SEO-friendly content. From crafting marketing copy to optimizing landing page text, Jasper accelerates content creation across the full lifecycle—from early planning to post-launch maintenance.",
       "keyFeatures": [
         "Marketing-oriented content generation with prebuilt templates for landing pages, email campaigns, product descriptions, and blog posts—perfect for content-first development approaches.",
@@ -426,6 +434,7 @@
       "description": "Tabnine is an AI code assistant that helps web developers write, test, and maintain high-quality code faster through intelligent, context-aware suggestions.",
       "url": "https://tabnine.com",
       "logoUrl": "https://tabnine.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "Tabnine boosts developer productivity by delivering real-time, AI-powered code completions that understand the structure, context, and patterns of modern web applications. It's optimized for frontend and backend development workflows and supports web standards, performance, and security best practices.",
       "keyFeatures": [
         "AI-powered code suggestions trained on modern web frameworks like React, Vue, Angular, and Next.js, offering accurate completions based on framework-specific syntax and patterns.",
@@ -499,6 +508,7 @@
       "description": "WebAIM is a comprehensive accessibility evaluation platform that helps developers and testers ensure websites meet accessibility standards and provide inclusive user experiences.",
       "url": "https://webaim.org",
       "logoUrl": "https://webaim.org/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "WebAIM offers robust tools and resources for evaluating and improving web accessibility. Ideal for both developers and testers, it assists in identifying WCAG compliance issues, simulating accessibility scenarios, and guiding remediation for more inclusive digital experiences.",
       "keyFeatures": [
         "Real-time accessibility checks covering color contrast, keyboard navigation, and missing alternative text, ensuring compliance with major accessibility standards.",
@@ -551,6 +561,7 @@
       "description": "Checkly is an AI-enhanced monitoring and end-to-end testing platform for modern web applications, helping developers and testers catch bugs and performance issues before they reach production.",
       "url": "https://checklyhq.com",
       "logoUrl": "https://checklyhq.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "Checkly combines end-to-end browser testing with real-time performance and availability monitoring. It's designed for developers and QA teams to ensure mission-critical web app features are working reliably through automated checks and detailed alerts.",
       "keyFeatures": [
         "End-to-end browser testing using Playwright and Puppeteer to simulate real user interactions and detect functional issues across web applications.",
@@ -603,6 +614,7 @@
       "description": "RunwayML is an AI-powered creative suite that empowers designers to generate and edit web visuals, video assets, and interface elements using advanced machine learning.",
       "url": "https://runwayml.com",
       "logoUrl": "https://runwayml.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "RunwayML brings AI-powered creativity into the web development process by allowing designers to rapidly generate and refine high-quality visuals and video assets. It streamlines the creation of UI components, hero banners, background animations, and branded visuals—making it a powerful tool in the UI/UX design pipeline.",
       "keyFeatures": [
         "Text-to-video generation that transforms written prompts into short video loops or animated backgrounds, useful for web hero sections and landing pages.",
@@ -667,6 +679,7 @@
       "description": "Codeium is an AI code assistant that helps developers accelerate development with smart autocompletions and contextual code suggestions.",
       "url": "https://codeium.com",
       "logoUrl": "https://codeium.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "Codeium streamlines the development process by offering intelligent code autocompletion, in-line suggestions, and natural language prompts tailored to your project's context. It's especially useful for accelerating front-end and back-end web development workflows.",
       "keyFeatures": [
         "Smart code autocompletion for faster development across popular languages and web frameworks.",
@@ -709,6 +722,7 @@
       "description": "Perplexity AI is an AI-powered search assistant that provides fact-based answers and links to relevant sources, ideal for research and analysis.",
       "url": "https://perplexity.ai",
       "logoUrl": "https://perplexity.ai/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
       "summary": "Perplexity AI enhances the research phase of web development by delivering accurate, source-backed answers to technical, design, and competitive questions. It saves time during planning and discovery by presenting concise insights from across the web.",
       "keyFeatures": [
         "Natural language search interface for fast, conversational queries.",
@@ -751,6 +765,7 @@
       "description": "FireHydrant is an AI-enhanced incident management platform that helps DevOps teams streamline on-call rotations, automate response workflows, and ensure rapid system recovery.",
       "url": "https://firehydrant.io",
       "logoUrl": "https://firehydrant.io/logo.png",
+      "youtubeVideoId": "0u9g0ZN4_FA",
       "summary": "FireHydrant is a powerful incident management platform designed for DevOps teams to automate and manage service reliability. It integrates seamlessly into your CI/CD pipelines and offers AI-powered features to detect, respond to, and resolve incidents faster, ensuring high uptime and operational continuity in web applications.",
       "keyFeatures": [
         "Automated incident response that coordinates team notifications, status page updates, and mitigation steps to reduce downtime and alert fatigue.",
@@ -824,6 +839,7 @@
       "description": "Gamma is an AI presentation tool that transforms ideas into beautiful, interactive slide decks using natural language prompts.",
       "url": "https://gamma.app",
       "logoUrl": "https://gamma.app/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Gamma accelerates the planning and presentation process in web development projects by turning raw ideas or notes into visually structured presentations. It's perfect for product managers to communicate vision, timelines, and feature sets with clarity and design appeal.",
       "keyFeatures": [
         "AI-powered slide generation based on prompts or outlines to reduce time spent designing.",
@@ -950,7 +966,8 @@
       "description": "Lumen5 is an AI-powered video creation platform that transforms technical documentation, code tutorials, and web development guides into engaging educational videos.",
       "url": "https://lumen5.com",
       "logoUrl": "https://lumen5.com/logo.png",
-      "summary": "Lumen5 helps development teams and technical writers convert complex web development documentation, API guides, and coding tutorials into engaging video content. The platform's AI technology automatically identifies key technical concepts, code snippets, and implementation steps from written content, transforming them into visually appealing educational videos that improve developer understanding and knowledge retention.",
+      "youtubeVideoId": "zsz7ZBUU0qE",
+      "summary": "Lumen5 helps development teams and technical writers convert complex web development documentation, API guides, and coding tutorials into structured video content with clear visual explanations. The platform's AI technology automatically identifies key technical concepts, code snippets, and implementation steps from written content, transforming them into visually appealing educational videos that improve developer understanding and knowledge retention.",
       "keyFeatures": [
         "Technical documentation conversion that transforms written web development guides, API documentation, and coding tutorials into structured video content with clear visual explanations.",
         "Code snippet visualization that automatically highlights and animates important code sections, making programming concepts more accessible and easier to understand.",
@@ -1276,6 +1293,7 @@
       "description": "MarketMuse is an AI-driven content research platform that helps web marketers and SEO teams plan high-performing content based on topic authority and competitive gaps.",
       "url": "https://marketmuse.com",
       "logoUrl": "https://marketmuse.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "MarketMuse enhances the research phase of web development by helping marketers and SEO strategists identify content opportunities, fill topic gaps, and optimize keyword targeting. Its AI-powered analysis helps development teams build SEO-friendly web content and plan strategic content pillars that drive organic traffic from search engines.",
       "keyFeatures": [
         "Topic gap analysis that compares your current site content against competitors to identify underdeveloped areas and opportunities for SEO growth in your niche.",
@@ -1663,6 +1681,7 @@
       "description": "Screaming Frog is a website crawler that helps developers and SEO teams audit technical issues such as broken links, duplicate content, and missing metadata.",
       "url": "https://www.screamingfrog.co.uk/seo-spider/",
       "logoUrl": "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/assets/images/logos/sf-icon-green.svg",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Screaming Frog supports the maintenance phase of web development by providing deep technical SEO insights. It crawls your entire site, flagging problems like broken links, redirects, poor metadata, and duplicate pages. It helps both developers and marketers maintain website health, performance, and search engine compliance.",
       "keyFeatures": [
         "Comprehensive website crawling to detect broken links, redirects, and server errors.",
@@ -1737,6 +1756,7 @@
       "description": "Raygun is an error tracking and performance monitoring platform that helps developers detect, diagnose, and resolve issues in real-time.",
       "url": "https://raygun.com",
       "logoUrl": "https://raygun.com/images/logos/raygun-logo.svg",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Raygun supports the maintenance phase of web development by delivering real-time error tracking, performance diagnostics, and crash reporting. It helps developers and DevOps teams maintain system stability, improve app performance, and reduce downtime through proactive alerting and detailed stack traces.",
       "keyFeatures": [
         "Real-time error tracking with detailed stack traces and user context.",
@@ -1811,6 +1831,7 @@
       "description": "Apify is a web scraping and automation platform that enables developers to extract structured data from websites and automate browser workflows at scale.",
       "url": "https://apify.com",
       "logoUrl": "https://apify.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Apify accelerates the research and development phases in web projects by providing tools to gather competitive intelligence, test user interactions, and automate repetitive browser tasks. Its powerful scraping capabilities support developers and analysts in extracting structured data and building automation scripts for web-based processes.",
       "keyFeatures": [
         "No-code and code-based web scraping solutions for extracting data from any website, ideal for competitive research, content aggregation, and market analysis.",
@@ -1874,6 +1895,7 @@
       "description": "Claude AI is an AI-powered assistant built by Anthropic, designed to support natural language tasks such as brainstorming, documentation, technical explanations, and code generation.",
       "url": "https://claude.ai",
       "logoUrl": "https://claude.ai/logo.png",
+      "youtubeVideoId": "sGXJ1yqSkyc",
       "summary": "Claude AI supports the early phases of web development by helping teams brainstorm features, write technical documentation, and generate or review code. Its advanced language understanding makes it a reliable assistant for developers, product managers, and analysts during planning, research, and implementation.",
       "keyFeatures": [
         "Conversational code assistant capable of writing, reviewing, and debugging JavaScript, Python, HTML/CSS, and other common web development languages.",
@@ -1946,6 +1968,7 @@
       "description": "Productboard is a product management platform that helps teams prioritize features, collect customer feedback, and align development with business goals.",
       "url": "https://productboard.com",
       "logoUrl": "https://productboard.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Productboard enhances the planning and research phases of web development by helping product managers consolidate user needs, prioritize features, and communicate roadmaps. It connects customer insights directly to feature ideas, ensuring development aligns with strategic goals.",
       "keyFeatures": [
         "Feature prioritization boards using custom scoring based on business value, user impact, and development effort.",
@@ -2090,6 +2113,7 @@
       "description": "Hemingway Editor is a writing enhancement tool that simplifies complex sentences and ensures readability for technical and user-facing content.",
       "url": "https://hemingwayapp.com",
       "logoUrl": "https://hemingwayapp.com/images/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Hemingway Editor is ideal for making technical documentation and product content clearer and more concise. It highlights long or passive sentences, complex words, and readability issues to help web teams communicate effectively.",
       "keyFeatures": [
         "Highlights hard-to-read sentences and passive voice",
@@ -2163,6 +2187,7 @@
       "description": "Dovetail is a user research repository and analysis platform that helps product managers and UX teams turn qualitative insights into actionable product decisions.",
       "url": "https://dovetailapp.com",
       "logoUrl": "https://dovetailapp.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
       "summary": "Dovetail empowers product managers to centralize research data, analyze patterns from interviews or surveys, and surface user insights that directly inform product planning. It streamlines collaboration with designers and stakeholders by turning qualitative data into structured evidence for roadmap decisions.",
       "keyFeatures": [
         "Centralized research repository that stores interview notes, transcripts, and user feedback in one searchable location.",

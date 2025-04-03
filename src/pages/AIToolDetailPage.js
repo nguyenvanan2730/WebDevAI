@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaStar, FaMobile, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaStar, FaMobile, FaExternalLinkAlt, FaPlay } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ToolCard from '../components/ToolCard';
@@ -8,13 +8,14 @@ import './AIToolDetailPage.css';
 import toolsData from '../components/toolsData.json'; // Import the tools data
 
 function AIToolDetailPage() {
+  // Get tool ID from URL params and setup state
   const { id } = useParams();
   const [tool, setTool] = useState(null);
   const [loading, setLoading] = useState(true);
   const [reviews, setReviews] = useState([]);
   const [relatedTools, setRelatedTools] = useState([]);
 
-  // Function to get the icon path based on tool name
+  // Get tool icon path from name
   const getToolIconPath = (name) => {
     if (!name) return '';
     // Convert to lowercase and remove spaces/special chars
@@ -22,6 +23,7 @@ function AIToolDetailPage() {
     return `/icon/${formattedName}.png`;
   };
 
+  // Load tool data when component mounts or ID changes
   useEffect(() => {
     // Find the tool with the matching ID
     const toolId = parseInt(id);
@@ -46,6 +48,7 @@ function AIToolDetailPage() {
     setLoading(false);
   }, [id]);
 
+  // Display star rating
   const renderStars = (rating) => {
     return (
       <div className="stars">
@@ -59,6 +62,7 @@ function AIToolDetailPage() {
     );
   };
 
+  // Smooth scroll to reviews section
   const scrollToReviews = () => {
     document.querySelector('#reviews-section').scrollIntoView({ 
       behavior: 'smooth',
@@ -66,6 +70,7 @@ function AIToolDetailPage() {
     });
   };
 
+  // Show loading spinner while data is being fetched
   if (loading) {
     return (
       <div className="ai-tool-detail-page">
@@ -79,7 +84,7 @@ function AIToolDetailPage() {
     );
   }
 
-  // Handle case where tool is not found
+  // Show error message if tool is not found
   if (!tool) {
     return (
       <div className="ai-tool-detail-page">
@@ -97,8 +102,9 @@ function AIToolDetailPage() {
     <div className="ai-tool-detail-page">
       <Header />
       <div className="container">
+        {/* Main tool detail wrapper */}
         <div className="tool-detail-wrapper">
-          {/* Tool Header Section */}
+          {/* Tool header with logo and basic info */}
           <div className="tool-detail-header">
             <div className="tool-header-left">
               <div className="tool-logo">
@@ -112,11 +118,11 @@ function AIToolDetailPage() {
               <div className="tool-header-info">
                 <h1 className="tool-name">{tool.name}</h1>
                 <div className="tool-meta">
-                  <div className="tags">
+                  {/* <div className="tags">
                     {tool.tags && tool.tags.map((tag, index) => (
                       <span key={index} className="tag">#{tag}</span>
                     ))}
-                  </div>
+                  </div> */}
                   <span className="meta-badge price">{tool.type}</span>
                 </div>
                 <div className="tool-rating-container">
@@ -131,6 +137,13 @@ function AIToolDetailPage() {
                   >
                     ({tool.reviews ? tool.reviews.length : 0} reviews)
                   </span>
+                  <div className="likes-count">
+                    <span className="heart-icon">♥</span>
+                    <span className="likes-number">{tool.likes || 0}</span>
+                  </div>
+                </div>
+                <div className="tool-description">
+                  {tool.description}
                 </div>
                 <a href={tool.url} target="_blank" rel="noopener noreferrer" className="visit-site-btn">
                   Visit Site <FaExternalLinkAlt />
@@ -138,15 +151,22 @@ function AIToolDetailPage() {
               </div>
             </div>
             <div className="tool-header-right">
-              {/* Tool preview image would go here */}
-              <div className="tool-preview-image">
-                {/* Placeholder for tool preview/screenshot */}
+              <div className="video-container">
+                <iframe
+                  src={`https://www.youtube.com/embed/${tool.youtubeVideoId}`}
+                  title={`${tool.name} tutorial video`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="youtube-iframe"
+                />
               </div>
             </div>
           </div>
 
-          {/* Two column grid with stacked left sections */}
+          {/* Main content layout */}
           <div className="tool-detail-content-layout">
+            {/* Left column - Tool information */}
             <div className="tool-detail-left-column">
               {/* Summary Section */}
               <section className="detail-section">
@@ -169,6 +189,7 @@ function AIToolDetailPage() {
               </section>
             </div>
 
+            {/* Right column - Related tools */}
             <div className="tool-detail-right-column">
               {/* Related Tools Section */}
               <section className="detail-section">
