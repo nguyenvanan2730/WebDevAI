@@ -278,127 +278,132 @@
   color: var(--text-light);
 }
 
-/* Related Tools Styles - Fixed height for 3 cards */
+/* Related Tools Section Styles */
 .related-tools-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
+  max-height: calc(100vh - 200px); /* Dynamic height based on viewport */
   overflow-y: auto;
-  padding-right: 10px;
-  
-  /* Calculate height to show exactly 3 cards */
-  /* Each card: ~120px + 10px gap = 130px per card, multiply by 3 cards = 390px */
-  height: 390px; 
-  min-height: 0;
+  padding-right: 12px;
+  margin-right: -12px; /* Compensate for scroll padding */
 }
 
-.related-tools-container .tool-card {
-  margin-bottom: 5px;
-  transform: scale(0.92);
-  transform-origin: top center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+.simplified-tool-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--grey-light);
+  padding: 16px;
+  transition: all 0.2s ease;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  min-height: 160px; /* Minimum height for each card */
 }
 
-/* Hide action buttons in related tools */
-.related-tools-container .tool-card .tool-actions {
-  display: none;
+.simplified-tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Make the tool card more compact by removing extra elements */
-.related-tools-container .tool-card .tool-header {
-  padding: 8px 10px;
-}
-
-.related-tools-container .tool-card .tool-logo {
-  width: 36px;
-  height: 36px;
-}
-
-.related-tools-container .tool-card .tool-info {
+.simplified-tool-card .tool-header {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.related-tools-container .tool-card .tool-name {
-  font-size: 15px;
-  margin-bottom: 0;
-}
-
-.related-tools-container .tool-card .tool-meta {
-  margin: 5px 0;
-  padding: 0 10px;
-}
-
-.related-tools-container .tool-card .tool-preview {
-  padding: 0 10px 10px;
-  margin: 0;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-}
-
-.related-tools-container .tool-card .tool-description {
-  font-size: 12px;
-  line-height: 1.4;
-  margin-bottom: 0; /* Remove margin since we're not showing buttons */
-  max-height: 50px;
+.simplified-tool-card .tool-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  background-color: var(--grey-lightest);
+}
+
+.simplified-tool-card .tool-info {
+  flex: 1;
+}
+
+.simplified-tool-card .tool-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 4px;
+}
+
+.simplified-tool-card .tool-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.simplified-tool-card .tool-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.simplified-tool-card .tool-description {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.related-tools-container .tool-card:hover {
-  transform: translateY(-2px) scale(0.92);
-  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.1);
+.no-related {
+  color: var(--text-light);
+  text-align: center;
+  padding: 24px;
+  background-color: var(--grey-lightest);
+  border-radius: 8px;
+  font-size: 14px;
 }
 
+/* Custom scrollbar for better visibility */
 .related-tools-container::-webkit-scrollbar {
   width: 6px;
 }
 
 .related-tools-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+  background: var(--grey-lightest);
+  border-radius: 6px;
+  margin: 4px 0;
 }
 
 .related-tools-container::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 10px;
+  background: var(--grey-light);
+  border-radius: 6px;
+  transition: background 0.2s;
 }
 
 .related-tools-container::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: var(--grey-medium);
 }
 
-.related-tool-item {
-  padding: 12px;
-  border-radius: 8px;
-  background-color: var(--grey-lightest);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .related-tools-container {
+    max-height: calc(100vh - 180px);
+  }
 }
 
-.related-tool-name {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--text-dark);
+@media (max-width: 768px) {
+  .related-tools-container {
+    max-height: 500px; /* Fixed height for mobile */
+  }
+
+  .simplified-tool-card {
+    min-height: 140px; /* Smaller minimum height for mobile */
+  }
 }
 
-.related-tool-rating {
-  display: flex;
-  align-items: center;
-}
-
-.related-tool-type {
-  font-size: 12px;
-  color: var(--success);
-  font-weight: 500;
+@media (max-width: 480px) {
+  .related-tools-container {
+    max-height: 400px;
+  }
 }
 
 /* Reviews Section */
@@ -495,139 +500,6 @@
 
 .write-review-btn:hover {
   background-color: var(--grey-medium);
-}
-
-/* Simplified Tool Card for Related Tools */
-.simplified-tool-card {
-  background-color: var(--white);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid var(--grey-light);
-  height: 120px; /* Fixed height for each card */
-  flex-shrink: 0; /* Prevent cards from shrinking */
-}
-
-.simplified-tool-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.1);
-}
-
-.simplified-tool-card .tool-header {
-  display: flex;
-  padding: 10px 12px;
-  align-items: center;
-  background-color: rgba(246, 248, 250, 0.5);
-  border-bottom: 1px solid var(--grey-lightest);
-  height: 42px; /* Fixed height header */
-}
-
-.simplified-tool-card .tool-logo-container {
-  margin-right: 10px;
-}
-
-.simplified-tool-card .tool-logo {
-  width: 40px;
-  height: 40px;
-  background-color: var(--grey-light);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.simplified-tool-card .tool-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex-grow: 1;
-}
-
-.simplified-tool-card .tool-name {
-  font-size: 14px;
-  margin: 0 0 2px;
-  color: var(--text-dark);
-  font-weight: 600;
-}
-
-.simplified-tool-card .tool-rating {
-  display: flex;
-  align-items: center;
-}
-
-.simplified-tool-card .star {
-  color: #ddd;
-  font-size: 10px;
-  margin-right: 1px;
-}
-
-.simplified-tool-card .star.filled {
-  color: var(--accent);
-}
-
-.simplified-tool-card .tool-meta {
-  padding: 6px 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin: 0;
-  align-items: center;
-  background-color: rgba(246, 248, 250, 0.3);
-  border-bottom: 1px solid var(--grey-lightest);
-  height: 28px; /* Fixed height for meta section */
-}
-
-.simplified-tool-card .meta-badge {
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 10px;
-  color: var(--success);
-  border: 1px solid var(--success);
-  background-color: transparent;
-}
-
-.simplified-tool-card .tag {
-  font-size: 10px;
-  color: var(--text-light);
-}
-
-.simplified-tool-card .tool-preview {
-  padding: 8px 12px;
-  background-color: var(--white);
-  flex-grow: 1; /* Allow description area to fill remaining space */
-  display: flex;
-  flex-direction: column;
-}
-
-.simplified-tool-card .tool-description {
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--text-light);
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-/* Ensure responsive behavior maintains the 3-card display */
-@media (max-width: 992px) {
-  .related-tools-container {
-    height: 390px; /* Maintain same height on tablet */
-  }
-}
-
-@media (max-width: 768px) {
-  .related-tools-container {
-    height: 390px; /* Maintain same height on mobile */
-    max-height: none; /* Remove previous max-height constraints */
-  }
 }
 
 .video-preview-container {

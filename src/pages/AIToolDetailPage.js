@@ -23,24 +23,135 @@ function AIToolDetailPage() {
     return `/icon/${formattedName}.png`;
   };
 
+  // Get appropriate class for price type badge
+  const getPriceTypeClass = (type) => {
+    switch (type?.toLowerCase()) {
+      case 'free':
+        return 'tool-type-free';
+      case 'freemium':
+        return 'tool-type-freemium';
+      case 'premium':
+      case 'paid':
+        return 'tool-type-premium';
+      default:
+        return 'tool-type-default';
+    }
+  };
+
   // Load tool data when component mounts or ID changes
   useEffect(() => {
-    // Find the tool with the matching ID
     const toolId = parseInt(id);
     const foundTool = toolsData.find(tool => tool.id === toolId);
     
     if (foundTool) {
+      // Log the current tool's data
+      console.log('Current tool:', {
+        id: foundTool.id,
+        name: foundTool.name,
+        role: foundTool.role,
+        process: foundTool.process,
+        type: foundTool.type
+      });
+
       setTool(foundTool);
-      // Set reviews from the found tool
       setReviews(foundTool.reviews || []);
       
-      // Find related tools (tools with the same role or process)
+      // Log all available tools for comparison
+      console.log('All tools:', toolsData.map(t => ({
+        id: t.id,
+        name: t.name,
+        role: t.role,
+        process: t.process,
+        type: t.type
+      })));
+
+      // Find related tools based on role or process
       const related = toolsData
-        .filter(t => 
-          t.id !== toolId && 
-          (t.role === foundTool.role || t.process === foundTool.process)
-        )
-        .slice(0, 8); // Limit to 8 related tools
+        .filter(t => {
+          // Skip the current tool
+          if (t.id === toolId) return false;
+          
+          // Check if either role or process matches
+          const roleMatch = t.role && foundTool.role && 
+                           ((Array.isArray(t.role) && Array.isArray(foundTool.role) &&
+                             (t.role.some(r => foundTool.role.includes(r)) || 
+                              foundTool.role.some(r => t.role.includes(r)))) ||
+                            (typeof t.role === 'string' && typeof foundTool.role === 'string' &&
+                             (t.role.toLowerCase() === foundTool.role.toLowerCase() ||
+                              t.role.toLowerCase().includes(foundTool.role.toLowerCase()) ||
+                              foundTool.role.toLowerCase().includes(t.role.toLowerCase()))));
+          
+          const processMatch = t.process && foundTool.process && 
+                              ((Array.isArray(t.process) && Array.isArray(foundTool.process) &&
+                                (t.process.some(p => foundTool.process.includes(p)) || 
+                                 foundTool.process.some(p => t.process.includes(p)))) ||
+                               (typeof t.process === 'string' && typeof foundTool.process === 'string' &&
+                                (t.process.toLowerCase() === foundTool.process.toLowerCase() ||
+                                 t.process.toLowerCase().includes(foundTool.process.toLowerCase()) ||
+                                 foundTool.process.toLowerCase().includes(t.process.toLowerCase()))));
+          
+          // Log matching details
+          console.log('Checking tool:', t.name, {
+            roleMatch,
+            processMatch,
+            toolRole: t.role,
+            foundToolRole: foundTool.role,
+            toolProcess: t.process,
+            foundToolProcess: foundTool.process
+          });
+          
+          return roleMatch || processMatch;
+        })
+        .sort((a, b) => {
+          // Prioritize exact matches
+          const aRoleExactMatch = a.role && foundTool.role && 
+                                 ((Array.isArray(a.role) && Array.isArray(foundTool.role) && 
+                                   a.role.some(r => foundTool.role.includes(r)) && 
+                                   foundTool.role.some(r => a.role.includes(r))) ||
+                                  (typeof a.role === 'string' && typeof foundTool.role === 'string' && 
+                                   a.role.toLowerCase() === foundTool.role.toLowerCase()));
+          
+          const bRoleExactMatch = b.role && foundTool.role && 
+                                 ((Array.isArray(b.role) && Array.isArray(foundTool.role) && 
+                                   b.role.some(r => foundTool.role.includes(r)) && 
+                                   foundTool.role.some(r => b.role.includes(r))) ||
+                                  (typeof b.role === 'string' && typeof foundTool.role === 'string' && 
+                                   b.role.toLowerCase() === foundTool.role.toLowerCase()));
+          
+          const aProcessExactMatch = a.process && foundTool.process && 
+                                    ((Array.isArray(a.process) && Array.isArray(foundTool.process) && 
+                                      a.process.some(p => foundTool.process.includes(p)) && 
+                                      foundTool.process.some(p => a.process.includes(p))) ||
+                                     (typeof a.process === 'string' && typeof foundTool.process === 'string' && 
+                                      a.process.toLowerCase() === foundTool.process.toLowerCase()));
+          
+          const bProcessExactMatch = b.process && foundTool.process && 
+                                    ((Array.isArray(b.process) && Array.isArray(foundTool.process) && 
+                                      b.process.some(p => foundTool.process.includes(p)) && 
+                                      foundTool.process.some(p => b.process.includes(p))) ||
+                                     (typeof b.process === 'string' && typeof foundTool.process === 'string' && 
+                                      b.process.toLowerCase() === foundTool.process.toLowerCase()));
+          
+          // If one has exact role match and other doesn't
+          if (aRoleExactMatch && !bRoleExactMatch) return -1;
+          if (!aRoleExactMatch && bRoleExactMatch) return 1;
+          
+          // If one has exact process match and other doesn't
+          if (aProcessExactMatch && !bProcessExactMatch) return -1;
+          if (!aProcessExactMatch && bProcessExactMatch) return 1;
+          
+          return 0;
+        })
+        .slice(0, 8);
+      
+      // Log final related tools
+      console.log('Found related tools:', related.map(t => ({
+        id: t.id,
+        name: t.name,
+        role: t.role,
+        process: t.process,
+        type: t.type
+      })));
       
       setRelatedTools(related);
     }
@@ -123,7 +234,17 @@ function AIToolDetailPage() {
                       <span key={index} className="tag">#{tag}</span>
                     ))}
                   </div> */}
-                  <span className="meta-badge price">{tool.type}</span>
+                  <span className={`meta-badge price ${getPriceTypeClass(tool.type)}`}>
+                    {tool.type}
+                  </span>
+                  <div className="tool-tags">
+                    {tool.role && (
+                      <span className="tag role">Role: {Array.isArray(tool.role) ? tool.role.join(', ') : tool.role}</span>
+                    )}
+                    {tool.process && (
+                      <span className="tag process">Process: {Array.isArray(tool.process) ? tool.process.join(', ') : tool.process}</span>
+                    )}
+                  </div>
                 </div>
                 <div className="tool-rating-container">
                   <div className="rating-stars">
@@ -195,39 +316,50 @@ function AIToolDetailPage() {
               <section className="detail-section">
                 <h2 className="section-title">Related tools</h2>
                 <div className="related-tools-container">
-                  {relatedTools.map(relatedTool => (
-                    <div key={relatedTool.id} className="simplified-tool-card">
-                      <div className="tool-header">
-                        <div className="tool-logo-container">
-                          <div className="tool-logo">
-                            <img 
-                              src={getToolIconPath(relatedTool.name)} 
-                              alt={`${relatedTool.name} icon`}
-                              className="tool-logo-image"
-                              onError={(e) => { e.target.style.display = 'none'; }}
-                            />
+                  {relatedTools.length > 0 ? (
+                    relatedTools.map(relatedTool => (
+                      <div key={relatedTool.id} className="simplified-tool-card">
+                        <div className="tool-header">
+                          <div className="tool-logo-container">
+                            <div className="tool-logo">
+                              <img 
+                                src={getToolIconPath(relatedTool.name)} 
+                                alt={`${relatedTool.name} icon`}
+                                className="tool-logo-image"
+                                onError={(e) => { e.target.style.display = 'none'; }}
+                              />
+                            </div>
+                          </div>
+                          <div className="tool-info">
+                            <h3 className="tool-name">{relatedTool.name}</h3>
+                            <div className="tool-rating">
+                              {renderStars(relatedTool.rating)}
+                            </div>
                           </div>
                         </div>
-                        <div className="tool-info">
-                          <h3 className="tool-name">{relatedTool.name}</h3>
-                          <div className="tool-rating">
-                            {[...Array(5)].map((_, i) => (
-                              <span key={i} className={`star ${i < relatedTool.rating ? 'filled' : ''}`}>★</span>
-                            ))}
+                        
+                        <div className="tool-meta">
+                          <span className={`tool-type ${getPriceTypeClass(relatedTool.type)}`}>
+                            {relatedTool.type}
+                          </span>
+                          <div className="tool-tags">
+                            {relatedTool.role && (
+                              <span className="tag role">Role: {Array.isArray(relatedTool.role) ? relatedTool.role.join(', ') : relatedTool.role}</span>
+                            )}
+                            {relatedTool.process && (
+                              <span className="tag process">Process: {Array.isArray(relatedTool.process) ? relatedTool.process.join(', ') : relatedTool.process}</span>
+                            )}
                           </div>
                         </div>
+                        
+                        <div className="tool-preview">
+                          <p className="tool-description">{relatedTool.description}</p>
+                        </div>
                       </div>
-                      
-                      <div className="tool-meta">
-                        <span className="meta-badge price">{relatedTool.type}</span>
-                        <span className="tag hashtag">#{relatedTool.role.toLowerCase()}</span>
-                      </div>
-                      
-                      <div className="tool-preview">
-                        <p className="tool-description">{relatedTool.description}</p>
-                      </div>
-                    </div>
-                  ))}
+                    ))
+                  ) : (
+                    <p className="no-related">No related tools found</p>
+                  )}
                 </div>
               </section>
             </div>
