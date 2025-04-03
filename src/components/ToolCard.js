@@ -81,8 +81,28 @@ function ToolCard({ tool }) {
       {/* Card Footer */}
       <div className="card-footer">
         <div className="tool-tags">
-          <span className="tag hashtag">#{role.toLowerCase()}</span>
-          <span className="tag hashtag">#{process.toLowerCase()}</span>
+          {Array.isArray(role) ? (
+            role.map((r, index) => (
+              <span key={`role-${index}`} className="tag hashtag">
+                #{typeof r === 'string' ? r.toLowerCase() : r}
+              </span>
+            ))
+          ) : (
+            <span className="tag hashtag">
+              #{typeof role === 'string' ? role.toLowerCase() : role}
+            </span>
+          )}
+          {Array.isArray(process) ? (
+            process.map((p, index) => (
+              <span key={`process-${index}`} className="tag hashtag">
+                #{typeof p === 'string' ? p.toLowerCase() : p}
+              </span>
+            ))
+          ) : (
+            <span className="tag hashtag">
+              #{typeof process === 'string' ? process.toLowerCase() : process}
+            </span>
+          )}
         </div>
         <div className="tool-likes">
           <button className="like-button">

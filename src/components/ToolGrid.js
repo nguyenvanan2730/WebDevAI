@@ -7,9 +7,30 @@ import './ToolsFilter.css';
 import allTools from './toolsData.json'; // Import the tools data
 
 function ToolGrid() {
+  // Define the complete list of roles and processes
+  const allRoles = [
+    "Marketers", 
+    "Developers", 
+    "Designers", 
+    "Product Managers", 
+    "Testers", 
+    "DevOps", 
+    "Analysts"
+  ];
+  
+  const allProcesses = [
+    "Research", 
+    "Planning", 
+    "Design", 
+    "Development", 
+    "Testing", 
+    "Deployment", 
+    "Maintenance"
+  ];
+  
   // Get unique roles, processes, and prices from the data
-  const roles = [...new Set(allTools.map(tool => tool.role))];
-  const processes = [...new Set(allTools.map(tool => tool.process))];
+  const roles = [...new Set(allTools.flatMap(tool => Array.isArray(tool.role) ? tool.role : [tool.role]))];
+  const processes = [...new Set(allTools.flatMap(tool => Array.isArray(tool.process) ? tool.process : [tool.process]))];
   const prices = [...new Set(allTools.map(tool => tool.type))];
   // Generate rating options (1-5)
   const ratings = [1, 2, 3, 4, 5];
@@ -138,16 +159,18 @@ function ToolGrid() {
     
     // Apply role filters
     if (selectedRoles.length > 0) {
-      result = result.filter(tool => 
-        selectedRoles.includes(tool.role)
-      );
+      result = result.filter(tool => {
+        const toolRoles = Array.isArray(tool.role) ? tool.role : [tool.role];
+        return selectedRoles.some(role => toolRoles.includes(role));
+      });
     }
     
     // Apply process filters
     if (selectedProcesses.length > 0) {
-      result = result.filter(tool => 
-        selectedProcesses.includes(tool.process)
-      );
+      result = result.filter(tool => {
+        const toolProcesses = Array.isArray(tool.process) ? tool.process : [tool.process];
+        return selectedProcesses.some(process => toolProcesses.includes(process));
+      });
     }
     
     // Apply price filters
@@ -336,7 +359,7 @@ function ToolGrid() {
                     className="dropdown-action-btn" 
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedRoles(roles);
+                      setSelectedRoles(allRoles);
                     }}
                   >
                     Select All
@@ -352,7 +375,7 @@ function ToolGrid() {
                   </button>
                 </div>
                 <div className="dropdown-divider"></div>
-                {roles.map(role => (
+                {allRoles.map(role => (
                   <label key={role} className="checkbox-label">
                     <input 
                       type="checkbox" 
@@ -388,7 +411,7 @@ function ToolGrid() {
                     className="dropdown-action-btn" 
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedProcesses(processes);
+                      setSelectedProcesses(allProcesses);
                     }}
                   >
                     Select All
@@ -404,7 +427,7 @@ function ToolGrid() {
                   </button>
                 </div>
                 <div className="dropdown-divider"></div>
-                {processes.map(process => (
+                {allProcesses.map(process => (
                   <label key={process} className="checkbox-label">
                     <input 
                       type="checkbox" 
