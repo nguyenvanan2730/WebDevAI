@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './PopularTools.css';
-import toolsData from './toolsData.json'; // Import the tools data
+import { useAppContext } from '../context/AppContext';
 
 function PopularTools() {
   // Reference to the scrolling container
   const scrollContainerRef = useRef(null);
   const [popularTools, setPopularTools] = useState([]);
+  const { tools } = useAppContext();
   
   // Function to get the icon path based on tool name
   const getToolIconPath = (name) => {
@@ -18,9 +19,9 @@ function PopularTools() {
 
   // Get popular tools based on rating and likes
   useEffect(() => {
-    if (toolsData && toolsData.length > 0) {
+    if (tools && tools.length > 0) {
       // Sort tools by a combination of rating and likes
-      const sortedTools = [...toolsData].sort((a, b) => {
+      const sortedTools = [...tools].sort((a, b) => {
         const scoreA = a.rating * 20 + a.likes / 50; // Weight formula
         const scoreB = b.rating * 20 + b.likes / 50;
         return scoreB - scoreA;
@@ -31,7 +32,7 @@ function PopularTools() {
       
       setPopularTools(top8Tools);
     }
-  }, []);
+  }, [tools]);
 
   // Auto-scroll effect
   useEffect(() => {

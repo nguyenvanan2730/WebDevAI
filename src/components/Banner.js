@@ -1,15 +1,14 @@
 import React from 'react';
 import './Banner.css';
 
-function Banner() {
+function Banner({ title, subtitle }) {
   return (
     <div className="banner">
       <div className="container">
         <div className="banner-content">
-          <h1 className="banner-title">WEB DEVELOPMENT AI TOOLS</h1>
+          <h1 className="banner-title">{title}</h1>
           <p className="banner-subtitle">
-            Discover the best AI-powered tools to enhance your web development workflow, 
-            improve productivity, and create better websites faster.
+            {subtitle}
           </p>
         </div>
       </div>

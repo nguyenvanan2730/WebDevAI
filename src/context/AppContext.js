@@ -1,17 +1,18 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import toolsData from '../components/toolsData.json'; // Import tools data directly
 
 // Create the context
 const AppContext = createContext();
 
 // Create a provider component
 export function AppProvider({ children }) {
-  // Define your global state here
-  const [tools, setTools] = useState([]);
+  // Define your global state here - initialize tools with data immediately
+  const [tools, setTools] = useState(toolsData);
   const [selectedTool, setSelectedTool] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredTools, setFilteredTools] = useState([]);
+  const [filteredTools, setFilteredTools] = useState(toolsData); // Initialize filtered tools too
   const [filterCriteria, setFilterCriteria] = useState({
     roles: [],
     processes: [],

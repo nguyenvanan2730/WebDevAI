@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './TrendingTools.css';
-import toolsData from './toolsData.json'; // Import the tools data
+import { useAppContext } from '../context/AppContext';
 
 function TrendingTools() {
+  const { tools } = useAppContext();
   const [topTrendingTool, setTopTrendingTool] = useState(null);
 
   // Find the tool with the highest likes
   useEffect(() => {
-    if (toolsData && toolsData.length > 0) {
+    if (tools && tools.length > 0) {
       // Sort tools by likes in descending order
-      const sortedTools = [...toolsData].sort((a, b) => b.likes - a.likes);
+      const sortedTools = [...tools].sort((a, b) => b.likes - a.likes);
       // Set the top trending tool
       setTopTrendingTool(sortedTools[0]);
     }
-  }, []);
+  }, [tools]);
 
   // Add the getPriceTypeClass function
   const getPriceTypeClass = (type) => {

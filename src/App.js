@@ -12,8 +12,8 @@ import './App.css';
 
 function App() {
   return (
-    <AppProvider>
-      <Router>
+    <Router>
+      <AppProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -22,8 +22,8 @@ function App() {
           <Route path="/tool/:id" element={<AIToolDetailPage />} />
           <Route path="/tools/:id" element={<AIToolDetailPage />} /> {/* Now using AIToolDetailPage for both routes */}
         </Routes>
-      </Router>
-    </AppProvider>
+      </AppProvider>
+    </Router>
   );
 }
 

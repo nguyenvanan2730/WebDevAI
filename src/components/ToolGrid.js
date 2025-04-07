@@ -79,11 +79,6 @@ function ToolGrid() {
   const ratingDropdownRef = useRef(null);
   const likesDropdownRef = useRef(null);
   
-  // Initialize tools in context
-  useEffect(() => {
-    setTools(allTools);
-  }, [setTools]);
-
   // Sync local state with context filter criteria
   useEffect(() => {
     setSelectedRoles(filterCriteria.roles || []);

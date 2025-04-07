@@ -5,11 +5,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ToolCard from '../components/ToolCard';
 import './AIToolDetailPage.css';
-import toolsData from '../components/toolsData.json'; // Import the tools data
+import { useAppContext } from '../context/AppContext';
 
 function AIToolDetailPage() {
   // Get tool ID from URL params and setup state
   const { id } = useParams();
+  const { tools } = useAppContext();
   const [tool, setTool] = useState(null);
   const [loading, setLoading] = useState(true);
   const [reviews, setReviews] = useState([]);
@@ -41,7 +42,7 @@ function AIToolDetailPage() {
   // Load tool data when component mounts or ID changes
   useEffect(() => {
     const toolId = parseInt(id);
-    const foundTool = toolsData.find(tool => tool.id === toolId);
+    const foundTool = tools.find(tool => tool.id === toolId);
     
     if (foundTool) {
       // Log the current tool's data
@@ -57,7 +58,7 @@ function AIToolDetailPage() {
       setReviews(foundTool.reviews || []);
       
       // Log all available tools for comparison
-      console.log('All tools:', toolsData.map(t => ({
+      console.log('All tools:', tools.map(t => ({
         id: t.id,
         name: t.name,
         role: t.role,
@@ -66,7 +67,7 @@ function AIToolDetailPage() {
       })));
 
       // Find related tools based on role or process
-      const related = toolsData
+      const related = tools
         .filter(t => {
           // Skip the current tool
           if (t.id === toolId) return false;
@@ -157,7 +158,7 @@ function AIToolDetailPage() {
     }
     
     setLoading(false);
-  }, [id]);
+  }, [id, tools]);
 
   // Display star rating
   const renderStars = (rating) => {
