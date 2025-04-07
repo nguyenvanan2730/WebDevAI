@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useAppContext } from '../context/AppContext';
 import ToolCard from './ToolCard';
 import Pagination from './Pagination';
 import { FaSearch, FaChevronDown } from 'react-icons/fa';
@@ -7,6 +8,17 @@ import './ToolsFilter.css';
 import allTools from './toolsData.json'; // Import the tools data
 
 function ToolGrid() {
+  const { 
+    tools, 
+    setTools, 
+    filteredTools, 
+    searchQuery, 
+    setSearchQuery, 
+    filterCriteria,
+    updateFilterCriteria,
+    resetFilters: contextResetFilters
+  } = useAppContext();
+  
   // Define the complete list of roles and processes
   const allRoles = [
     "Marketer", 
@@ -44,13 +56,11 @@ function ToolGrid() {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedRoles, setSelectedRoles] = useState([]);
   const [selectedProcesses, setSelectedProcesses] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [selectedRatings, setSelectedRatings] = useState([]);
   const [selectedLikesRanges, setSelectedLikesRanges] = useState([]);
-  const [filteredTools, setFilteredTools] = useState([]);
   const [isFilterApplied, setIsFilterApplied] = useState(false);
   
   // UI state for dropdowns
@@ -69,10 +79,28 @@ function ToolGrid() {
   const ratingDropdownRef = useRef(null);
   const likesDropdownRef = useRef(null);
   
-  // Initialize filtered tools with all tools
+  // Initialize tools in context
   useEffect(() => {
-    setFilteredTools(allTools);
-  }, []);
+    setTools(allTools);
+  }, [setTools]);
+
+  // Sync local state with context filter criteria
+  useEffect(() => {
+    setSelectedRoles(filterCriteria.roles || []);
+    setSelectedProcesses(filterCriteria.processes || []);
+    setSelectedPrices(filterCriteria.prices || []);
+    setSelectedRatings(filterCriteria.ratings || []);
+    
+    // Convert likesRanges objects to indices for local state
+    if (filterCriteria.likesRanges && filterCriteria.likesRanges.length > 0) {
+      const indices = filterCriteria.likesRanges.map(range => {
+        return likesRanges.findIndex(lr => lr.min === range.min && lr.max === range.max);
+      }).filter(index => index !== -1);
+      setSelectedLikesRanges(indices);
+    } else {
+      setSelectedLikesRanges([]);
+    }
+  }, [filterCriteria]);
 
   // Add event listener to detect outside clicks
   useEffect(() => {
@@ -94,10 +122,7 @@ function ToolGrid() {
       }
     }
     
-    // Add event listener
     document.addEventListener('mousedown', handleClickOutside);
-    
-    // Clean up the event listener
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -105,183 +130,85 @@ function ToolGrid() {
 
   // Handle checkbox changes
   const handleRoleChange = (role) => {
-    setSelectedRoles(prev => 
-      prev.includes(role) 
-        ? prev.filter(r => r !== role) 
-        : [...prev, role]
-    );
+    const newRoles = selectedRoles.includes(role)
+      ? selectedRoles.filter(r => r !== role)
+      : [...selectedRoles, role];
+    
+    setSelectedRoles(newRoles);
   };
 
   const handleProcessChange = (process) => {
-    setSelectedProcesses(prev => 
-      prev.includes(process) 
-        ? prev.filter(p => p !== process) 
-        : [...prev, process]
-    );
+    const newProcesses = selectedProcesses.includes(process)
+      ? selectedProcesses.filter(p => p !== process)
+      : [...selectedProcesses, process];
+    
+    setSelectedProcesses(newProcesses);
   };
 
   const handlePriceChange = (price) => {
-    setSelectedPrices(prev => 
-      prev.includes(price) 
-        ? prev.filter(p => p !== price) 
-        : [...prev, price]
-    );
+    const newPrices = selectedPrices.includes(price)
+      ? selectedPrices.filter(p => p !== price)
+      : [...selectedPrices, price];
+    
+    setSelectedPrices(newPrices);
   };
 
   const handleRatingChange = (rating) => {
-    setSelectedRatings(prev => 
-      prev.includes(rating) 
-        ? prev.filter(r => r !== rating) 
-        : [...prev, rating]
-    );
+    const newRatings = selectedRatings.includes(rating)
+      ? selectedRatings.filter(r => r !== rating)
+      : [...selectedRatings, rating];
+    
+    setSelectedRatings(newRatings);
   };
 
   const handleLikesRangeChange = (rangeIndex) => {
-    setSelectedLikesRanges(prev => 
-      prev.includes(rangeIndex) 
-        ? prev.filter(r => r !== rangeIndex) 
-        : [...prev, rangeIndex]
-    );
+    const newLikesRanges = selectedLikesRanges.includes(rangeIndex)
+      ? selectedLikesRanges.filter(r => r !== rangeIndex)
+      : [...selectedLikesRanges, rangeIndex];
+    
+    setSelectedLikesRanges(newLikesRanges);
   };
 
   // Apply filters when user clicks Apply Filters button
   const handleApplyFilters = () => {
-    let result = [...allTools];
+    // Convert selected ranges indices to actual range objects
+    const selectedRangesObjects = selectedLikesRanges.map(index => likesRanges[index]);
     
-    // Apply search filter - search by name or description only
-    if (searchTerm) {
-      result = result.filter(tool => {
-        const lowerCaseSearchTerm = searchTerm.toLowerCase();
-        return tool.name.toLowerCase().includes(lowerCaseSearchTerm) ||
-               tool.description.toLowerCase().includes(lowerCaseSearchTerm);
-      });
-    }
+    // Update filter criteria in context
+    updateFilterCriteria({
+      roles: selectedRoles,
+      processes: selectedProcesses,
+      prices: selectedPrices,
+      ratings: selectedRatings,
+      likesRanges: selectedRangesObjects
+    });
     
-    // Apply role filters
-    if (selectedRoles.length > 0) {
-      result = result.filter(tool => {
-        const toolRoles = Array.isArray(tool.role) ? tool.role : [tool.role];
-        return selectedRoles.some(role => toolRoles.includes(role));
-      });
-    }
-    
-    // Apply process filters
-    if (selectedProcesses.length > 0) {
-      result = result.filter(tool => {
-        const toolProcesses = Array.isArray(tool.process) ? tool.process : [tool.process];
-        return selectedProcesses.some(process => toolProcesses.includes(process));
-      });
-    }
-    
-    // Apply price filters
-    if (selectedPrices.length > 0) {
-      result = result.filter(tool => 
-        selectedPrices.includes(tool.type)
-      );
-    }
-    
-    // Apply rating filters
-    if (selectedRatings.length > 0) {
-      result = result.filter(tool => 
-        selectedRatings.includes(tool.rating)
-      );
-    }
-    
-    // Apply likes range filters
-    if (selectedLikesRanges.length > 0) {
-      result = result.filter(tool => {
-        return selectedLikesRanges.some(rangeIndex => {
-          const range = likesRanges[rangeIndex];
-          if (range.max === 1000) { // For the 501+ range
-            return tool.likes >= range.min;
-          } else {
-            return tool.likes >= range.min && tool.likes <= range.max;
-          }
-        });
-      });
-    }
-    
-    setFilteredTools(result);
     setCurrentPage(1); // Reset to first page when filters change
     setIsFilterApplied(true);
   };
 
   // Reset filters and display all tools
   const resetFilters = () => {
-    setSearchTerm('');
-    setSelectedRoles([]);
-    setSelectedProcesses([]);
-    setSelectedPrices([]);
-    setSelectedRatings([]);
-    setSelectedLikesRanges([]);
-    setFilteredTools(allTools);
+    contextResetFilters();
+    setCurrentPage(1);
     setIsFilterApplied(false);
   };
 
-  // Real-time search filter
-  useEffect(() => {
-    if (searchTerm) {
-      const searchResults = allTools.filter(tool => {
-        const lowerCaseSearchTerm = searchTerm.toLowerCase();
-        
-        // Search by name or description only
-        return tool.name.toLowerCase().includes(lowerCaseSearchTerm) ||
-               tool.description.toLowerCase().includes(lowerCaseSearchTerm);
-      });
-      
-      // Apply other active filters to search results
-      let result = [...searchResults];
-      
-      if (selectedRoles.length > 0) {
-        result = result.filter(tool => selectedRoles.includes(tool.role));
-      }
-      
-      if (selectedProcesses.length > 0) {
-        result = result.filter(tool => selectedProcesses.includes(tool.process));
-      }
-      
-      if (selectedPrices.length > 0) {
-        result = result.filter(tool => selectedPrices.includes(tool.type));
-      }
-      
-      if (selectedRatings.length > 0) {
-        result = result.filter(tool => selectedRatings.includes(tool.rating));
-      }
-      
-      if (selectedLikesRanges.length > 0) {
-        result = result.filter(tool => {
-          return selectedLikesRanges.some(rangeIndex => {
-            const range = likesRanges[rangeIndex];
-            if (range.max === 1000) { // For the 501+ range
-              return tool.likes >= range.min;
-            } else {
-              return tool.likes >= range.min && tool.likes <= range.max;
-            }
-          });
-        });
-      }
-      
-      setFilteredTools(result);
-    } else if (isFilterApplied) {
-      // If there's no search term but other filters are applied, reapply those filters
-      handleApplyFilters();
-    } else {
-      // If no filters are applied, show all tools
-      setFilteredTools(allTools);
-    }
-  }, [searchTerm]);
+  // Handle search input change
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  };
 
-  // Get current tools
+  // Calculate pagination
   const indexOfLastTool = currentPage * toolsPerPage;
   const indexOfFirstTool = indexOfLastTool - toolsPerPage;
   const currentTools = filteredTools.slice(indexOfFirstTool, indexOfLastTool);
+  const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
 
-  // Change page
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
-  // Helper to close other dropdowns when one is opened
   const handleDropdownToggle = (dropdown) => {
     if (dropdown === 'role') {
       setRoleDropdownOpen(!roleDropdownOpen);
@@ -328,8 +255,8 @@ function ToolGrid() {
               <input 
                 type="text" 
                 placeholder="Search by tool name or description" 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                value={searchQuery}
+                onChange={handleSearch}
               />
               <span className="search-icon"><FaSearch /></span>
             </div>
