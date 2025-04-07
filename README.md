@@ -1,70 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AI TOOLS FOR WEB DEVELOPMENT
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+### Objective  
+This platform helps you find the newest AI tools to make web development faster and easier.
+No matter what stage you’re working on — planning, design, coding, or testing — and no matter your role, you’ll find tools that fit your needs.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Search and Filtering**  
+  A grid view of AI tools that includes a search bar and category filters. Users can find a tool by name or description and filter results based on role or development phase tags.
 
-### `npm test`
+- **Detailed Tool Information**  
+  Each tool includes detailed descriptions of its features, pros and cons, and user feedback.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Tool Submission**  
+  Users can submit new AI tools to the platform.
 
-### `npm run build`
+- **Reviews and Likes**  
+  Users can leave reviews and like tools to share their experiences and help others in the community.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Information Architecture Map
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There are a total of 5 pages: Home page, Detail page, Contact page, About page, and Submit page.
 
-### `npm run eject`
+### Home Page
+- **Top Trending**: Displays the tools with the most stars and likes.  
+- **Search and Filter**: Allows users to search by keywords in the name or description, or filter by tag.  
+- **Popular Tools**: A list of the top 8 tools with the highest user ratings.  
+- **Write a Review**: Enables users to leave reviews and share their experiences.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Detail Page
+- **Introduction Video**: A quick guide on how to use the tool.  
+- **Key Features**: Lists the advantages of the tool in the web development process.  
+- **Related Tools**: Shows tools related by role or process tags.  
+- **Latest Reviews**: Displays the most recent reviews from users.  
+- **Write a Review**: Allows users to leave a review and rate the tool.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Contact Page  
+Includes contact details such as email and phone number. Users can also send a message through a validated contact form.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### About Page  
+Explains the mission and purpose of the website.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Submit Page  
+Allows users to submit new tools by filling in the minimum required information.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Roles and Processes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+There are two types of categories: based on **development process phases** and **user roles**.
 
-### Code Splitting
+### User Roles
+- **Marketer** – Tools for AI-driven SEO analysis, content optimization, and traffic analytics.  
+- **Developer** – AI for coding, debugging, and API integration.  
+- **Designer** – AI-powered wireframing, prototyping, and UX optimization.  
+- **Product Manager** – AI tools for market research, feature prioritization, and planning.  
+- **Tester** – Automated testing, security auditing, and performance monitoring.  
+- **DevOps** – AI for cloud infrastructure, CI/CD automation, and monitoring.  
+- **Analyst** – AI for data visualization, insight generation, and decision-making.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Development Process
+- **Research** – AI for market analysis, user research, and competitor insights.  
+- **Planning** – AI-powered wireframing, user flows, and feature definition.  
+- **Design** – AI-driven UI/UX tools for creating components, styling, and prototyping.  
+- **Development** – AI-assisted coding, debugging, refactoring, and automation.  
+- **Testing** – Automated testing, bug detection, security analysis, and performance checks.  
+- **Deployment** – CI/CD tools, AI-driven infrastructure management, and automatic deployment.  
+- **Maintenance** – AI-powered monitoring and SEO analytics.
