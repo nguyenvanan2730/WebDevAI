@@ -16,6 +16,11 @@ function AIToolDetailPage() {
   const [reviews, setReviews] = useState([]);
   const [relatedTools, setRelatedTools] = useState([]);
 
+  // Scroll to top when component mounts or ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   // Get tool icon path from name
   const getToolIconPath = (name) => {
     if (!name) return '';
