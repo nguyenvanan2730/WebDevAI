@@ -79,6 +79,9 @@ function ToolGrid() {
   const ratingDropdownRef = useRef(null);
   const likesDropdownRef = useRef(null);
   
+  // Create ref for the grid container for scrolling
+  const gridRef = useRef(null);
+  
   // Sync local state with context filter criteria
   useEffect(() => {
     setSelectedRoles(filterCriteria.roles || []);
@@ -200,8 +203,20 @@ function ToolGrid() {
   const currentTools = filteredTools.slice(indexOfFirstTool, indexOfLastTool);
   const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
 
+  // Handle page change with scrolling to top of grid
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    
+    // Scroll to the top of the grid with smooth behavior
+    if (gridRef.current) {
+      gridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // Fallback if ref isn't attached
+      window.scrollTo({
+        top: document.querySelector('.tool-grid-section').offsetTop,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const handleDropdownToggle = (dropdown) => {
@@ -239,7 +254,7 @@ function ToolGrid() {
   };
 
   return (
-    <div className="tool-grid-container">
+    <div ref={gridRef} className="tool-grid-container">
       <h2 className="section-title">All AI Tools</h2>
 
       <div className="tools-filter">
