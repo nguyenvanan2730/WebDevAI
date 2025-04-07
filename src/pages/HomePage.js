@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import TrendingTools from '../components/TrendingTools';
@@ -8,6 +8,11 @@ import SubmitSection from '../components/SubmitSection';
 import Footer from '../components/Footer';
 
 function HomePage() {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="homepage">
       <Header />
