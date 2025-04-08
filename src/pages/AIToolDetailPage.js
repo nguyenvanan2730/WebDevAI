@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaStar, FaMobile, FaExternalLinkAlt, FaPlay } from 'react-icons/fa';
+import { FaStar, FaMobile, FaExternalLinkAlt, FaPlay, FaTimes } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ToolCard from '../components/ToolCard';
@@ -15,6 +15,186 @@ function AIToolDetailPage() {
   const [loading, setLoading] = useState(true);
   const [reviews, setReviews] = useState([]);
   const [relatedTools, setRelatedTools] = useState([]);
+  const [showReviewPopup, setShowReviewPopup] = useState(false);
+  const [newReview, setNewReview] = useState({
+    rating: 5,
+    title: '',
+    body: '',
+    reviewer: { name: '', avatar: null }
+  });
+  const [avatarLoading, setAvatarLoading] = useState(false);
+  const [formErrors, setFormErrors] = useState({
+    title: '',
+    body: '',
+    reviewerName: ''
+  });
+
+  // Toggle review popup visibility
+  const toggleReviewPopup = () => {
+    // If opening the popup, reset the form with default avatar
+    if (!showReviewPopup) {
+      // Generate a default avatar using a fixed seed for consistency
+      const defaultAvatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=default123`;
+      
+      setNewReview({
+        rating: 5,
+        title: '',
+        body: '',
+        reviewer: { name: '', avatar: defaultAvatarUrl }
+      });
+      
+      // Reset any form errors
+      setFormErrors({
+        title: '',
+        body: '',
+        reviewerName: ''
+      });
+    }
+    setShowReviewPopup(!showReviewPopup);
+  };
+
+  // Handle review input changes
+  const handleReviewChange = (e) => {
+    const { name, value } = e.target;
+    
+    // Clear error for this field when user starts typing
+    setFormErrors({
+      ...formErrors,
+      [name === 'reviewerName' ? name : name]: ''
+    });
+    
+    if (name === 'reviewerName') {
+      setNewReview({
+        ...newReview,
+        reviewer: { ...newReview.reviewer, name: value }
+      });
+      
+      // Validate name if user has typed something and then deleted it
+      if (value.trim() === '') {
+        setFormErrors({
+          ...formErrors,
+          reviewerName: ''  // We'll show error only on submit or blur
+        });
+      }
+    } else {
+      setNewReview({
+        ...newReview,
+        [name]: value
+      });
+      
+      // Basic validation based on field
+      if (name === 'title' && value.trim() === '') {
+        setFormErrors({
+          ...formErrors,
+          title: ''  // We'll show error only on submit or blur
+        });
+      } else if (name === 'body' && value.trim() === '') {
+        setFormErrors({
+          ...formErrors,
+          body: ''  // We'll show error only on submit or blur
+        });
+      }
+    }
+  };
+
+  // Handle star rating change
+  const handleRatingChange = (rating) => {
+    setNewReview({
+      ...newReview,
+      rating
+    });
+  };
+
+  // Fetch a random avatar from Dicebear API
+  const fetchRandomAvatar = () => {
+    setAvatarLoading(true);
+    const seed = Math.random().toString(36).substring(2, 8);
+    const avatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`;
+    
+    // Just to simulate a bit of loading time
+    setTimeout(() => {
+      setNewReview({
+        ...newReview,
+        reviewer: { ...newReview.reviewer, avatar: avatarUrl }
+      });
+      setAvatarLoading(false);
+    }, 500);
+  };
+
+  // Submit new review
+  const submitReview = () => {
+    // Validate all fields
+    let isValid = true;
+    const errors = {
+      title: '',
+      body: '',
+      reviewerName: ''
+    };
+    
+    // Title validation
+    if (!newReview.title.trim()) {
+      errors.title = 'Please enter a review title';
+      isValid = false;
+    } else if (newReview.title.trim().length < 3) {
+      errors.title = 'Title must be at least 3 characters';
+      isValid = false;
+    }
+    
+    // Review body validation
+    if (!newReview.body.trim()) {
+      errors.body = 'Please enter your review';
+      isValid = false;
+    } else if (newReview.body.trim().length < 10) {
+      errors.body = 'Review must be at least 10 characters';
+      isValid = false;
+    }
+    
+    // Name validation
+    if (!newReview.reviewer.name.trim()) {
+      errors.reviewerName = 'Please enter your name';
+      isValid = false;
+    }
+    
+    // Update error messages
+    setFormErrors(errors);
+    
+    // If there are errors, don't submit
+    if (!isValid) {
+      return;
+    }
+
+    const reviewToAdd = {
+      ...newReview,
+      id: Date.now(), // Simple unique ID
+      date: new Date().toISOString(),
+      reviewer: {
+        ...newReview.reviewer,
+        name: newReview.reviewer.name.trim() || 'Anonymous User',
+        avatar: newReview.reviewer.avatar || null
+      }
+    };
+
+    // Add review to the list
+    setReviews([reviewToAdd, ...reviews]);
+    
+    // Reset form
+    setNewReview({
+      rating: 5,
+      title: '',
+      body: '',
+      reviewer: { name: '', avatar: null }
+    });
+    
+    // Reset form errors
+    setFormErrors({
+      title: '',
+      body: '',
+      reviewerName: ''
+    });
+    
+    // Close popup
+    setShowReviewPopup(false);
+  };
 
   // Scroll to top when component mounts or ID changes
   useEffect(() => {
@@ -185,6 +365,45 @@ function AIToolDetailPage() {
       behavior: 'smooth',
       block: 'start'
     });
+  };
+
+  // Handle field blur for validation
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    
+    // Validate the field that just lost focus
+    if (name === 'reviewerName') {
+      if (value.trim() === '') {
+        setFormErrors({
+          ...formErrors,
+          reviewerName: 'Please enter your name'
+        });
+      }
+    } else if (name === 'title') {
+      if (value.trim() === '') {
+        setFormErrors({
+          ...formErrors,
+          title: 'Please enter a review title'
+        });
+      } else if (value.trim().length < 3) {
+        setFormErrors({
+          ...formErrors,
+          title: 'Title must be at least 3 characters'
+        });
+      }
+    } else if (name === 'body') {
+      if (value.trim() === '') {
+        setFormErrors({
+          ...formErrors,
+          body: 'Please enter your review'
+        });
+      } else if (value.trim().length < 10) {
+        setFormErrors({
+          ...formErrors,
+          body: 'Review must be at least 10 characters'
+        });
+      }
+    }
   };
 
   // Show loading spinner while data is being fetched
@@ -403,11 +622,117 @@ function AIToolDetailPage() {
 
           {/* Full-width Write Review Button */}
           <div className="write-review-container">
-            <button className="write-review-btn">Write a review</button>
+            <button className="write-review-btn" onClick={toggleReviewPopup}>Write a review</button>
           </div>
         </div>
       </div>
       <Footer />
+
+      {/* Review Popup */}
+      {showReviewPopup && (
+        <div className="review-popup-overlay">
+          <div className="review-popup">
+            <div className="review-popup-header">
+              <h3>Write a Review for {tool.name}</h3>
+              <button className="close-popup" onClick={toggleReviewPopup}>
+                <FaTimes />
+              </button>
+            </div>
+            <div className="review-popup-content">
+              <div className="review-popup-rating">
+                <p>Your Rating:</p>
+                <div className="rating-stars-input">
+                  {[...Array(5)].map((_, index) => (
+                    <FaStar
+                      key={index}
+                      className={`star ${index < newReview.rating ? 'filled' : 'empty'}`}
+                      onClick={() => handleRatingChange(index + 1)}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="review-popup-form">
+                <div className="form-group">
+                  <label htmlFor="review-title">Title</label>
+                  <input
+                    type="text"
+                    id="review-title"
+                    name="title"
+                    placeholder="Summarize your experience"
+                    value={newReview.title}
+                    onChange={handleReviewChange}
+                    onBlur={handleBlur}
+                    className={formErrors.title ? 'input-error' : ''}
+                  />
+                  {formErrors.title && <div className="error-message">{formErrors.title}</div>}
+                </div>
+                <div className="form-group">
+                  <label htmlFor="review-body">Review</label>
+                  <textarea
+                    id="review-body"
+                    name="body"
+                    placeholder="Share your thoughts about this AI tool"
+                    rows="5"
+                    value={newReview.body}
+                    onChange={handleReviewChange}
+                    onBlur={handleBlur}
+                    className={formErrors.body ? 'input-error' : ''}
+                  ></textarea>
+                  {formErrors.body && <div className="error-message">{formErrors.body}</div>}
+                </div>
+                <div className="reviewer-details">
+                  <div className="reviewer-info-row">
+                    <div className="form-group name-input">
+                      <label htmlFor="reviewer-name">Your Name</label>
+                      <input
+                        type="text"
+                        id="reviewer-name"
+                        name="reviewerName"
+                        placeholder="Enter your name"
+                        value={newReview.reviewer.name}
+                        onChange={handleReviewChange}
+                        onBlur={handleBlur}
+                        className={formErrors.reviewerName ? 'input-error' : ''}
+                      />
+                      {formErrors.reviewerName && <div className="error-message">{formErrors.reviewerName}</div>}
+                    </div>
+                    <div className="avatar-section">
+                      <label>Your Avatar</label>
+                      <div className="avatar-container">
+                        <div className="avatar-preview">
+                          {newReview.reviewer.avatar ? (
+                            <img 
+                              src={newReview.reviewer.avatar} 
+                              alt="Your avatar" 
+                              className="preview-avatar"
+                            />
+                          ) : (
+                            <div className="empty-avatar">
+                              {newReview.reviewer.name ? newReview.reviewer.name.charAt(0).toUpperCase() : '?'}
+                            </div>
+                          )}
+                        </div>
+                        <button 
+                          type="button" 
+                          className="generate-avatar-btn" 
+                          onClick={fetchRandomAvatar}
+                          disabled={avatarLoading}
+                        >
+                          {avatarLoading ? '...' : 'New'}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="review-popup-footer">
+              <button className="cancel-review-btn" onClick={toggleReviewPopup}>Cancel</button>
+              <button className="submit-review-btn" onClick={submitReview}>Submit Review</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
