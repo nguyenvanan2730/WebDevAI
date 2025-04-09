@@ -283,11 +283,7 @@
   transition: all 0.2s ease;
   flex-shrink: 0; /* Prevent cards from shrinking */
   min-height: 160px; /* Minimum height for each card */
-}
-
-.simplified-tool-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .simplified-tool-card .tool-header {
@@ -323,21 +319,9 @@
 
 .simplified-tool-card .tool-meta {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-top: 8px;
-}
-
-.simplified-tool-card .tool-type {
-  position: static;
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #4B5563;
-  background-color: #F3F4F6;
-  border: 1px solid #9CA3AF;
+  margin: 12px 0;
 }
 
 .simplified-tool-card .tool-description {
