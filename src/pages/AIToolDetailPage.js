@@ -221,20 +221,6 @@ function AIToolDetailPage() {
     if (!isValid) {
       return;
     }
-
-    const reviewToAdd = {
-      ...newReview,
-      id: Date.now(), // Simple unique ID
-      date: new Date().toISOString(),
-      reviewer: {
-        ...newReview.reviewer,
-        name: newReview.reviewer.name.trim() || 'Anonymous User',
-        avatar: newReview.reviewer.avatar || null
-      }
-    };
-
-    // Add review to the list
-    setReviews([reviewToAdd, ...reviews]);
     
     // Reset form
     setNewReview({
