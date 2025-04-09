@@ -680,12 +680,13 @@ function AIToolDetailPage() {
                 <p className="no-reviews">No reviews yet. Be the first to write a review!</p>
               )}
             </div>
+            {/* Full-width Write Review Button */}
+            <div className="write-review-container">
+              <button className="write-review-btn" onClick={toggleReviewPopup}>Write a review</button>
+            </div>
           </section>
 
-          {/* Full-width Write Review Button */}
-          <div className="write-review-container">
-            <button className="write-review-btn" onClick={toggleReviewPopup}>Write a review</button>
-          </div>
+
         </div>
       </div>
       <Footer />
