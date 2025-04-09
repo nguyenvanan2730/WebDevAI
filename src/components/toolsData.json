@@ -421,7 +421,7 @@
       "rating": 4,
       "type": "Freemium",
       "role": ["Developer"],
-      "process": ["Development", "Testin", "Maintenance"],
+      "process": ["Development", "Testing", "Maintenance"],
       "likes": 198,
       "description": "Tabnine is an AI code assistant that helps web developers write, test, and maintain high-quality code faster through intelligent, context-aware suggestions.",
       "url": "https://tabnine.com",

@@ -232,6 +232,7 @@
   color: var(--text-dark);
   padding: 0;
   font-weight: 400;
+  margin-right: 6px;
 }
 
 .tool-likes {
