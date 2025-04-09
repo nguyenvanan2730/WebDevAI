@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FaStar, FaMobile, FaExternalLinkAlt, FaPlay, FaTimes } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -595,7 +595,12 @@ function AIToolDetailPage() {
                 <div className="related-tools-container">
                   {relatedTools.length > 0 ? (
                     relatedTools.map(relatedTool => (
-                      <div key={relatedTool.id} className="simplified-tool-card">
+                      <Link 
+                        to={`/tools/${relatedTool.id}`} 
+                        key={relatedTool.id} 
+                        className="simplified-tool-card"
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                      >
                         <div className="tool-header">
                           <div className="tool-logo-container">
                             <div className="tool-logo">
@@ -624,7 +629,7 @@ function AIToolDetailPage() {
                         <div className="tool-preview">
                           <p className="tool-description">{relatedTool.description}</p>
                         </div>
-                      </div>
+                      </Link>
                     ))
                   ) : (
                     <p className="no-related">No related tools found</p>
