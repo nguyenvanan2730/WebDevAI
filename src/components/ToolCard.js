@@ -22,6 +22,11 @@ function ToolCard({ tool }) {
     return `/icon/${formattedName}.png`;
   };
   
+  // Function to get descriptive alt text for tool icon
+  const getToolIconAlt = (name) => {
+    return `${name} tool icon - AI-powered web development tool`;
+  };
+
   const getPriceTypeClass = (type) => {
     switch (type.toLowerCase()) {
       case 'free':
@@ -45,7 +50,7 @@ function ToolCard({ tool }) {
             <div className="tool-logo">
               <img 
                 src={getToolIconPath(name)} 
-                alt={`${name} icon`}
+                alt={getToolIconAlt(name)}
                 className="tool-icon"
                 onError={(e) => {
                   // If icon not found, show a placeholder or fallback to the background

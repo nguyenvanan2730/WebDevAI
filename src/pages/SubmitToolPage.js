@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageTitle from '../components/PageTitle';
 import { 
   Container, 
   Typography, 
@@ -299,7 +300,11 @@ function SubmitToolPage() {
   };
 
   return (
-    <div className="submit-tool-page">
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <PageTitle 
+        title="Submit Tool" 
+        description="Submit your AI tool to WebDevAI Tools platform. Share your innovative solutions with the web development community."
+      />
       <Header />
       <Container maxWidth="md" sx={{ py: 5 }}>
         <Typography 
@@ -477,7 +482,7 @@ function SubmitToolPage() {
                               <Box 
                                 component="img" 
                                 src={logoPreview} 
-                                alt="Logo preview"
+                                alt={`Preview of ${formData.name} tool logo`}
                                 sx={{ 
                                   height: 80, 
                                   width: 80, 
@@ -798,7 +803,7 @@ function SubmitToolPage() {
         </Paper>
       </Container>
       <Footer />
-    </div>
+    </Box>
   );
 }
 

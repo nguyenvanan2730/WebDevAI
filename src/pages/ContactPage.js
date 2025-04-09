@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageTitle from '../components/PageTitle';
 import { 
   Container,
   Grid,
@@ -128,6 +129,10 @@ function ContactPage() {
 
   return (
     <div className="contact-page">
+      <PageTitle 
+        title="Contact Us" 
+        description="Get in touch with WebDevAI Tools team. We're here to help you with any questions about our AI tools platform."
+      />
       <Header />
       <Container maxWidth="lg" sx={{ py: 6 }}>
         {/* Page Header */}

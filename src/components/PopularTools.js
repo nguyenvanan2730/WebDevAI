@@ -17,6 +17,11 @@ function PopularTools() {
     return `/icon/${formattedName}.png`;
   };
 
+  // Function to get descriptive alt text for tool icon
+  const getToolIconAlt = (name) => {
+    return `${name} tool icon - AI-powered web development tool`;
+  };
+
   // Get popular tools based on rating and likes
   useEffect(() => {
     if (tools && tools.length > 0) {
@@ -140,7 +145,7 @@ function PopularTools() {
               <div className="popular-tool-icon">
                 <img 
                   src={getToolIconPath(tool.name)} 
-                  alt={`${tool.name} icon`}
+                  alt={getToolIconAlt(tool.name)}
                   className="popular-tool-image"
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />

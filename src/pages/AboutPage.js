@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageTitle from '../components/PageTitle';
 import { 
   Box, 
   Container, 
@@ -47,6 +48,10 @@ function AboutPage() {
       flexDirection: 'column',
       background: `linear-gradient(135deg, ${alpha(theme.palette.primary.light, 0.1)} 0%, ${alpha(theme.palette.primary.main, 0.05)} 100%)`
     }}>
+      <PageTitle 
+        title="About Us" 
+        description="Learn about WebDevAI Tools - Empowering developers with cutting-edge AI tools for modern web development"
+      />
       <Header />
       <Container maxWidth="lg" sx={{ py: 4, flex: 1 }}>
         {/* Hero Section */}

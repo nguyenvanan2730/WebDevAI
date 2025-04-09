@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { FaStar, FaMobile, FaExternalLinkAlt, FaPlay, FaTimes } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageTitle from '../components/PageTitle';
 import ToolCard from '../components/ToolCard';
 import './AIToolDetailPage.css';
 import { useAppContext } from '../context/AppContext';
@@ -468,6 +469,10 @@ function AIToolDetailPage() {
   if (loading) {
     return (
       <div className="ai-tool-detail-page">
+        <PageTitle 
+          title="Detail" 
+          description="Loading tool details..."
+        />
         <Header />
         <div className="container loading-container">
           <div className="loading-spinner"></div>
@@ -482,6 +487,10 @@ function AIToolDetailPage() {
   if (!tool) {
     return (
       <div className="ai-tool-detail-page">
+        <PageTitle 
+          title="Detail" 
+          description="The requested AI tool could not be found"
+        />
         <Header />
         <div className="container">
           <h2>Tool not found</h2>
@@ -494,6 +503,10 @@ function AIToolDetailPage() {
 
   return (
     <div className="ai-tool-detail-page">
+      <PageTitle 
+        title="Detail" 
+        description={`${tool.name} - ${tool.description}`}
+      />
       <Header />
       <div className="container">
         {/* Main tool detail wrapper */}
@@ -504,7 +517,7 @@ function AIToolDetailPage() {
               <div className="tool-logo">
                 <img 
                   src={getToolIconPath(tool.name)} 
-                  alt={`${tool.name} icon`}
+                  alt={`${tool.name} logo - ${tool.type} AI tool for ${Array.isArray(tool.role) ? tool.role.join(', ') : tool.role}`}
                   className="tool-logo-image"
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />
@@ -512,11 +525,6 @@ function AIToolDetailPage() {
               <div className="tool-header-info">
                 <h1 className="tool-name">{tool.name}</h1>
                 <div className="tool-meta">
-                  {/* <div className="tags">
-                    {tool.tags && tool.tags.map((tag, index) => (
-                      <span key={index} className="tag">#{tag}</span>
-                    ))}
-                  </div> */}
                   <span className={`meta-badge price ${getPriceTypeClass(tool.type)}`}>
                     {tool.type}
                   </span>
@@ -558,7 +566,7 @@ function AIToolDetailPage() {
               <div className="video-container">
                 <iframe
                   src={`https://www.youtube.com/embed/${tool.youtubeVideoId}`}
-                  title={`${tool.name} tutorial video`}
+                  title={`${tool.name} tutorial video - Learn how to use ${tool.name} for ${Array.isArray(tool.role) ? tool.role.join(', ') : tool.role}`}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -607,7 +615,7 @@ function AIToolDetailPage() {
                             <div className="tool-logo">
                               <img 
                                 src={getToolIconPath(relatedTool.name)} 
-                                alt={`${relatedTool.name} icon`}
+                                alt={`${relatedTool.name} logo - ${relatedTool.type} AI tool for ${Array.isArray(relatedTool.role) ? relatedTool.role.join(', ') : relatedTool.role}`}
                                 className="tool-logo-image"
                                 onError={(e) => { e.target.style.display = 'none'; }}
                               />
@@ -625,14 +633,6 @@ function AIToolDetailPage() {
                           <span className={`tool-type ${getPriceTypeClass(relatedTool.type)}`}>
                             {relatedTool.type}
                           </span>
-                          {/* <div className="tool-tags">
-                            {relatedTool.role && (
-                              <span className="tag role">Role: {Array.isArray(relatedTool.role) ? relatedTool.role.join(', ') : relatedTool.role}</span>
-                            )}
-                            {relatedTool.process && (
-                              <span className="tag process">Process: {Array.isArray(relatedTool.process) ? relatedTool.process.join(', ') : relatedTool.process}</span>
-                            )}
-                          </div> */}
                         </div>
                         
                         <div className="tool-preview">
@@ -663,7 +663,11 @@ function AIToolDetailPage() {
                     <div className="reviewer-info">
                       <div className="reviewer-avatar">
                         {review.reviewer.avatar ? (
-                          <img src={review.reviewer.avatar} alt={review.reviewer.name} />
+                          <img 
+                            src={review.reviewer.avatar} 
+                            alt={`Avatar for reviewer ${review.reviewer.name}`}
+                            title={`${review.reviewer.name}'s avatar`}
+                          />
                         ) : (
                           <div className="avatar-placeholder">{review.reviewer.name.charAt(0)}</div>
                         )}
@@ -761,7 +765,8 @@ function AIToolDetailPage() {
                           {newReview.reviewer.avatar ? (
                             <img 
                               src={newReview.reviewer.avatar} 
-                              alt="Your avatar" 
+                              alt={`Preview of your avatar for ${newReview.reviewer.name || 'anonymous user'}`}
+                              title="Your avatar preview"
                               className="preview-avatar"
                             />
                           ) : (

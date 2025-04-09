@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Banner from '../components/Banner';
 import TrendingTools from '../components/TrendingTools';
 import ToolGrid from '../components/ToolGrid';
 import PopularTools from '../components/PopularTools';
 import SubmitSection from '../components/SubmitSection';
-import Footer from '../components/Footer';
+import PageTitle from '../components/PageTitle';
 
 function HomePage() {
   // Scroll to top when component mounts
@@ -14,11 +15,15 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="homepage">
+    <div className="home-page">
+      <PageTitle 
+        title="Home" 
+        description="Discover the best AI tools for web development. Browse, compare, and find the perfect tools to enhance your workflow."
+      />
       <Header />
       <Banner 
-        title="WEB DEVELOPMENT AI TOOLS" 
-        subtitle="All best AI tools using for web development"
+        title="Discover AI Tools for Web Development"
+        subtitle="Find the perfect tools to enhance your workflow and boost productivity"
       />
       
       <div className="trending-tools-section">

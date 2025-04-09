@@ -20,7 +20,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/submit-tool" element={<SubmitToolPage />} />
           <Route path="/tool/:id" element={<AIToolDetailPage />} />
-          <Route path="/tools/:id" element={<AIToolDetailPage />} /> {/* Now using AIToolDetailPage for both routes */}
+          <Route path="/tools/:id" element={<AIToolDetailPage />} />
         </Routes>
       </AppProvider>
     </Router>

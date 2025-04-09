@@ -40,6 +40,11 @@ function TrendingTools() {
     return `/icon/${formattedName}.png`;
   };
 
+  // Function to get descriptive alt text for tool icon
+  const getToolIconAlt = (name) => {
+    return `${name} tool icon - AI-powered web development tool`;
+  };
+
   // Loading state
   if (!topTrendingTool) {
     return (
@@ -60,7 +65,7 @@ function TrendingTools() {
               <div className="trending-tool-logo">
                 <img 
                   src={getToolIconPath(topTrendingTool.name)} 
-                  alt={`${topTrendingTool.name} icon`} 
+                  alt={getToolIconAlt(topTrendingTool.name)}
                   className="trending-tool-icon"
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />
