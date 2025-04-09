@@ -1,34 +1,55 @@
 .tool-card {
-  background-color: #f5f5f5;
+  background: white;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  padding-bottom: 60px; /* Adjust based on the footer height */
+}
+
+/* Card Header Styles */
+.card-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
 }
 
 .tool-header {
   display: flex;
-  padding: 15px;
-  align-items: center;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  padding-right: 100px;
 }
 
 .tool-logo-container {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .tool-logo {
-  width: 50px;
-  height: 50px;
-  background-color: #ccc;
-  border-radius: 8px;
+  width: 55px;
+  height: 55px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.tool-name {
-  font-size: 16px;
+.tool-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.tool-name-home-page {
+  font-size: 18px;
   margin: 0 0 5px;
-  color: #333;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .tool-rating {
@@ -42,54 +63,182 @@
 }
 
 .star.filled {
-  color: #ffc107;
+  color: var(--accent);
 }
 
 .tool-rating-count {
   font-size: 12px;
-  color: #888;
+  color: var(--text-light);
   margin-left: 5px;
 }
 
-.tool-type {
-  padding: 0 15px;
+.tool-meta {
+  /* padding: 0 18px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  /* margin: 15px 0; */
 }
 
-.type-badge {
+.meta-badge {
   display: inline-block;
-  background-color: #eee;
-  padding: 4px 8px;
-  border-radius: 3px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: var(--white);
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meta-badge.price {
+  background-color: var(--success);
+}
+
+.meta-badge.role {
+  background-color: var(--primary);
+}
+
+.meta-badge.process {
+  background-color: var(--warning);
+}
+
+.tool-type {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
   font-size: 12px;
-  color: #555;
+  font-weight: 500;
 }
 
-.tool-preview {
-  background-color: #ddd;
-  height: 100px;
-  margin: 15px;
-  border-radius: 5px;
+.tool-type-free {
+  color: #059669;
+  background-color: #D1FAE5;
+  border-color: #34D399;
 }
 
-.tool-footer {
-  padding: 15px;
+.tool-type-freemium {
+  color: #D97706;
+  background-color: #FEF3C7;
+  border-color: #FBBF24;
+}
+
+.tool-type-premium {
+  color: #DC2626;
+  background-color: #FEE2E2;
+  border-color: #F87171;
+}
+
+.tool-type-default {
+  color: #4B5563;
+  background-color: #F3F4F6;
+  border-color: #9CA3AF;
+}
+
+.tool-type-free:hover {
+  background-color: #A7F3D0;
+}
+
+.tool-type-freemium:hover {
+  background-color: #FDE68A;
+}
+
+.tool-type-premium:hover {
+  background-color: #FECACA;
+}
+
+.tool-type-default:hover {
+  background-color: #E5E7EB;
+}
+
+/* Card Content Styles */
+.card-content {
+  padding: 16px;
+}
+
+.tool-description {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.tool-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.tool-link {
+  flex: 1;
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+}
+
+.visit-website-link {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.tool-link:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.visit-website-link:hover {
+  background-color: rgb(245, 245, 245);
+  color:var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Card Footer Styles */
+.card-footer {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #eee;
+  background-color: #f9fafb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .tool-tags {
   display: flex;
-  gap: 5px;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 70%;
+  align-items: center;
 }
 
 .tag {
-  background-color: #e0e0e0;
-  padding: 3px 6px;
-  border-radius: 3px;
-  font-size: 10px;
-  color: #666;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.tag.hashtag {
+  background-color: transparent;
+  border: none;
+  color: var(--text-dark);
+  padding: 0;
+  font-weight: 400;
 }
 
 .tool-likes {
@@ -98,16 +247,34 @@
 }
 
 .like-button {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 3px 8px;
+  background-color: var(--white);
+  border: 1px solid var(--grey-medium);
+  border-radius: 20px;
+  padding: 5px 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 12px;
+  transition: all 0.2s;
+}
+
+.like-button:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: var(--danger);
+}
+
+.heart-icon {
+  color: var(--danger);
+  margin-right: 5px;
+  font-size: 12px;
 }
 
 .like-count {
-  margin-left: 3px;
-} 
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.tool-card-body {
+  max-height: calc(100% - 60px); /* adjust according to footer height */
+  overflow-y: auto;
+}

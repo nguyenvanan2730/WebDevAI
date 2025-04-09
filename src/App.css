@@ -1,3 +1,25 @@
+/* Global color variables */
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --secondary: #2ecc71;
+  --secondary-dark: #27ae60;
+  --accent: #f39c12;
+  --accent-dark: #e67e22;
+  --dark: #2c3e50;
+  --light: #ecf0f1;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --border: #dddddd;
+  --danger: #e74c3c;
+  --warning: #f39c12;
+  --success: #2ecc71;
+  --grey-light: #f5f5f5;
+  --grey-medium: #e0e0e0;
+  --section-alternate: #f0f7fc;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,8 +29,8 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: var(--text-dark);
+  background-color: var(--light);
 }
 
 .container {
@@ -19,7 +41,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primary);
 }
 
 button {
@@ -36,12 +58,33 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 
 .homepage {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Section alternating backgrounds */
+.trending-tools-section {
+  background-color: var(--section-alternate);
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.tool-grid-section {
+  /* background: linear-gradient(to bottom, #c3d3e0 0%, rgba(240, 247, 252, 0.5) 100%);*/
+  background: #e1e9f0; 
+  padding: 40px 0;
+  border-top: 1px solid rgba(52, 152, 219, 0.1);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.popular-tools-section {
+  background-color: var(--white);
+  padding: 40px 0;
 }
 
 .App {

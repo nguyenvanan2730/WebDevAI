@@ -6,8 +6,10 @@ function Banner({ title, subtitle }) {
     <div className="banner">
       <div className="container">
         <div className="banner-content">
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
+          <h1 className="banner-title">{title}</h1>
+          <p className="banner-subtitle">
+            {subtitle}
+          </p>
         </div>
       </div>
     </div>

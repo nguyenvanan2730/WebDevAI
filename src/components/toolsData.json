@@ -1,0 +1,2252 @@
+[
+    { 
+      "id": 1, 
+      "name": "DeepSeek", 
+      "rating": 5, 
+      "type": "Free", 
+      "role": "Developer", 
+      "process": "Development",
+      "likes": 235,
+      "description": "DeepSeek is an advanced AI coding assistant that helps developers write, debug, and understand code across multiple programming languages.",
+      "url": "https://deepseek.com",
+      "logoUrl": "https://deepseek.com/logo.png",
+      "youtubeVideoId": "qXeF3dXxZtY",
+      "summary": "DeepSeek is a powerful AI coding assistant that helps developers write and understand code across multiple programming languages. It uses advanced machine learning to provide intelligent code suggestions and explanations.",
+      "keyFeatures": [
+        "AI-powered code completion that intelligently suggests relevant code snippets based on context, dramatically reducing development time and cognitive load for programmers.",
+        "Multi-language support covering over 40 programming languages with specialized understanding of syntax, libraries, and frameworks for each language ecosystem.",
+        "Code explanation and documentation capabilities that break down complex functions and algorithms into understandable components with natural language descriptions.",
+        "Bug detection and fixing mechanisms that identify potential errors in your code and suggest optimized solutions before runtime issues occur.",
+        "Learning resources integration that connects developers with relevant documentation, tutorials, and community solutions while coding to accelerate learning and problem-solving."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Revolutionized my coding workflow",
+          "body": "DeepSeek has completely transformed how I write code. The intelligent suggestions and explanations have helped me become a more efficient developer.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Alex Johnson",
+            "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for learning new languages",
+          "body": "As someone who frequently switches between programming languages, DeepSeek has been invaluable in helping me adapt quickly to different syntax and patterns.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sarah Williams",
+            "avatar": "https://randomuser.me/api/portraits/women/45.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent debugging assistant",
+          "body": "The ability to explain code and identify potential bugs has saved me countless hours of debugging. Highly recommended for developers of all levels.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Michael Chen",
+            "avatar": "https://randomuser.me/api/portraits/men/67.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ChatGPT",
+      "rating": 5,
+      "type": "Freemium",
+      "role": ["Developer", "Product Manager", "Analyst"],
+      "process": ["Research", "Development", "Planning"],
+      "likes": 512,
+      "description": "ChatGPT is an AI assistant specialized in web development, helping with code generation, debugging, technical research, and creating comprehensive documentation.",
+      "url": "https://chat.openai.com",
+      "logoUrl": "https://chat.openai.com/logo.png",
+      "youtubeVideoId": "e0aKI2GGZNg",
+      "summary": "ChatGPT enhances web development productivity through intelligent code generation, efficient debugging, and deep technical insights. It supports developers, product managers, and analysts by simplifying complex coding tasks and accelerating technical research.",
+      "keyFeatures": [
+        "Code generation and debugging capabilities supporting JavaScript, HTML/CSS, React, and backend frameworks, streamlining the web development process.",
+        "Technical research assistance, providing accurate and detailed explanations of complex web technologies, frameworks, and APIs.",
+        "Automated content creation for technical documentation, tutorials, and guides, enhancing team productivity.",
+        "Interactive troubleshooting to quickly resolve coding issues through conversational guidance and context-aware suggestions.",
+        "Up-to-date insights on web development best practices, trends, and emerging technologies."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Essential coding companion",
+          "body": "ChatGPT significantly speeds up my web development workflow with precise code suggestions and debugging help. It's indispensable for day-to-day coding.",
+          "rating": 5,
+          "reviewer": {
+            "name": "David Kim",
+            "avatar": "https://randomuser.me/api/portraits/men/42.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Fantastic for exploring frameworks",
+          "body": "ChatGPT clearly explains complex frameworks, making learning new web technologies quicker and easier.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emily Rodriguez",
+            "avatar": "https://randomuser.me/api/portraits/women/33.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Highly effective, with occasional checks",
+          "body": "Incredibly helpful for coding tasks, though occasionally it's important to verify some technical details manually.",
+          "rating": 4,
+          "reviewer": {
+            "name": "James Wilson",
+            "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Midjourney",
+      "rating": 4,
+      "type": "Paid",
+      "role": ["Designer", "Marketer"],
+      "process": ["Design", "Planning"],
+      "likes": 423,
+      "description": "Midjourney is a generative AI tool that turns text prompts into high-quality visuals, helping web designers and product teams create engaging UI concepts, hero images, and illustrations for digital products.",
+      "url": "https://midjourney.com",
+      "logoUrl": "https://midjourney.com/logo.png",
+      "youtubeVideoId": "VPGPrPvPrzw",
+      "summary": "Midjourney empowers web designers and digital creators by generating stunning visuals from simple text descriptions. It accelerates ideation for UI/UX design, marketing content, and landing page assets by delivering unique, high-resolution images tailored to your creative vision.",
+      "keyFeatures": [
+        "AI-driven text-to-image generation that helps designers rapidly prototype visual content for websites, product pages, and marketing banners.",
+        "Supports creative ideation in the early planning and design stages by producing unique styles and visual directions from simple prompts.",
+        "Customizable artistic styles and aspect ratios that allow creators to tailor imagery to fit web layouts, mobile screens, and digital platforms.",
+        "Enables fast iteration cycles for concept art, UI elements, and promotional graphics without needing manual design work.",
+        "Community-driven inspiration through shared prompt libraries and showcase galleries, encouraging experimentation and reuse of visual patterns."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Essential for visual prototyping",
+          "body": "Midjourney helps me create beautiful header illustrations and UI concepts for websites in minutes. It's a huge boost to my design workflow.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Lisa Chen",
+            "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Stunning results for web assets",
+          "body": "I use Midjourney to produce hero images and visual concepts for our product landing pages. It gives us a professional edge without hiring illustrators.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Mark Thompson",
+            "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent for quick client mockups",
+          "body": "Clients love seeing multiple design directions early. Midjourney lets me present several moodboards in no time, which helps with faster approvals.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophia Miller",
+            "avatar": "https://randomuser.me/api/portraits/women/62.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "GitHub Copilot",
+      "rating": 5,
+      "type": "Paid",
+      "role": ["Developer"],
+      "process": ["Development"],
+      "likes": 312,
+      "description": "GitHub Copilot is an AI-powered coding assistant that helps web developers write, refactor, and optimize code faster with real-time suggestions based on context.",
+      "url": "https://github.com/features/copilot",
+      "logoUrl": "https://github.com/features/copilot/logo.png",
+      "youtubeVideoId": "4RQh6qOUbPw",
+      "summary": "GitHub Copilot accelerates web development by providing intelligent code completions for front-end and back-end technologies. From writing components in React to building REST APIs, it boosts productivity and helps teams ship faster.",
+      "keyFeatures": [
+        "Real-time, context-aware code suggestions for JavaScript, TypeScript, HTML, CSS, Node.js, and more—tailored for modern web development.",
+        "Efficient auto-generation of boilerplate code such as API routes, form handlers, and state management logic in frameworks like React, Next.js, and Express.",
+        "Works inside popular web development IDEs including VS Code and JetBrains, allowing developers to stay focused in their preferred coding environment.",
+        "Improves code quality by recommending best practices and catching syntax or logical errors early during development.",
+        "Supports end-to-end web development tasks, from frontend layout to backend logic, with intelligent completions based on surrounding code and project structure."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Boosts web development speed",
+          "body": "Copilot helps me write React components and backend routes much faster. It's like having a junior developer always ready with helpful suggestions.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jason Patel",
+            "avatar": "https://randomuser.me/api/portraits/men/54.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Excellent for repetitive tasks",
+          "body": "I save so much time with Copilot when setting up routes, forms, and frontend logic. It reduces the boring parts of coding.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Rachel Kim",
+            "avatar": "https://randomuser.me/api/portraits/women/23.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Understands your project",
+          "body": "It adapts to my coding style and understands the structure of my project. The suggestions get better over time.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Thomas Wright",
+            "avatar": "https://randomuser.me/api/portraits/men/18.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Figma AI",
+      "rating": 4,
+      "type": "Freemium",
+      "role": ["Designer", "Product Manager"],
+      "process": ["Design", "Planning"],
+      "likes": 246,
+      "description": "Figma AI enhances web design workflows by offering smart layout suggestions, component automation, and design system consistency, all within the Figma environment.",
+      "url": "https://figma.com",
+      "logoUrl": "https://figma.com/logo.png",
+      "youtubeVideoId": "EQXqHYBtHJg",
+      "summary": "Figma AI supercharges the Figma design tool with intelligent features to help UI/UX designers and product managers create responsive, user-friendly web interfaces. It saves time by suggesting layouts, refining design components, and maintaining system-wide consistency.",
+      "keyFeatures": [
+        "AI-generated layout suggestions that streamline wireframing and help align elements visually for responsive web designs.",
+        "Automated detection of reusable UI patterns with prompts to convert them into components, improving consistency across pages.",
+        "Design system enforcement tools that check for deviations from established guidelines, ensuring scalable and accessible interfaces.",
+        "Quick generation of placeholder text and icons based on context, accelerating prototyping for new features and landing pages.",
+        "Helps teams collaborate more efficiently during the planning phase by visualizing UI flows and offering smart refinements in real-time."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Huge help for responsive design",
+          "body": "Figma AI has made my web design workflow much more efficient. The auto-layout suggestions are perfect for building responsive pages faster.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Elena Costa",
+            "avatar": "https://randomuser.me/api/portraits/women/36.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Keeps our design system consistent",
+          "body": "Our large team relies on Figma AI to maintain design consistency across products. It flags inconsistencies early and helps avoid rework.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Ryan Patel",
+            "avatar": "https://randomuser.me/api/portraits/men/63.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Still needs tighter integration",
+          "body": "The AI features are great, but sometimes feel like add-ons. I'd love to see deeper integration into the core Figma flow.",
+          "rating": 3,
+          "reviewer": {
+            "name": "Sophie Martin",
+            "avatar": "https://randomuser.me/api/portraits/women/29.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Cursor",
+      "rating": 5,
+      "type": "Freemium",
+      "role": "Developer",
+      "process": "Development",
+      "likes": 289,
+      "description": "Cursor is an AI-enhanced code editor that helps web developers understand, refactor, and generate code using natural language within a modern, intuitive IDE.",
+      "url": "https://cursor.com",
+      "logoUrl": "https://cursor.com/logo.png",
+      "youtubeVideoId": "zsz7ZBUU0qE",
+      "summary": "Cursor is a next-gen code editor designed for modern web development. With built-in AI capabilities, it helps developers write, explain, refactor, and search code using natural language, making it an ideal tool for both frontend and backend web projects.",
+      "keyFeatures": [
+        "Natural language coding support that allows web developers to describe what they want in plain English and receive functioning HTML, CSS, JavaScript, or backend code as output.",
+        "Code explanation tools that help decode complex components, functions, and asynchronous logic—especially useful in React, Node.js, or full-stack environments.",
+        "Semantic search that understands developer intent, helping you find code snippets, functions, or patterns across your project—even with vague queries.",
+        "Contextual code suggestions tailored to your codebase, whether you're working in Next.js, Flask, Express, or other modern web frameworks.",
+        "Automated refactoring features that modernize legacy web code, improve structure and performance, and help enforce best practices for maintainability."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "My go-to for full-stack coding",
+          "body": "Cursor is the most helpful tool in my workflow. I use it to generate backend endpoints, refactor frontend logic, and explain legacy React code. Absolute lifesaver.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Marcus Johnson",
+            "avatar": "https://randomuser.me/api/portraits/men/41.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Best for legacy refactoring",
+          "body": "I inherited a messy web app and Cursor helped me clean it up with smart explanations and refactoring suggestions. It’s like pair programming with an expert.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Priya Singh",
+            "avatar": "https://randomuser.me/api/portraits/women/52.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Surprisingly powerful for a free tool",
+          "body": "The fact that Cursor is free is mind-blowing. It's helped me finish my portfolio site faster and understand how to optimize code for performance.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Chris Baker",
+            "avatar": "https://randomuser.me/api/portraits/men/27.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Notion AI",
+      "rating": 4,
+      "type": "Paid",
+      "role": "Product Manager",
+      "process": "Planning",
+      "likes": 378,
+      "description": "Notion AI boosts team productivity during the web development planning phase by assisting with drafting specs, summarizing meeting notes, generating ideas, and maintaining organized project documentation.",
+      "url": "https://notion.so",
+      "logoUrl": "https://notion.so/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "Notion AI is an AI-powered workspace tool that enhances project planning for web development teams. It helps product managers and developers streamline documentation, generate structured feature specs, and summarize meetings—keeping everything aligned and clear across the team.",
+      "keyFeatures": [
+        "Specification drafting using natural language input to turn rough ideas into structured product requirements, epics, and feature outlines.",
+        "AI-driven meeting summary generation that extracts key decisions, blockers, and next steps from team notes or transcripts.",
+        "Content rewriting and editing tools that help improve clarity, tone, and readability of product descriptions, sprint goals, and dev documentation.",
+        "Ideation assistant for brainstorming product features, naming ideas, or user stories based on existing project goals or themes.",
+        "Tight integration with Notion’s workspace system, ensuring a smooth experience for planning sprints, updating progress, and collaborating on documents in real-time."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Streamlined our sprint planning",
+          "body": "We use Notion AI to turn rough notes into clean, readable sprint briefs. It keeps everyone on the same page and reduces manual documentation overhead.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jessica Lee",
+            "avatar": "https://randomuser.me/api/portraits/women/8.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for refining product specs",
+          "body": "Notion AI helps clean up and rewrite our feature specs before we send them to the dev team. It improves clarity and saves hours of rework.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Daniel Garcia",
+            "avatar": "https://randomuser.me/api/portraits/men/72.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Needs improvement with technical topics",
+          "body": "It sometimes struggles with technical planning docs, especially if the content is complex. Still useful, just needs human review after generation.",
+          "rating": 3,
+          "reviewer": {
+            "name": "Emma Wilson",
+            "avatar": "https://randomuser.me/api/portraits/women/15.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Jasper",
+      "rating": 4,
+      "type": "Paid",
+      "role": "Marketer",
+      "process": ["Research", "Planning", "Maintenance"],
+      "likes": 267,
+      "description": "Jasper is an AI content generation platform tailored for marketers and web teams to produce high-performing content for websites, landing pages, blogs, and ads.",
+      "url": "https://jasper.ai",
+      "logoUrl": "https://jasper.ai/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "Jasper enhances the web development workflow by helping marketers and product teams generate persuasive and SEO-friendly content. From crafting marketing copy to optimizing landing page text, Jasper accelerates content creation across the full lifecycle—from early planning to post-launch maintenance.",
+      "keyFeatures": [
+        "Marketing-oriented content generation with prebuilt templates for landing pages, email campaigns, product descriptions, and blog posts—perfect for content-first development approaches.",
+        "Brand voice customization tools to ensure consistent tone and messaging across all web content, aligned with your company’s identity and goals.",
+        "SEO optimization suggestions that analyze keywords and search intent to help craft web content that ranks well and attracts organic traffic.",
+        "Multi-format content support allowing you to create microcopy for UI elements, onboarding messages, FAQs, and conversion-optimized product pages.",
+        "Team collaboration features for content planning, editing, and approval workflows directly within Jasper’s shared workspace."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Essential for high-volume content needs",
+          "body": "Jasper helped us launch our landing pages faster by generating all the copy from headlines to CTAs. It saved us hours of writing and reviewing.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Laura Martinez",
+            "avatar": "https://randomuser.me/api/portraits/women/73.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great copy ideas for A/B testing",
+          "body": "We use Jasper to brainstorm and test multiple copy variations for ads and banners. It helps us come up with options we wouldn't think of ourselves.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Robert Johnson",
+            "avatar": "https://randomuser.me/api/portraits/men/92.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Boosts SEO and content output",
+          "body": "We use Jasper to generate blog articles and optimize them with SEO keywords. It’s improved our rankings and reduced content production time significantly.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Nina Thompson",
+            "avatar": "https://randomuser.me/api/portraits/women/61.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Tabnine",
+      "rating": 4,
+      "type": "Freemium",
+      "role": "Developer",
+      "process": ["Development", "Testing", "Maintenance"],
+      "likes": 198,
+      "description": "Tabnine is an AI code assistant that helps web developers write, test, and maintain high-quality code faster through intelligent, context-aware suggestions.",
+      "url": "https://tabnine.com",
+      "logoUrl": "https://tabnine.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "Tabnine boosts developer productivity by delivering real-time, AI-powered code completions that understand the structure, context, and patterns of modern web applications. It's optimized for frontend and backend development workflows and supports web standards, performance, and security best practices.",
+      "keyFeatures": [
+        "AI-powered code suggestions trained on modern web frameworks like React, Vue, Angular, and Next.js, offering accurate completions based on framework-specific syntax and patterns.",
+        "Built-in security-aware patterns that guide developers to follow best practices when handling form data, authentication flows, and API integrations.",
+        "Support for responsive web design with intelligent CSS completions and UI structure predictions using flexbox, grid, and media queries.",
+        "Smart API integration suggestions that help build consistent, RESTful, and GraphQL service calls with headers, parameters, and error handling.",
+        "Performance-aware code generation that promotes efficient DOM handling, asynchronous patterns, and optimization techniques like lazy loading.",
+        "Cross-browser compatibility hints that help prevent common front-end pitfalls and ensure consistent behavior across modern browsers."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Game changer for productivity",
+          "body": "Tabnine has transformed my coding workflow completely. The AI predictions are impressively accurate, often suggesting exactly what I was about to type. It's like having a mind-reading coding assistant that understands your project context.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Andrew Peterson",
+            "avatar": "https://randomuser.me/api/portraits/men/37.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for learning new frameworks",
+          "body": "As someone who frequently works with new frameworks, Tabnine has been invaluable. It suggests idiomatic patterns and API uses that help me learn while coding. It's particularly strong with React and Node.js in my experience.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Michelle Garcia",
+            "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Occasional performance issues",
+          "body": "While the suggestions are excellent, I've experienced some latency issues when working on larger projects. The AI can sometimes slow down when analyzing complex codebases, which interrupts my flow.",
+          "rating": 3,
+          "reviewer": {
+            "name": "Daniel Thompson",
+            "avatar": "https://randomuser.me/api/portraits/men/81.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Better than GitHub Copilot for my needs",
+          "body": "I've tried both Tabnine and GitHub Copilot, and I find Tabnine's suggestions to be more contextually relevant for my web development work. It seems to understand my coding style better and offers more precise completions for the specific libraries I use.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophia Chen",
+            "avatar": "https://randomuser.me/api/portraits/women/39.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Freemium model works well",
+          "body": "The free tier provides enough functionality for my personal projects, while the paid version at work gives us the team learning features. The pricing is reasonable for the productivity gains, and I appreciate that they offer a useful free version.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Omar Patel",
+            "avatar": "https://randomuser.me/api/portraits/men/25.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "WebAIM",
+      "rating": 5,
+      "type": "Free",
+      "role": ["Developer", "Tester"],
+      "process": ["Testing", "Maintenance"],
+      "likes": 456,
+      "description": "WebAIM is a comprehensive accessibility evaluation platform that helps developers and testers ensure websites meet accessibility standards and provide inclusive user experiences.",
+      "url": "https://webaim.org",
+      "logoUrl": "https://webaim.org/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "WebAIM offers robust tools and resources for evaluating and improving web accessibility. Ideal for both developers and testers, it assists in identifying WCAG compliance issues, simulating accessibility scenarios, and guiding remediation for more inclusive digital experiences.",
+      "keyFeatures": [
+        "Real-time accessibility checks covering color contrast, keyboard navigation, and missing alternative text, ensuring compliance with major accessibility standards.",
+        "WCAG compliance reports that highlight violations and offer suggestions to improve alignment with international accessibility guidelines.",
+        "Simulated disability testing that allows testers to evaluate how users with various impairments interact with web content.",
+        "Best practice guidelines for creating accessible forms, layouts, and interactive components that work seamlessly across assistive technologies.",
+        "Detailed documentation and learning materials for teams aiming to embed accessibility into the development and QA workflow."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Essential tool for accessibility",
+          "body": "WebAIM has been instrumental in ensuring the accessibility of our websites. It helped us identify and fix issues that we wouldn’t have noticed otherwise.",
+          "rating": 5,
+          "reviewer": {
+            "name": "John Smith",
+            "avatar": "https://randomuser.me/api/portraits/men/12.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for WCAG compliance",
+          "body": "The WCAG compliance feature is very useful for evaluating how our pages stack up. We've significantly improved our accessibility thanks to WebAIM.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sarah Johnson",
+            "avatar": "https://randomuser.me/api/portraits/women/22.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Accessibility testing made easy",
+          "body": "The built-in simulation tools made it easier to understand accessibility from the user’s perspective. It's now a core part of our QA process.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Michael Brown",
+            "avatar": "https://randomuser.me/api/portraits/men/33.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Checkly",
+      "rating": 5,
+      "type": "Freemium",
+      "role": ["Tester", "Developer"],
+      "process": ["Testing", "Maintenance"],
+      "likes": 321,
+      "description": "Checkly is an AI-enhanced monitoring and end-to-end testing platform for modern web applications, helping developers and testers catch bugs and performance issues before they reach production.",
+      "url": "https://checklyhq.com",
+      "logoUrl": "https://checklyhq.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "Checkly combines end-to-end browser testing with real-time performance and availability monitoring. It's designed for developers and QA teams to ensure mission-critical web app features are working reliably through automated checks and detailed alerts.",
+      "keyFeatures": [
+        "End-to-end browser testing using Playwright and Puppeteer to simulate real user interactions and detect functional issues across web applications.",
+        "Smart alerting system that notifies you instantly via Slack, email, or webhooks when checks fail, allowing for quick response and resolution.",
+        "API and frontend monitoring combined in a single workflow, enabling you to verify not just UI elements but also underlying API responses and performance.",
+        "Scheduled checks with CI/CD integration to run tests after each deployment, reducing risk of undetected issues in production environments.",
+        "Detailed performance metrics including load times, execution steps, and network requests to optimize user experience and speed."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "One-stop solution for testing and monitoring",
+          "body": "Checkly has become a critical part of our QA and DevOps pipeline. The Playwright support and alerts are top-notch.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Natalie Wong",
+            "avatar": "https://randomuser.me/api/portraits/women/45.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for catching API and UI bugs",
+          "body": "I love how Checkly monitors both the backend APIs and the frontend. We’ve caught multiple production issues early thanks to their browser checks.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Ethan Zhao",
+            "avatar": "https://randomuser.me/api/portraits/men/16.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent for continuous deployment workflows",
+          "body": "The CI/CD integration is seamless. We automatically test every new release and get real-time alerts if something breaks.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Grace Lin",
+            "avatar": "https://randomuser.me/api/portraits/women/50.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "RunwayML",
+      "rating": 5,
+      "type": "Freemium",
+      "role": "Designer",
+      "process": "Design",
+      "likes": 278,
+      "description": "RunwayML is an AI-powered creative suite that empowers designers to generate and edit web visuals, video assets, and interface elements using advanced machine learning.",
+      "url": "https://runwayml.com",
+      "logoUrl": "https://runwayml.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "RunwayML brings AI-powered creativity into the web development process by allowing designers to rapidly generate and refine high-quality visuals and video assets. It streamlines the creation of UI components, hero banners, background animations, and branded visuals—making it a powerful tool in the UI/UX design pipeline.",
+      "keyFeatures": [
+        "Text-to-video generation that transforms written prompts into short video loops or animated backgrounds, useful for web hero sections and landing pages.",
+        "Text-to-image generation powered by Stable Diffusion, helping designers create branded graphics, illustrations, and UI visuals without relying on stock images.",
+        "Video inpainting for quickly removing or adjusting objects in UI demo recordings or marketing assets while preserving motion continuity.",
+        "Green screen removal that simplifies content compositing for explainer videos, tutorials, or web demo showcases—even without physical green screens.",
+        "Motion tracking tools that apply dynamic effects to demo footage or site previews, allowing visually engaging product walk-throughs or UI flows.",
+        "Style transfer capabilities for applying brand aesthetics across image or video content to ensure visual consistency across a web app’s design assets.",
+        "Content-aware fill to intelligently extend backgrounds or fill removed sections when editing site visuals, keeping layouts clean and consistent."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Speed up web design workflows",
+          "body": "RunwayML has become an essential part of my prototyping toolkit. I use it to create background visuals and quick mockups that help communicate ideas faster to developers and stakeholders.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Isabella Nguyen",
+            "avatar": "https://randomuser.me/api/portraits/women/48.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "From wireframe to styled hero image",
+          "body": "I used RunwayML to generate a landing page hero section based on our wireframe and mood board. Saved hours of design iterations and helped the dev team start integration faster.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Leo Tanaka",
+            "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Great for video backgrounds",
+          "body": "I used the text-to-video feature to create lightweight background loops for a homepage section. No need for After Effects or stock footage—RunwayML nailed it.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Amira Hassan",
+            "avatar": "https://randomuser.me/api/portraits/women/31.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "A must-have for UI concept testing",
+          "body": "We use RunwayML to explore visual styles early in the design phase. It helps us present 3–4 fully visualized directions before committing to dev implementation.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Tomás Reyes",
+            "avatar": "https://randomuser.me/api/portraits/men/12.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Codeium",
+      "rating": 4,
+      "type": "Freemium",
+      "role": "Developer",
+      "process": "Development",
+      "likes": 341,
+      "description": "Codeium is an AI code assistant that helps developers accelerate development with smart autocompletions and contextual code suggestions.",
+      "url": "https://codeium.com",
+      "logoUrl": "https://codeium.com/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "Codeium streamlines the development process by offering intelligent code autocompletion, in-line suggestions, and natural language prompts tailored to your project's context. It's especially useful for accelerating front-end and back-end web development workflows.",
+      "keyFeatures": [
+        "Smart code autocompletion for faster development across popular languages and web frameworks.",
+        "Context-aware suggestions that adapt to your coding patterns, improving with continuous use.",
+        "Natural language to code conversion that allows developers to describe what they need and get real code snippets.",
+        "Multi-language support including JavaScript, Python, HTML, CSS, and more.",
+        "Seamless IDE integration supporting VS Code, JetBrains, and other popular environments."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Boosts productivity",
+          "body": "Codeium really improved my efficiency on full-stack web projects. It understands what I’m working on and offers helpful suggestions.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Liam Adams",
+            "avatar": "https://randomuser.me/api/portraits/men/67.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Works great for frontend",
+          "body": "I mainly use it for React and JavaScript projects. It’s almost like having another pair of eyes helping you code.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Emily Tran",
+            "avatar": "https://randomuser.me/api/portraits/women/31.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Perplexity AI",
+      "rating": 4,
+      "type": "Free",
+      "role": "Analyst",
+      "process": "Research",
+      "likes": 294,
+      "description": "Perplexity AI is an AI-powered search assistant that provides fact-based answers and links to relevant sources, ideal for research and analysis.",
+      "url": "https://perplexity.ai",
+      "logoUrl": "https://perplexity.ai/logo.png",
+      "youtubeVideoId": "Ywq6OWML9ww",
+      "summary": "Perplexity AI enhances the research phase of web development by delivering accurate, source-backed answers to technical, design, and competitive questions. It saves time during planning and discovery by presenting concise insights from across the web.",
+      "keyFeatures": [
+        "Natural language search interface for fast, conversational queries.",
+        "Cites sources and provides links for all responses to ensure transparency and reliability.",
+        "Great for technical documentation lookups, library comparisons, and understanding web standards.",
+        "Generates summaries and explanations of complex development topics or tools.",
+        "Useful for competitor and keyword research during the planning phase."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Speeds up research",
+          "body": "I use Perplexity AI at the start of every project to quickly understand the tech stack and research APIs. Super helpful.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Noah Scott",
+            "avatar": "https://randomuser.me/api/portraits/men/15.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Great for finding dev resources",
+          "body": "It surfaces very relevant articles and tutorials when I’m exploring a new tool or framework.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Sofia Nguyen",
+            "avatar": "https://randomuser.me/api/portraits/women/48.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "FireHydrant",
+      "rating": 5,
+      "type": "Paid",
+      "role": "DevOps",
+      "process": "Maintenance",
+      "likes": 201,
+      "description": "FireHydrant is an AI-enhanced incident management platform that helps DevOps teams streamline on-call rotations, automate response workflows, and ensure rapid system recovery.",
+      "url": "https://firehydrant.io",
+      "logoUrl": "https://firehydrant.io/logo.png",
+      "youtubeVideoId": "0u9g0ZN4_FA",
+      "summary": "FireHydrant is a powerful incident management platform designed for DevOps teams to automate and manage service reliability. It integrates seamlessly into your CI/CD pipelines and offers AI-powered features to detect, respond to, and resolve incidents faster, ensuring high uptime and operational continuity in web applications.",
+      "keyFeatures": [
+        "Automated incident response that coordinates team notifications, status page updates, and mitigation steps to reduce downtime and alert fatigue.",
+        "Runbook execution powered by AI to trigger predefined remediation processes based on the incident type, ensuring consistent and timely responses.",
+        "Real-time incident tracking and communication tools that keep engineering, product, and customer teams aligned during outages or performance degradation.",
+        "Root cause analysis support with AI-assisted event correlation, helping teams identify the origin of issues faster and prevent future recurrence.",
+        "Post-incident review automation that compiles timelines, action items, and summaries for stakeholder review and process improvement.",
+        "Seamless integrations with monitoring, alerting, and CI/CD tools such as PagerDuty, Slack, Datadog, GitHub, and Jenkins to unify your DevOps toolchain."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Essential for uptime reliability",
+          "body": "FireHydrant has become our go-to tool for incident response. We’ve reduced our mean time to recovery (MTTR) significantly, and our post-incident analysis is now organized and actionable.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Liam Walker",
+            "avatar": "https://randomuser.me/api/portraits/men/65.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Streamlined our on-call workflows",
+          "body": "Managing alerts and incidents used to be chaotic. FireHydrant gave us structured workflows, automated playbooks, and clarity on every step of the resolution process.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Ava Brooks",
+            "avatar": "https://randomuser.me/api/portraits/women/25.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Fantastic integrations and automation",
+          "body": "We integrated FireHydrant with our CI/CD and alerting stack, and now everything from alerts to incident resolution is smoother and faster. It’s a must-have for any serious DevOps team.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Noah Hughes",
+            "avatar": "https://randomuser.me/api/portraits/men/38.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Helps us stay audit-ready",
+          "body": "The incident timelines and automatic documentation features are a blessing when it comes to compliance and audits. FireHydrant helps us stay prepared without extra effort.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Chloe Mitchell",
+            "avatar": "https://randomuser.me/api/portraits/women/35.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "A true DevOps ally",
+          "body": "FireHydrant isn’t just a tool, it’s a DevOps teammate. It brings transparency to incidents and gives the entire team clarity on what’s going on, who’s handling what, and what needs to happen next.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Ethan Price",
+            "avatar": "https://randomuser.me/api/portraits/men/40.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Gamma",
+      "rating": 4,
+      "type": "Freemium",
+      "role": "Product Manager",
+      "process": "Planning",
+      "likes": 201,
+      "description": "Gamma is an AI presentation tool that transforms ideas into beautiful, interactive slide decks using natural language prompts.",
+      "url": "https://gamma.app",
+      "logoUrl": "https://gamma.app/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Gamma accelerates the planning and presentation process in web development projects by turning raw ideas or notes into visually structured presentations. It's perfect for product managers to communicate vision, timelines, and feature sets with clarity and design appeal.",
+      "keyFeatures": [
+        "AI-powered slide generation based on prompts or outlines to reduce time spent designing.",
+        "Interactive presentation formats perfect for roadmap sharing, sprint planning, and client briefings.",
+        "Collaborative editing tools for teams to contribute and refine presentations together.",
+        "Responsive design layouts that adapt automatically for readability across devices.",
+        "Media and web content embedding options ideal for showcasing mockups, data, and prototypes."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "My go-to for client updates",
+          "body": "I use Gamma to summarize sprint outcomes and timelines for clients. It looks polished without spending hours tweaking slides.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Grace Evans",
+            "avatar": "https://randomuser.me/api/portraits/women/77.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Streamlined my planning decks",
+          "body": "I no longer need PowerPoint. Gamma creates clean presentations from bullet points and ideas.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Oliver King",
+            "avatar": "https://randomuser.me/api/portraits/men/51.jpg"
+          }
+        }
+      ]
+    },  
+    { 
+      "id": 17, 
+      "name": "Synthesia", 
+      "rating": 5, 
+      "type": "Paid", 
+      "role": "Developer, Marketer, DevOps", 
+      "process": "Development, Deployment, Maintenance",
+      "likes": 312,
+      "description": "Synthesia is an AI video generation platform for creating professional web tutorials, feature demos, and documentation videos without filming equipment.",
+      "url": "https://synthesia.io",
+      "logoUrl": "https://synthesia.io/logo.png",
+      "summary": "Synthesia transforms web development education and documentation by enabling developers and technical teams to create professional tutorial videos, feature demonstrations, and user guides without video production skills. The platform's AI avatars can explain complex web concepts, demonstrate features, and walk through codebases in multiple languages, significantly improving developer documentation and user onboarding experiences.",
+      "keyFeatures": [
+        "Web feature demonstration videos that showcase new website functionality, user interface updates, or application features with clear visual explanations and AI presenter walkthroughs.",
+        "Code tutorial generation that transforms written technical documentation into engaging video content where AI presenters explain development concepts, implementation approaches, and best practices.",
+        "Multilingual API and framework tutorials that enable development teams to create educational content in multiple languages, making technical documentation accessible to international development teams.",
+        "Screen recording integration that combines AI presenters with actual website interface recordings, creating professional walkthroughs of web applications and development environments.",
+        "Developer onboarding videos that explain codebase architecture, development workflows, and technical requirements to new team members, accelerating developer productivity.",
+        "Error handling demonstrations that visually explain common web application issues and their solutions, improving customer support and reducing support ticket volume.",
+        "Deployment and maintenance tutorials that clearly document server configurations, CI/CD pipelines, and maintenance procedures for DevOps and web operations teams."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Transformed our training video production",
+          "body": "Synthesia has revolutionized how our company creates training content. We've reduced production time from weeks to hours while maintaining high quality. The ability to quickly update content when procedures change and create versions in multiple languages has been invaluable for our global team.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophia Rodriguez",
+            "avatar": "https://randomuser.me/api/portraits/women/23.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Game-changer for our marketing team",
+          "body": "Creating product update videos used to be a major production requiring external agencies. With Synthesia, we now produce these in-house in a fraction of the time and cost. The quality of the AI avatars is impressive enough for customer-facing content, and we can quickly iterate based on feedback.",
+          "rating": 5,
+          "reviewer": {
+            "name": "David Thompson",
+            "avatar": "https://randomuser.me/api/portraits/men/39.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Multilingual capabilities are outstanding",
+          "body": "The ability to create videos in multiple languages has transformed our international marketing approach. Instead of creating subtitled content, we now deliver native-language presentations to each market. Our engagement metrics have improved significantly since making this change.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jean-Pierre Moreau",
+            "avatar": "https://randomuser.me/api/portraits/men/58.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Still some uncanny valley moments",
+          "body": "While Synthesia is impressive technology, there are still occasional moments where the AI avatars don't feel quite human in their expressions or mouth movements. These brief uncanny valley moments can be distracting in longer videos, though the technology is noticeably improving with each update.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Aisha Johnson",
+            "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Steep learning curve but worth it",
+          "body": "There's definitely a learning curve to creating truly effective videos with Synthesia. Writing scripts that sound natural when spoken by AI and choosing appropriate visual elements takes practice. However, once mastered, it's dramatically faster than traditional video production.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Michael Chen",
+            "avatar": "https://randomuser.me/api/portraits/men/65.jpg"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Democratized video creation for our entire team",
+          "body": "Before Synthesia, video creation was limited to a small team with technical expertise. Now everyone from product managers to customer success representatives can create professional videos independently. This has led to more diverse content and creative applications we hadn't initially considered.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Lisa Patel",
+            "avatar": "https://randomuser.me/api/portraits/women/77.jpg"
+          }
+        }
+      ]
+    },
+    { 
+      "id": 18, 
+      "name": "Lumen5", 
+      "rating": 4, 
+      "type": "Freemium", 
+      "role": "Developer, DevOps", 
+      "process": "Development, Maintenance",
+      "likes": 278,
+      "description": "Lumen5 is an AI-powered video creation platform that transforms technical documentation, code tutorials, and web development guides into engaging educational videos.",
+      "url": "https://lumen5.com",
+      "logoUrl": "https://lumen5.com/logo.png",
+      "youtubeVideoId": "zsz7ZBUU0qE",
+      "summary": "Lumen5 helps development teams and technical writers convert complex web development documentation, API guides, and coding tutorials into structured video content with clear visual explanations. The platform's AI technology automatically identifies key technical concepts, code snippets, and implementation steps from written content, transforming them into visually appealing educational videos that improve developer understanding and knowledge retention.",
+      "keyFeatures": [
+        "Technical documentation conversion that transforms written web development guides, API documentation, and coding tutorials into structured video content with clear visual explanations.",
+        "Code snippet visualization that automatically highlights and animates important code sections, making programming concepts more accessible and easier to understand.",
+        "Development workflow visualization that breaks down complex technical processes into step-by-step video segments, helping developers understand implementation sequences.",
+        "Framework and library tutorials that convert written documentation into engaging video content, making it easier for developers to learn new web technologies.",
+        "Technical concept explanation that uses visual metaphors and animations to simplify complex web development concepts for both technical and non-technical audiences.",
+        "Developer onboarding videos that transform company technical documentation into engaging video content, helping new team members understand development processes and standards.",
+        "Web performance optimization guides that visually explain techniques for improving website speed, accessibility, and user experience through engaging video content."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Revolutionary for technical documentation",
+          "body": "Lumen5 has completely transformed how we create technical content. The AI-powered video generation has allowed us to produce high-quality, engaging educational videos that are far more effective than traditional text-based tutorials. The visual explanations have made complex concepts much easier to grasp, and the interactive elements have made the learning process more interactive and engaging.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Dr. Emily Smith",
+            "avatar": "https://randomuser.me/api/portraits/women/46.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Essential tool for developers",
+          "body": "As a developer, I've found Lumen5 to be an invaluable resource for quickly creating high-quality, educational videos that explain complex web development concepts. The platform's AI technology has significantly improved the quality and effectiveness of our documentation, making it easier for new team members to get up to speed quickly.",
+          "rating": 5,
+          "reviewer": {
+            "name": "John Doe",
+            "avatar": "https://randomuser.me/api/portraits/men/38.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Great for SEO",
+          "body": "Lumen5's video content has not only improved our developer documentation but has also had a positive impact on our search engine rankings. The platform's AI-powered video generation has allowed us to create more engaging and informative videos that are optimized for search engines, resulting in higher click-through rates and more traffic to our technical documentation pages.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Jane Smith",
+            "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Accessibility improvements",
+          "body": "The addition of Lumen5 has not only improved the quality of our technical documentation but has also made it more accessible to users with disabilities. The platform's AI-powered video generation has allowed us to create captions and transcripts for our videos, making them more inclusive and easier to understand for users who are deaf or hard of hearing.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Samantha Lee",
+            "avatar": "https://randomuser.me/api/portraits/women/37.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Cost-effective solution",
+          "body": "Compared to hiring professional voice actors and animators, Lumen5 has been a cost-effective solution for our technical content creation needs. The platform's AI-powered video generation has allowed us to produce high-quality videos with minimal resources, significantly reducing our production costs.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Michael Brown",
+            "avatar": "https://randomuser.me/api/portraits/men/67.jpg"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Continuous improvement",
+          "body": "Lumen5's AI technology is constantly improving, and the platform's updates have resulted in more accurate and engaging video content. The platform's ability to learn from user feedback and preferences has allowed us to continuously improve the quality and effectiveness of our videos.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophia Rodriguez",
+            "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "PagerDuty",
+      "rating": 5,
+      "type": "Paid",
+      "role": "DevOps, SRE",
+      "process": "Incident Management, Monitoring, Alerting",
+      "likes": 340,
+      "description": "PagerDuty is a cloud-based incident management platform that provides IT operations and DevOps teams with real-time alerts and on-call scheduling to quickly detect and respond to issues.",
+      "url": "https://www.pagerduty.com",
+      "logoUrl": "https://www.pagerduty.com/wp-content/uploads/2020/06/pagerduty-logo-green.svg",
+      "summary": "PagerDuty enhances operational efficiency by enabling DevOps and Site Reliability Engineering (SRE) teams to manage incidents proactively. The platform integrates with various monitoring tools to provide real-time alerts, facilitating rapid response to system anomalies and minimizing downtime.",
+      "keyFeatures": [
+        "Real-time alerting system that notifies on-call personnel of incidents via multiple channels, ensuring prompt awareness and response.",
+        "On-call scheduling and escalation policies that automate the notification process, reducing manual coordination and response times.",
+        "Integration with a wide range of monitoring and ticketing tools, streamlining workflows and consolidating incident data.",
+        "Advanced analytics and reporting features that provide insights into incident trends, helping teams to identify and address recurring issues.",
+        "Mobile application support that allows team members to manage incidents and communicate on-the-go, enhancing flexibility and responsiveness.",
+        "Automation capabilities that enable the execution of predefined remediation actions, reducing the need for manual intervention in resolving common issues.",
+        "Stakeholder communication tools that keep relevant parties informed during incidents, improving transparency and coordination."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Indispensable for our DevOps workflow",
+          "body": "PagerDuty has become a critical component of our incident management process. Its reliable alerting and seamless integrations have significantly reduced our response times and improved system uptime.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Alex Johnson",
+            "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Streamlined our on-call scheduling",
+          "body": "Managing on-call rotations used to be a headache, but PagerDuty's scheduling features have made it straightforward and fair. The escalation policies ensure that no alert goes unattended.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Samantha Lee",
+            "avatar": "https://randomuser.me/api/portraits/women/32.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent integration capabilities",
+          "body": "We were able to integrate PagerDuty with all our existing monitoring tools effortlessly. This has centralized our alert management and provided a unified view of system health.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Michael Smith",
+            "avatar": "https://randomuser.me/api/portraits/men/56.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Mobile app needs improvement",
+          "body": "While the platform itself is robust, the mobile app occasionally lags and lacks some functionalities available on the web version. Enhancements in this area would be beneficial.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Emily Davis",
+            "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Valuable insights through analytics",
+          "body": "The analytics and reporting features have provided us with deep insights into our incident patterns, allowing us to proactively address underlying issues and improve our systems.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Robert Martinez",
+            "avatar": "https://randomuser.me/api/portraits/men/40.jpg"
+          }
+        }
+      ]
+    },
+    { 
+      "id": 20, 
+      "name": "Copy.ai", 
+      "rating": 5, 
+      "type": "Freemium", 
+      "role": "Developer, Product Manager", 
+      "process": "Development, Planning",
+      "likes": 256,
+      "description": "Copy.ai is an AI-powered content generation tool that helps create technical documentation, API guides, and web development content with consistent technical accuracy.",
+      "url": "https://copy.ai",
+      "logoUrl": "https://copy.ai/logo.png",
+      "summary": "Copy.ai streamlines the creation of web development documentation and content by generating technically accurate descriptions, API documentation, and development guides. The platform understands technical terminology and can maintain consistent voice across various web development content types, from code comments to user guides.",
+      "keyFeatures": [
+        "API documentation generation that creates clear, consistent documentation for web services and endpoints, including parameter descriptions and usage examples.",
+        "Technical blog post creation that explains web development concepts, framework features, and implementation strategies in an engaging and accessible way.",
+        "Code comment generation that produces clear, meaningful comments for web development codebases, improving code maintainability and team collaboration.",
+        "User guide creation that transforms technical specifications into user-friendly documentation for web applications and development tools.",
+        "Development roadmap content that helps product managers and technical leads communicate project timelines and technical milestones effectively.",
+        "Framework documentation that generates comprehensive guides for web development libraries and tools, including setup instructions and best practices.",
+        "Technical specification writing that helps document web application requirements, architecture decisions, and implementation details in a clear, structured format."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Game-changer for our marketing team",
+          "body": "Copy.ai has completely transformed our content creation process. What used to take our team hours now takes minutes, and the quality is consistently high. The template variety is impressive—we use it for everything from Instagram captions to full email sequences with great results.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jennifer Morris",
+            "avatar": "https://randomuser.me/api/portraits/women/26.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Perfect for small business owners",
+          "body": "As a solopreneur managing all aspects of my business, Copy.ai has been invaluable. I'm not a natural copywriter, but this tool helps me create professional marketing content that actually converts. The product description tool alone has improved my e-commerce sales significantly.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Michael Rodriguez",
+            "avatar": "https://randomuser.me/api/portraits/men/42.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent for overcoming writer's block",
+          "body": "Even as an experienced copywriter, I sometimes hit creative walls. Copy.ai has become my go-to solution for those moments. I use it to generate fresh ideas and approaches that I can then refine with my own expertise. It's like having a brainstorming partner available 24/7.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sarah Johnson",
+            "avatar": "https://randomuser.me/api/portraits/women/33.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Needs fact-checking",
+          "body": "While Copy.ai generates impressively fluid and persuasive copy, we've occasionally found it includes unverified claims or slightly inaccurate information about our products. It's essential to thoroughly review and fact-check everything it produces before publishing.",
+          "rating": 4,
+          "reviewer": {
+            "name": "David Chen",
+            "avatar": "https://randomuser.me/api/portraits/men/57.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Surprisingly good at capturing brand voice",
+          "body": "After properly setting up our brand voice parameters, Copy.ai has been remarkably consistent at generating content that sounds like our brand. We've had multiple pieces go through approval processes where stakeholders couldn't tell whether a human or AI wrote the copy.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Alicia Wong",
+            "avatar": "https://randomuser.me/api/portraits/women/53.jpg"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Great for email marketing optimization",
+          "body": "We've been using Copy.ai specifically for our email marketing campaigns, generating multiple subject line variations and email body options. After A/B testing these against our traditionally written emails, the Copy.ai versions have consistently outperformed in terms of open rates and conversions.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Robert Patel",
+            "avatar": "https://randomuser.me/api/portraits/men/36.jpg"
+          }
+        },
+        {
+          "id": 7,
+          "title": "Generous free tier for testing",
+          "body": "I appreciate that Copy.ai offers a substantial free tier that actually allows you to evaluate the tool properly before committing to a paid plan. This gave our team time to test it across different use cases and prove its value before requesting budget approval.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emily Thompson",
+            "avatar": "https://randomuser.me/api/portraits/women/19.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Dynatrace",
+      "rating": 5,
+      "type": "Paid",
+      "role": "DevOps, Developer",
+      "process": "Maintenance, Deployment, Testing",
+      "likes": 198,
+      "description": "Dynatrace is an AI-powered observability platform that helps DevOps teams monitor, test, and optimize web application performance and infrastructure in real time.",
+      "url": "https://dynatrace.com",
+      "logoUrl": "https://dynatrace.com/logo.png",
+      "summary": "Dynatrace enhances web development reliability by delivering intelligent observability and automation for modern applications. It provides end-to-end visibility into deployment pipelines, backend services, and user performance — enabling developers and DevOps engineers to proactively detect, test, and resolve issues before they impact users.",
+      "keyFeatures": [
+        "AI-powered performance monitoring that automatically detects anomalies in web services, APIs, and user interactions, helping identify and resolve performance bottlenecks before release.",
+        "Deployment verification tools that validate application behavior and resource health immediately after deployment, reducing the risk of downtime or regression bugs.",
+        "Synthetic and real-user testing capabilities that simulate user behavior across browsers and devices, providing actionable insights for front-end responsiveness and UX stability.",
+        "Infrastructure observability that offers full-stack visibility from containers and cloud services to code-level diagnostics, helping DevOps teams ensure scalable and efficient deployments.",
+        "Automated root cause analysis that uses AI to correlate logs, metrics, and traces across environments to pinpoint issues faster during the testing and maintenance phases.",
+        "Continuous delivery insights that provide feedback loops across CI/CD pipelines, ensuring that new deployments meet performance and stability standards.",
+        "Security insights that detect vulnerabilities in production environments and recommend remediation strategies, helping teams maintain secure, high-performing applications."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Our go-to for production monitoring",
+          "body": "Dynatrace gives us unparalleled visibility into our production stack. We’ve caught memory leaks and slow DB queries long before they impacted users. A must-have for any serious DevOps pipeline.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Anna Williams",
+            "avatar": "https://randomuser.me/api/portraits/women/34.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Best tool for CI/CD insights",
+          "body": "After adding Dynatrace to our deployment flow, we catch regressions within minutes. The deployment validation metrics and real-user monitoring have improved our release confidence.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jason Liu",
+            "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Accelerates issue resolution",
+          "body": "With Dynatrace’s root cause analysis, we resolve critical errors in hours instead of days. Its AI really helps filter out the noise and prioritize what matters.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Mira Takahashi",
+            "avatar": "https://randomuser.me/api/portraits/women/15.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Great integration with Kubernetes",
+          "body": "We rely on Dynatrace to monitor our containerized workloads. It gives us a holistic view of what’s going on in our clusters — even down to the individual pods and services.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Kevin Schmidt",
+            "avatar": "https://randomuser.me/api/portraits/men/44.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Pricey, but worth every cent",
+          "body": "Dynatrace isn’t the cheapest solution, but the time and revenue saved through early issue detection and optimization pays for itself quickly. It’s become an essential tool for both Dev and Ops.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Linda Fox",
+            "avatar": "https://randomuser.me/api/portraits/women/49.jpg"
+          }
+        }
+      ]
+    },  
+    {
+      "id": 22,
+      "name": "MarketMuse",
+      "rating": 4,
+      "type": "Paid",
+      "role": "Marketer",
+      "process": "Research",
+      "likes": 234,
+      "description": "MarketMuse is an AI-driven content research platform that helps web marketers and SEO teams plan high-performing content based on topic authority and competitive gaps.",
+      "url": "https://marketmuse.com",
+      "logoUrl": "https://marketmuse.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "MarketMuse enhances the research phase of web development by helping marketers and SEO strategists identify content opportunities, fill topic gaps, and optimize keyword targeting. Its AI-powered analysis helps development teams build SEO-friendly web content and plan strategic content pillars that drive organic traffic from search engines.",
+      "keyFeatures": [
+        "Topic gap analysis that compares your current site content against competitors to identify underdeveloped areas and opportunities for SEO growth in your niche.",
+        "Content brief generator that provides detailed outlines including keyword suggestions, subtopics, and structure to guide developers and content creators in building optimized pages.",
+        "Personalized difficulty scoring to assess how hard it would be to rank for a given topic based on your existing content authority, helping prioritize efforts during planning.",
+        "Inventory audit dashboard that evaluates your website's content library to highlight underperforming pages and provide suggestions for refresh and consolidation.",
+        "AI-assisted first draft writing to generate initial drafts based on the content brief, enabling faster iteration cycles between content teams and developers.",
+        "Topic clustering tool that groups semantically related subjects, helping marketers structure content hierarchies that improve site architecture and internal linking strategy.",
+        "Content score engine that evaluates your draft's depth, relevance, and authority in relation to the competition, ensuring web pages are well-positioned for search performance."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Vital for building SEO foundations",
+          "body": "MarketMuse helped us identify gaps in our content strategy that were holding our website back from ranking. It's now a cornerstone of our web content research and planning process.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Catherine Johnson",
+            "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "High cost, enterprise-level value",
+          "body": "It’s not cheap, but for web development teams focused on SEO from the start, MarketMuse pays off. The insights it offers helped guide our homepage and product page rewrites.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Mark Wilson",
+            "avatar": "https://randomuser.me/api/portraits/men/47.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Great for keyword clustering",
+          "body": "The clustering feature is a game-changer for us. We've used it to build our blog structure and create topic hubs that now serve as SEO anchors for entire sections of our website.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Samantha Lee",
+            "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Not beginner-friendly",
+          "body": "It takes a bit of time to get familiar with the interface and workflows. Our marketing team had to go through training sessions, but once we understood the tool, the impact was huge.",
+          "rating": 4,
+          "reviewer": {
+            "name": "David Chen",
+            "avatar": "https://randomuser.me/api/portraits/men/39.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Drafting tool needs human polish",
+          "body": "The AI-generated drafts are a great starting point, but they often require heavy editing. Still, it speeds things up compared to starting from scratch.",
+          "rating": 3,
+          "reviewer": {
+            "name": "Jennifer Moore",
+            "avatar": "https://randomuser.me/api/portraits/women/35.jpg"
+          }
+        },
+        {
+          "id": 6,
+          "title": "Exceptional support and onboarding",
+          "body": "Their onboarding team helped us map the tool into our web content production process. We now use it in sprints to research and scope SEO-friendly pages and landing content.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Robert Kim",
+            "avatar": "https://randomuser.me/api/portraits/men/53.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "UserLeap",
+      "rating": 4,
+      "type": "Paid",
+      "role": "Product Manager, Analyst",
+      "process": "Research",
+      "likes": 198,
+      "description": "UserLeap is an AI-driven micro-survey platform that enables product teams to collect real-time user insights to drive product development and web design decisions.",
+      "url": "https://userleap.com",
+      "logoUrl": "https://userleap.com/logo.png",
+      "summary": "UserLeap uses AI to analyze user feedback from in-app surveys, helping web development teams refine features, improve UX, and prioritize updates based on real user data.",
+      "keyFeatures": [
+        "Real-time micro-surveys embedded into web apps for fast user feedback during the product lifecycle.",
+        "AI analysis of open-ended responses to extract themes and sentiment from user input.",
+        "Behavioral targeting that triggers surveys based on specific actions, pages, or segments.",
+        "Insight dashboards that visualize user pain points and feature requests in real time.",
+        "Template library for common product research questions used in planning or feature validation."
+      ],
+      "reviews": []
+    },
+    {
+      "id": 24,
+      "name": "Uizard",
+      "rating": 4,
+      "type": "Freemium",
+      "role": "Designer, Product Manager",
+      "process": "Planning",
+      "likes": 245,
+      "description": "Uizard is an AI-powered design tool that transforms hand-drawn sketches or text into interactive wireframes for early-stage product planning.",
+      "url": "https://uizard.io",
+      "logoUrl": "https://uizard.io/logo.png",
+      "summary": "Uizard streamlines the planning phase by using AI to instantly convert rough ideas into editable wireframes, allowing product teams to visualize and iterate on layouts early in the web development cycle.",
+      "keyFeatures": [
+        "Sketch-to-wireframe capability that converts drawings into digital UI mockups.",
+        "Text-to-design features that build layouts based on written screen descriptions.",
+        "Real-time collaboration tools for design reviews and planning discussions.",
+        "Customizable design templates for common web app flows and components.",
+        "Interactive prototypes that simulate navigation and user experience logic."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Quick insights that drive UX decisions",
+          "body": "UserLeap helps us collect user insights right when they're needed. Great for refining features!",
+          "rating": 4,
+          "reviewer": {
+            "name": "Ava Johnson",
+            "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Effective for in-app surveys",
+          "body": "The real-time feedback allows us to iterate faster during development cycles.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Liam Hall",
+            "avatar": "https://randomuser.me/api/portraits/men/56.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Best micro-survey tool",
+          "body": "Micro-surveys feel natural and are easy to manage across different product pages.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Olivia Smith",
+            "avatar": "https://randomuser.me/api/portraits/women/65.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Testim",
+      "rating": 5,
+      "type": "Paid",
+      "role": "Tester, Developer",
+      "process": "Testing",
+      "likes": 304,
+      "description": "Testim is an AI-based test automation platform that simplifies end-to-end testing with smart selectors, self-healing tests, and visual validations.",
+      "url": "https://testim.io",
+      "logoUrl": "https://testim.io/logo.png",
+      "summary": "Testim accelerates the testing phase in web development by using AI to create resilient, low-maintenance automated UI tests that adapt to changes in the frontend codebase.",
+      "keyFeatures": [
+        "AI-powered test creation that captures user flows visually and generates stable selectors.",
+        "Self-healing test automation that updates broken tests when the UI structure changes.",
+        "Parallel test execution to reduce regression suite run times.",
+        "Visual testing and validation for detecting layout or rendering changes.",
+        "CI/CD integration with tools like Jenkins, GitHub Actions, and GitLab."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Great for early planning",
+          "body": "Uizard is magical. Sketch something and get a wireframe instantly. Game-changer.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophia Brown",
+            "avatar": "https://randomuser.me/api/portraits/women/38.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Instant wireframes from ideas",
+          "body": "Text-to-design saved us hours in brainstorming meetings.",
+          "rating": 4,
+          "reviewer": {
+            "name": "James Walker",
+            "avatar": "https://randomuser.me/api/portraits/men/21.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Streamlines design process",
+          "body": "Collaboration features are great for remote teams during early design discussions.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emma Moore",
+            "avatar": "https://randomuser.me/api/portraits/women/76.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Harness",
+      "rating": 5,
+      "type": "Paid",
+      "role": "DevOps",
+      "process": "Deployment",
+      "likes": 278,
+      "description": "Harness is a CI/CD platform that uses AI to automate deployments, monitor release health, and roll back failures intelligently.",
+      "url": "https://harness.io",
+      "logoUrl": "https://harness.io/logo.png",
+      "summary": "Harness empowers DevOps teams to streamline deployment pipelines with AI-driven release verification, canary deployments, and safe rollbacks based on performance and error monitoring.",
+      "keyFeatures": [
+        "Continuous Delivery pipelines with drag-and-drop workflow builder.",
+        "AI-based release verification that detects anomalies post-deployment.",
+        "Canary and blue-green deployments with automated rollback capabilities.",
+        "Built-in secrets management and role-based access controls.",
+        "Native integrations with AWS, Kubernetes, GitHub, and Jira."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Stable test automation at scale",
+          "body": "Testim saves us from flaky UI tests. The AI selectors are really smart.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Isabella Clark",
+            "avatar": "https://randomuser.me/api/portraits/women/52.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Perfect for frontend regression testing",
+          "body": "Self-healing tests reduce our maintenance overhead massively.",
+          "rating": 5,
+          "reviewer": {
+            "name": "William Anderson",
+            "avatar": "https://randomuser.me/api/portraits/men/37.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent for CI/CD",
+          "body": "We integrated it with our CI pipeline and never looked back. Super solid.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Ava Taylor",
+            "avatar": "https://randomuser.me/api/portraits/women/18.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Hotjar AI",
+      "rating": 4,
+      "type": "Freemium",
+      "role": "Designer, Product Manager",
+      "process": "Maintenance",
+      "likes": 322,
+      "description": "Hotjar AI enhances traditional behavior analytics with smart heatmap analysis, user journey insights, and conversion recommendations.",
+      "url": "https://hotjar.com",
+      "logoUrl": "https://hotjar.com/logo.png",
+      "summary": "Hotjar AI supports the maintenance phase of web development by providing automated insights into how users interact with a site, uncovering pain points and optimization opportunities for better UX and conversion.",
+      "keyFeatures": [
+        "AI-analyzed heatmaps that reveal critical areas of attention and confusion.",
+        "Session recordings with automatic tagging of drop-offs and rage clicks.",
+        "Conversion funnel analysis with improvement suggestions.",
+        "User feedback widgets enhanced with sentiment classification.",
+        "Smart reports that identify high-priority UX and performance issues."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Reliable deployment tool",
+          "body": "Harness helped us reduce deployment errors significantly. The verification step is amazing.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Benjamin Lee",
+            "avatar": "https://randomuser.me/api/portraits/men/59.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Rollback feature is a lifesaver",
+          "body": "We use canary deployments and love how easy rollbacks are with Harness.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophia Hall",
+            "avatar": "https://randomuser.me/api/portraits/women/64.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Supercharged our DevOps",
+          "body": "Simple UI and powerful integrations make this tool a DevOps must-have.",
+          "rating": 5,
+          "reviewer": {
+            "name": "James Smith",
+            "avatar": "https://randomuser.me/api/portraits/men/80.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Surfer SEO",
+      "rating": 4,
+      "type": "Paid",
+      "role": "Marketer, Analyst",
+      "process": "Research",
+      "likes": 319,
+      "description": "Surfer SEO is an AI-driven content optimization platform that helps teams research, plan, and improve web content based on data from top-ranking pages.",
+      "url": "https://surferseo.com",
+      "logoUrl": "https://surferseo.com/logo.png",
+      "summary": "Surfer SEO empowers marketers and analysts during the research phase by using AI to analyze competitor content, extract relevant keywords, and provide content structure recommendations. It ensures that new or updated web content aligns with search engine expectations and outperforms the competition in topical authority.",
+      "keyFeatures": [
+        "Real-time content editor that scores your content as you write, based on keyword density, structure, and on-page SEO best practices.",
+        "SERP analysis that compares your pages against top-performing competitors to identify gaps in headings, word count, and keyword usage.",
+        "Keyword clustering and topic grouping to guide comprehensive content planning and thematic authority building.",
+        "Content planner that auto-generates article suggestions and outlines based on your target keywords and niche.",
+        "Audit tool that highlights missing opportunities on existing pages and provides step-by-step SEO optimization guidance.",
+        "Integrations with Google Docs and WordPress for seamless content workflow.",
+        "AI-generated brief builder that recommends headings, questions, and keywords to cover for maximum ranking potential."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Superb for SEO research and outlines",
+          "body": "Surfer has changed how we plan our content. Its outline and keyword suggestions help us rank faster and more consistently. We use it for every blog we publish.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emily Carter",
+            "avatar": "https://randomuser.me/api/portraits/women/41.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Best content audit tool I’ve tried",
+          "body": "The audit feature is a goldmine. It’s helped us revive underperforming blog posts that now bring in consistent traffic.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jonathan Reed",
+            "avatar": "https://randomuser.me/api/portraits/men/50.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Great tool, slightly expensive",
+          "body": "Surfer SEO works great and gives accurate recommendations. But the pricing tiers can be a bit limiting if you’re managing multiple sites.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Sophia Nguyen",
+            "avatar": "https://randomuser.me/api/portraits/women/66.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Clean UI and insightful data",
+          "body": "The interface is easy to use even for beginners. The correlation data it shows between your content and top-ranking pages is very actionable.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Daniel Foster",
+            "avatar": "https://randomuser.me/api/portraits/men/61.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Improved our SEO strategy",
+          "body": "Thanks to Surfer SEO, we’ve created a focused SEO strategy with clear guidelines for writers and analysts. Keyword clustering has been a game-changer.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Hannah Brooks",
+            "avatar": "https://randomuser.me/api/portraits/women/48.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Screaming Frog",
+      "rating": 5,
+      "type": "Freemium",
+      "role": "Developer, Marketer, Analyst",
+      "process": "Maintenance",
+      "likes": 387,
+      "description": "Screaming Frog is a website crawler that helps developers and SEO teams audit technical issues such as broken links, duplicate content, and missing metadata.",
+      "url": "https://www.screamingfrog.co.uk/seo-spider/",
+      "logoUrl": "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/assets/images/logos/sf-icon-green.svg",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Screaming Frog supports the maintenance phase of web development by providing deep technical SEO insights. It crawls your entire site, flagging problems like broken links, redirects, poor metadata, and duplicate pages. It helps both developers and marketers maintain website health, performance, and search engine compliance.",
+      "keyFeatures": [
+        "Comprehensive website crawling to detect broken links, redirects, and server errors.",
+        "Metadata audit including missing or duplicated page titles and meta descriptions.",
+        "Canonical and duplicate content detection to avoid SEO penalties and confusion.",
+        "Sitemap and robots.txt analysis to ensure proper indexation and crawling behavior.",
+        "JavaScript rendering to analyze SPA frameworks and dynamically loaded content.",
+        "Integration with Google Analytics, Search Console, and PageSpeed Insights.",
+        "Custom extraction for structured data, Open Graph tags, and custom elements."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Go-to tool for technical audits",
+          "body": "Screaming Frog is our first step in any SEO audit. It’s fast, reliable, and surfaces everything from broken links to thin content. A must-have for technical marketers.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Liam Harris",
+            "avatar": "https://randomuser.me/api/portraits/men/35.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Perfect for developers",
+          "body": "We use it to spot issues in our deployment pipeline like redirect loops or broken URLs. It’s saved us from countless user experience disasters.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Ava Mitchell",
+            "avatar": "https://randomuser.me/api/portraits/women/20.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Excellent free tier",
+          "body": "The free version alone gives tons of value. Great for freelancers and small teams to monitor site health without any cost.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Noah Robinson",
+            "avatar": "https://randomuser.me/api/portraits/men/62.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Takes time to learn",
+          "body": "It’s not the most intuitive tool at first, but once you get the hang of filters and reports, it becomes indispensable for auditing complex sites.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Mia Johnson",
+            "avatar": "https://randomuser.me/api/portraits/women/12.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Great for large-scale audits",
+          "body": "We manage dozens of client sites and Screaming Frog scales beautifully. The exportable data makes it easy to pass along actionable insights.",
+          "rating": 5,
+          "reviewer": {
+            "name": "William Brooks",
+            "avatar": "https://randomuser.me/api/portraits/men/59.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Raygun",
+      "rating": 5,
+      "type": "Paid",
+      "role": "Developer, DevOps",
+      "process": "Maintenance",
+      "likes": 311,
+      "description": "Raygun is an error tracking and performance monitoring platform that helps developers detect, diagnose, and resolve issues in real-time.",
+      "url": "https://raygun.com",
+      "logoUrl": "https://raygun.com/images/logos/raygun-logo.svg",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Raygun supports the maintenance phase of web development by delivering real-time error tracking, performance diagnostics, and crash reporting. It helps developers and DevOps teams maintain system stability, improve app performance, and reduce downtime through proactive alerting and detailed stack traces.",
+      "keyFeatures": [
+        "Real-time error tracking with detailed stack traces and user context.",
+        "Application performance monitoring (APM) for frontend and backend services.",
+        "Deployment tracking to link errors and performance dips to recent code changes.",
+        "User impact visibility showing which customers are affected by issues.",
+        "Crash reporting for mobile, web, and server-side applications.",
+        "Custom dashboards and alerts for error trends, slow traces, and SLA breaches.",
+        "Seamless integrations with tools like GitHub, Slack, Jira, and Datadog."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Lifesaver for production monitoring",
+          "body": "Raygun has helped us identify and fix critical issues before our users even report them. It’s incredibly detailed and easy to integrate with our stack.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jessica Carter",
+            "avatar": "https://randomuser.me/api/portraits/women/34.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "A must-have for DevOps teams",
+          "body": "From error diagnostics to performance tracing, Raygun has become central to our monitoring workflow. We use it every day to maintain app reliability.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Daniel Nguyen",
+            "avatar": "https://randomuser.me/api/portraits/men/41.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Instant visibility into user issues",
+          "body": "What I love about Raygun is how it connects technical issues to specific users and sessions. It’s made our debugging process way more efficient and targeted.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emily Foster",
+            "avatar": "https://randomuser.me/api/portraits/women/61.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Pricing is a bit steep",
+          "body": "Raygun is fantastic, but the pricing structure can be expensive for small teams. That said, the value it provides justifies the cost if you're maintaining a large user base.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Lucas Martin",
+            "avatar": "https://randomuser.me/api/portraits/men/46.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Helps us deliver stable releases",
+          "body": "Since adopting Raygun, our team has caught regressions and performance issues during staging, preventing them from reaching production. It’s a huge confidence booster.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Olivia Bennett",
+            "avatar": "https://randomuser.me/api/portraits/women/27.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Apify",
+      "rating": 4,
+      "type": "Freemium",
+      "role": "Developer, Analyst",
+      "process": "Research, Development",
+      "likes": 204,
+      "description": "Apify is a web scraping and automation platform that enables developers to extract structured data from websites and automate browser workflows at scale.",
+      "url": "https://apify.com",
+      "logoUrl": "https://apify.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Apify accelerates the research and development phases in web projects by providing tools to gather competitive intelligence, test user interactions, and automate repetitive browser tasks. Its powerful scraping capabilities support developers and analysts in extracting structured data and building automation scripts for web-based processes.",
+      "keyFeatures": [
+        "No-code and code-based web scraping solutions for extracting data from any website, ideal for competitive research, content aggregation, and market analysis.",
+        "Headless browser automation to simulate real user interactions for testing workflows, crawling pages, and triggering events.",
+        "Scheduler and queue management to automate scraping jobs and handle large-scale data collection with reliability.",
+        "JavaScript-based Actor platform allowing developers to build, run, and share reusable scraping and automation workflows in the cloud.",
+        "Integration with APIs and webhooks to push scraped data into databases, analytics tools, or custom apps in real time.",
+        "Rich library of ready-made scrapers for popular websites like Amazon, LinkedIn, and Google Maps — customizable for specific project needs."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Streamlined our market research",
+          "body": "We use Apify to scrape competitor websites and pricing data regularly. It’s helped our product team make data-driven decisions and stay ahead of the market.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Olivia Tan",
+            "avatar": "https://randomuser.me/api/portraits/women/12.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Reliable for automation tasks",
+          "body": "Apify replaced several internal scripts we used for browser automation. The scheduling and reliability are much better than anything we had before.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Lucas Meyer",
+            "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Great for scraping but learning curve exists",
+          "body": "The platform is powerful, but beginners might need time to get comfortable with Actors and APIs. Once set up, though, it saves hours every week.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Ava Rivera",
+            "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Supportive community and templates",
+          "body": "I love how many prebuilt scrapers the community has shared. We found one that fit our use case and just customized it — saved so much time.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Noah Johnson",
+            "avatar": "https://randomuser.me/api/portraits/men/19.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Claude AI",
+      "rating": 5,
+      "type": "Freemium",
+      "role": "Developer, Product Manager, Analyst",
+      "process": "Research, Planning, Development",
+      "likes": 328,
+      "description": "Claude AI is an AI-powered assistant built by Anthropic, designed to support natural language tasks such as brainstorming, documentation, technical explanations, and code generation.",
+      "url": "https://claude.ai",
+      "logoUrl": "https://claude.ai/logo.png",
+      "youtubeVideoId": "sGXJ1yqSkyc",
+      "summary": "Claude AI supports the early phases of web development by helping teams brainstorm features, write technical documentation, and generate or review code. Its advanced language understanding makes it a reliable assistant for developers, product managers, and analysts during planning, research, and implementation.",
+      "keyFeatures": [
+        "Conversational code assistant capable of writing, reviewing, and debugging JavaScript, Python, HTML/CSS, and other common web development languages.",
+        "Natural language document generation for product specs, user stories, test cases, and technical architecture summaries.",
+        "Smart brainstorming and ideation support for product managers planning new features or user flows.",
+        "Summarization and translation capabilities useful for technical research, multilingual projects, and customer-facing documentation.",
+        "Privacy-centric design with focus on enterprise-level security and alignment with human feedback for safer outputs."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Perfect AI partner for product planning",
+          "body": "Claude helps me outline feature specs, write clear user stories, and organize ideas faster than I could on my own. It's my go-to brainstorming buddy for sprint planning.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Emma Park",
+            "avatar": "https://randomuser.me/api/portraits/women/41.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Fantastic for research and documentation",
+          "body": "I use Claude to summarize API docs, technical papers, and customer feedback. It's made my documentation process smoother and more thorough.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Daniel Reyes",
+            "avatar": "https://randomuser.me/api/portraits/men/34.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Smarter than most code assistants",
+          "body": "Compared to other tools, Claude is better at understanding intent and long-form logic. It helped me refactor a Node.js module and explain async behavior clearly.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Lily Nakamura",
+            "avatar": "https://randomuser.me/api/portraits/women/17.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Great UI, fast responses",
+          "body": "Claude's interface is clean, and the responses feel thoughtful. It’s not just generating boilerplate—it genuinely helps improve how I write and code.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Josh Becker",
+            "avatar": "https://randomuser.me/api/portraits/men/24.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Still refining its code accuracy",
+          "body": "It's excellent for generating code and docs, but I occasionally have to fix small syntax issues. Still, it saves me loads of time in development.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Nina Lopez",
+            "avatar": "https://randomuser.me/api/portraits/women/30.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Productboard",
+      "rating": 5,
+      "type": "Paid",
+      "role": "Product Manager",
+      "process": "Planning, Research",
+      "likes": 289,
+      "description": "Productboard is a product management platform that helps teams prioritize features, collect customer feedback, and align development with business goals.",
+      "url": "https://productboard.com",
+      "logoUrl": "https://productboard.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Productboard enhances the planning and research phases of web development by helping product managers consolidate user needs, prioritize features, and communicate roadmaps. It connects customer insights directly to feature ideas, ensuring development aligns with strategic goals.",
+      "keyFeatures": [
+        "Feature prioritization boards using custom scoring based on business value, user impact, and development effort.",
+        "Customer feedback aggregation from email, Intercom, and CRM tools, directly linked to product ideas.",
+        "Public and internal roadmap views for stakeholder alignment and transparency.",
+        "User segmentation and persona management to support tailored product decisions.",
+        "Integration with Jira, Azure DevOps, and GitHub to connect product planning with engineering workflows."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Transformed our feature planning",
+          "body": "Productboard lets us connect real customer feedback directly to product ideas. It’s completely changed how we prioritize our roadmap.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Maya Anderson",
+            "avatar": "https://randomuser.me/api/portraits/women/29.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Keeps stakeholders aligned",
+          "body": "Our exec team and developers finally see the same roadmap. It’s streamlined communication and cut down planning meetings.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Tom Reynolds",
+            "avatar": "https://randomuser.me/api/portraits/men/48.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Great for customer-driven decisions",
+          "body": "We love how Productboard ties feedback from support tickets and emails right into product ideas. It keeps us user-focused.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Leila Nassar",
+            "avatar": "https://randomuser.me/api/portraits/women/40.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Flexible but takes onboarding",
+          "body": "It’s a powerful platform, but setting up custom prioritization and views takes some learning. Once configured, it’s a game-changer.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Jack Wu",
+            "avatar": "https://randomuser.me/api/portraits/men/50.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Excellent Jira integration",
+          "body": "Productboard syncs perfectly with our Jira setup. PMs define features and devs work from linked tickets — no more duplication.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Claire Bennett",
+            "avatar": "https://randomuser.me/api/portraits/women/38.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Airfocus",
+      "rating": 4,
+      "type": "Paid",
+      "role": "Product Manager",
+      "process": "Planning, Research",
+      "likes": 194,
+      "description": "Airfocus is a flexible product management platform that helps teams prioritize initiatives, build clear roadmaps, and align stakeholders on product strategy.",
+      "url": "https://airfocus.com",
+      "logoUrl": "https://airfocus.com/logo.png",
+      "summary": "Airfocus enhances the planning and research process by allowing product managers to make data-informed decisions, prioritize features based on impact and effort, and create strategic product roadmaps that align development with user and business needs.",
+      "keyFeatures": [
+        "Priority scoring system to evaluate features using customizable value vs. effort matrices.",
+        "Roadmap builder with multiple view options (timeline, kanban, chart) for different stakeholder needs.",
+        "Feedback portal to gather and centralize user suggestions from email, support, or in-app sources.",
+        "Integration with Jira, Trello, Azure DevOps, and other tools to sync product planning with execution.",
+        "Collaborative workspace for cross-functional teams to contribute to prioritization and roadmap planning."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Simplified our roadmap communication",
+          "body": "Airfocus has helped us communicate our product vision more clearly across teams. The roadmap views are flexible and easy to present to leadership.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Rachel Greene",
+            "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Helps prioritize with logic, not emotion",
+          "body": "We finally have a system for prioritizing features based on real impact. The scoring system helps remove bias in our planning meetings.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Carlos Mendez",
+            "avatar": "https://randomuser.me/api/portraits/men/61.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Easy integration with Jira",
+          "body": "Airfocus integrates smoothly with our Jira workflows. PMs do the prioritizing and strategy in Airfocus, then pass it to the dev team with zero confusion.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Sophie Novak",
+            "avatar": "https://randomuser.me/api/portraits/women/26.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Could use better templates",
+          "body": "The platform is powerful, but I wish there were more pre-built templates for scoring models and roadmap types. Setup took a bit longer than expected.",
+          "rating": 3,
+          "reviewer": {
+            "name": "Kevin Lang",
+            "avatar": "https://randomuser.me/api/portraits/men/18.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Improved cross-team planning",
+          "body": "It’s much easier to involve marketing, sales, and support in our product planning now. Airfocus makes everything transparent and easy to follow.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Amy Park",
+            "avatar": "https://randomuser.me/api/portraits/women/12.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Hemingway",
+      "rating": 4,
+      "type": "Freemium",
+      "role": ["Product Managers"],
+      "process": ["Documentation", "Planning"],
+      "likes": 194,
+      "description": "Hemingway Editor is a writing enhancement tool that simplifies complex sentences and ensures readability for technical and user-facing content.",
+      "url": "https://hemingwayapp.com",
+      "logoUrl": "https://hemingwayapp.com/images/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Hemingway Editor is ideal for making technical documentation and product content clearer and more concise. It highlights long or passive sentences, complex words, and readability issues to help web teams communicate effectively.",
+      "keyFeatures": [
+        "Highlights hard-to-read sentences and passive voice",
+        "Readability grading to suit different user levels",
+        "Focus mode for distraction-free writing",
+        "Offline desktop version for productivity without internet",
+        "Exports formatted text and HTML for seamless integration"
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Super useful for simplifying docs",
+          "body": "Helps us trim down overly complex documentation. It’s now our go-to for final reviews before publishing.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Lisa Nguyen",
+            "avatar": "https://randomuser.me/api/portraits/women/55.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Good for junior writers",
+          "body": "Great tool for mentoring junior writers or non-native speakers in the team.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Ken Adams",
+            "avatar": "https://randomuser.me/api/portraits/men/44.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Improves onboarding docs",
+          "body": "Our onboarding docs became way easier to follow after using Hemingway.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Amira Hassan",
+            "avatar": "https://randomuser.me/api/portraits/women/41.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Not just for writers",
+          "body": "Even developers use this to polish commit messages and code comments!",
+          "rating": 5,
+          "reviewer": {
+            "name": "Jake Peterson",
+            "avatar": "https://randomuser.me/api/portraits/men/39.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Desktop version is a plus",
+          "body": "I like that it works offline—perfect for flights or limited Wi-Fi situations.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Sakura Tanaka",
+            "avatar": "https://randomuser.me/api/portraits/women/33.jpg"
+          }
+        }
+      ]
+    },
+    
+    {
+      "id": 36,
+      "name": "Dovetail",
+      "rating": 5,
+      "type": "Freemium",
+      "role": "Product Manager",
+      "process": "Research, Planning",
+      "likes": 231,
+      "description": "Dovetail is a user research repository and analysis platform that helps product managers and UX teams turn qualitative insights into actionable product decisions.",
+      "url": "https://dovetailapp.com",
+      "logoUrl": "https://dovetailapp.com/logo.png",
+      "youtubeVideoId": "UAef1g7HNqQ",
+      "summary": "Dovetail empowers product managers to centralize research data, analyze patterns from interviews or surveys, and surface user insights that directly inform product planning. It streamlines collaboration with designers and stakeholders by turning qualitative data into structured evidence for roadmap decisions.",
+      "keyFeatures": [
+        "Centralized research repository that stores interview notes, transcripts, and user feedback in one searchable location.",
+        "Tagging and highlight tools that identify recurring themes and user pain points across multiple research sources.",
+        "Sentiment analysis and theme clustering to reveal patterns in qualitative data at scale.",
+        "Insights board for surfacing research-backed product opportunities and user needs.",
+        "Integrations with Zoom, Google Meet, and cloud storage tools for seamless research importing."
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "title": "Brings clarity to user research",
+          "body": "Dovetail helps us organize and make sense of dozens of interviews and survey responses. It’s become essential for justifying our product decisions with real user data.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Aaron Li",
+            "avatar": "https://randomuser.me/api/portraits/men/23.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Turns chaos into structure",
+          "body": "Before Dovetail, we had research notes scattered everywhere. Now everything is tagged and easy to find, and the insights we generate are much more compelling.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Maya Gomez",
+            "avatar": "https://randomuser.me/api/portraits/women/46.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Perfect for cross-functional alignment",
+          "body": "We use Dovetail to align PMs, designers, and engineers around user problems. The insights board makes it easy to present findings to stakeholders.",
+          "rating": 5,
+          "reviewer": {
+            "name": "Luke Harris",
+            "avatar": "https://randomuser.me/api/portraits/men/34.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "title": "Could use more integrations",
+          "body": "Love the experience, but I wish there were deeper integrations with product management tools like Jira or Asana to link insights directly to epics.",
+          "rating": 4,
+          "reviewer": {
+            "name": "Tina Evans",
+            "avatar": "https://randomuser.me/api/portraits/women/25.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "title": "Game-changer for discovery",
+          "body": "Dovetail has completely changed how we approach product discovery. We now start every roadmap discussion with user data rather than assumptions.",
+          "rating": 5,
+          "reviewer": {
+            "name": "David Nguyen",
+            "avatar": "https://randomuser.me/api/portraits/men/55.jpg"
+          }
+        }
+      ]
+    }
+  ]

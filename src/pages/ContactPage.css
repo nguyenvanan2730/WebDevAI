@@ -1,0 +1,8 @@
+.contact-page {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Material UI handles all styling through sx prop and MUI components */ 
