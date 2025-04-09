@@ -269,10 +269,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-height: calc(100vh - 200px); /* Dynamic height based on viewport */
   overflow-y: auto;
   padding-right: 12px;
   margin-right: -12px; /* Compensate for scroll padding */
+  max-height: 500px; /* Set a reasonable max height */
 }
 
 .simplified-tool-card {
@@ -368,23 +368,40 @@
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .related-tools-container {
-    max-height: calc(100vh - 180px);
+    max-height: 1000px;
   }
 }
 
 @media (max-width: 768px) {
   .related-tools-container {
-    max-height: 500px; /* Fixed height for mobile */
+    max-height: 600px;
+    height: 600px; /* Fixed height for mobile */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   }
 
   .simplified-tool-card {
-    min-height: 140px; /* Smaller minimum height for mobile */
+    min-height: 140px;
+  }
+
+  .tool-detail-right-column {
+    height: auto;
+  }
+
+  .tool-detail-right-column .detail-section {
+    height: auto;
+    min-height: 400px; /* Match the container height */
   }
 }
 
 @media (max-width: 480px) {
   .related-tools-container {
-    max-height: 400px;
+    max-height: 450px;
+    height: 450px; /* Slightly smaller height for very small screens */
+  }
+
+  .simplified-tool-card {
+    min-height: 120px;
   }
 }
 
@@ -1016,4 +1033,161 @@
 
 .form-group {
   margin-bottom: 4px;
+}
+
+/* Mobile-specific styles for tool header */
+@media (max-width: 768px) {
+  .tool-detail-header {
+    padding: 20px;
+  }
+
+  .tool-header-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    position: relative;
+  }
+
+  .tool-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tool-header-info {
+    width: 100%;
+    align-items: center;
+  }
+
+  .tool-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .meta-badge {
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-left: 8px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .tool-rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .rating-stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  .star {
+    font-size: 18px;
+  }
+
+  .rating-count {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .likes-count {
+    padding: 3px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .tool-description {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .visit-site-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-detail-header {
+    padding: 15px;
+  }
+
+  .tool-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tool-name {
+    font-size: 20px;
+  }
+
+  .tool-meta {
+    gap: 6px;
+  }
+
+  .meta-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .tool-tags {
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .tool-rating-container {
+    gap: 8px;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
+  .rating-count {
+    font-size: 12px;
+  }
+
+  .likes-count {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+
+  .visit-site-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
 } 
