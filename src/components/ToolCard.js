@@ -86,28 +86,33 @@ function ToolCard({ tool }) {
       {/* Card Footer */}
       <div className="card-footer">
         <div className="tool-tags">
-          {Array.isArray(role) ? (
-            role.map((r, index) => (
-              <span key={`role-${index}`} className="tag hashtag">
-                #{typeof r === 'string' ? r.toLowerCase() : r}
+          <div className="tags-container">
+            {Array.isArray(role) ? (
+              role.slice(0, 3).map((r, index) => (
+                <span key={`role-${index}`} className="tag hashtag" style={{ marginRight: '8px' }}>
+                  #{typeof r === 'string' ? r.toLowerCase() : r}
+                </span>
+              ))
+            ) : (
+              <span className="tag hashtag" style={{ marginRight: '8px' }}>
+                #{typeof role === 'string' ? role.toLowerCase() : role}
               </span>
-            ))
-          ) : (
-            <span className="tag hashtag">
-              #{typeof role === 'string' ? role.toLowerCase() : role}
-            </span>
-          )}
-          {Array.isArray(process) ? (
-            process.map((p, index) => (
-              <span key={`process-${index}`} className="tag hashtag">
-                #{typeof p === 'string' ? p.toLowerCase() : p}
+            )}
+            {role.length > 3 && <span className="tag hashtag">...</span>}
+            
+            {Array.isArray(process) ? (
+              process.slice(0, 3).map((p, index) => (
+                <span key={`process-${index}`} className="tag hashtag" style={{ marginRight: '8px' }}>
+                  #{typeof p === 'string' ? p.toLowerCase() : p}
+                </span>
+              ))
+            ) : (
+              <span className="tag hashtag" style={{ marginRight: '8px' }}>
+                #{typeof process === 'string' ? process.toLowerCase() : process}
               </span>
-            ))
-          ) : (
-            <span className="tag hashtag">
-              #{typeof process === 'string' ? process.toLowerCase() : process}
-            </span>
-          )}
+            )}
+            {process.length > 3 && <span className="tag hashtag">...</span>}
+          </div>
         </div>
         <div className="tool-likes">
           <button className="like-button">

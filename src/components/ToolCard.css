@@ -4,7 +4,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
-  padding-bottom: 60px; /* Adjust based on the footer height */
+  display: flex;
+  flex-direction: column;
+  height: 370px; /* Fixed height for the entire card */
 }
 
 /* Card Header Styles */
@@ -12,6 +14,8 @@
   padding: 16px;
   border-bottom: 1px solid #e5e7eb;
   background-color: #f9fafb;
+  height: 100px; /* Fixed height for header */
+  flex-shrink: 0;
 }
 
 .tool-header {
@@ -155,6 +159,11 @@
 /* Card Content Styles */
 .card-content {
   padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Important for proper scrolling */
+  overflow: hidden;
 }
 
 .tool-description {
@@ -162,11 +171,18 @@
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
 }
 
 .tool-actions {
   display: flex;
   gap: 12px;
+  margin-top: auto; /* Push to bottom */
+  padding-top: 16px;
+  flex-shrink: 0;
 }
 
 .tool-link {
@@ -211,10 +227,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: #f9fafb;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  height: 70px; /* Fixed height for footer */
+  flex-shrink: 0;
 }
 
 .tool-tags {
@@ -223,6 +237,7 @@
   flex-wrap: wrap;
   max-width: 70%;
   align-items: center;
+  overflow: hidden;
 }
 
 .tag {
