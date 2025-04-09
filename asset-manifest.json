@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nguyenvanan2730/WebDevAI/static/css/main.d64c2548.css",
+    "main.js": "/nguyenvanan2730/WebDevAI/static/js/main.d38e4e4f.js",
+    "static/js/511.f93e63c6.chunk.js": "/nguyenvanan2730/WebDevAI/static/js/511.f93e63c6.chunk.js",
+    "index.html": "/nguyenvanan2730/WebDevAI/index.html",
+    "main.d64c2548.css.map": "/nguyenvanan2730/WebDevAI/static/css/main.d64c2548.css.map",
+    "main.d38e4e4f.js.map": "/nguyenvanan2730/WebDevAI/static/js/main.d38e4e4f.js.map",
+    "511.f93e63c6.chunk.js.map": "/nguyenvanan2730/WebDevAI/static/js/511.f93e63c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d64c2548.css",
+    "static/js/main.d38e4e4f.js"
+  ]
+}
