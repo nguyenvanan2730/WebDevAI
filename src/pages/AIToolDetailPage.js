@@ -263,8 +263,8 @@ function AIToolDetailPage() {
   // Get tool icon path from name
   const getToolIconPath = (name) => {
     if (!name) return '';
-    // Convert to lowercase and remove spaces/special chars
-    const formattedName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    // Convert to lowercase and remove spaces
+    const formattedName = name.toLowerCase().replace(/\s+/g, '');
     return `/icon/${formattedName}.png`;
   };
 
