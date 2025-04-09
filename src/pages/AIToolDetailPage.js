@@ -525,7 +525,7 @@ function AIToolDetailPage() {
               <div className="tool-header-info">
                 <h1 className="tool-name">{tool.name}</h1>
                 <div className="tool-meta">
-                  <span className={`meta-badge price ${getPriceTypeClass(tool.type)}`}>
+                  <span className={`meta-badge ${getPriceTypeClass(tool.type)}`}>
                     {tool.type}
                   </span>
                   <div className="tool-tags">
