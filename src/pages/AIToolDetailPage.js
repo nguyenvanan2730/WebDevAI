@@ -29,19 +29,61 @@ function AIToolDetailPage() {
     reviewerName: ''
   });
 
+  // Utility function for secure Dicebear API calls
+  const fetchDicebearAvatar = async (seed) => {
+    try {
+      const response = await fetch(`https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`, {
+        method: 'GET',
+        headers: {
+          'Accept': 'image/svg+xml',
+          'Content-Type': 'image/svg+xml',
+          'X-Content-Type-Options': 'nosniff',
+          'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+          'Content-Security-Policy': "default-src 'self'; img-src 'self' https://api.dicebear.com; style-src 'self' 'unsafe-inline'; script-src 'self'",
+          'X-XSS-Protection': '1; mode=block',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+          'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+          'Cache-Control': 'no-store, max-age=0',
+          'Pragma': 'no-cache'
+        },
+        mode: 'cors',
+        credentials: 'omit',
+        cache: 'no-store',
+        referrerPolicy: 'strict-origin-when-cross-origin'
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`;
+    } catch (error) {
+      console.error('Error fetching Dicebear avatar:', error);
+      throw error;
+    }
+  };
+
   // Toggle review popup visibility
-  const toggleReviewPopup = () => {
+  const toggleReviewPopup = async () => {
     // If opening the popup, reset the form with default avatar
     if (!showReviewPopup) {
-      // Generate a default avatar using a fixed seed for consistency
-      const defaultAvatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=default123`;
-      
-      setNewReview({
-        rating: 5,
-        title: '',
-        body: '',
-        reviewer: { name: '', avatar: defaultAvatarUrl }
-      });
+      try {
+        const defaultAvatarUrl = await fetchDicebearAvatar('default123');
+        setNewReview({
+          rating: 5,
+          title: '',
+          body: '',
+          reviewer: { name: '', avatar: defaultAvatarUrl }
+        });
+      } catch (error) {
+        // Fallback to a hardcoded default avatar URL if the fetch fails
+        setNewReview({
+          rating: 5,
+          title: '',
+          body: '',
+          reviewer: { name: '', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=default123' }
+        });
+      }
       
       // Reset any form errors
       setFormErrors({
@@ -106,19 +148,35 @@ function AIToolDetailPage() {
   };
 
   // Fetch a random avatar from Dicebear API
-  const fetchRandomAvatar = () => {
+  const fetchRandomAvatar = async () => {
     setAvatarLoading(true);
     const seed = Math.random().toString(36).substring(2, 8);
-    const avatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`;
     
-    // Just to simulate a bit of loading time
-    setTimeout(() => {
+    try {
+      const avatarUrl = await fetchDicebearAvatar(seed);
       setNewReview({
         ...newReview,
         reviewer: { ...newReview.reviewer, avatar: avatarUrl }
       });
+    } catch (error) {
+      console.error('Error fetching random avatar:', error);
+      // Fallback to a default avatar in case of error
+      try {
+        const defaultAvatarUrl = await fetchDicebearAvatar('default123');
+        setNewReview({
+          ...newReview,
+          reviewer: { ...newReview.reviewer, avatar: defaultAvatarUrl }
+        });
+      } catch (fallbackError) {
+        // If even the fallback fails, use a hardcoded URL
+        setNewReview({
+          ...newReview,
+          reviewer: { ...newReview.reviewer, avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=default123' }
+        });
+      }
+    } finally {
       setAvatarLoading(false);
-    }, 500);
+    }
   };
 
   // Submit new review
