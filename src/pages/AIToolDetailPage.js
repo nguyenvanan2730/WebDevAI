@@ -530,10 +530,10 @@ function AIToolDetailPage() {
                   </span>
                   <div className="tool-tags">
                     {tool.role && (
-                      <span className="tag role">Role: {Array.isArray(tool.role) ? tool.role.join(', ') : tool.role}</span>
+                      <span className="tag role">{Array.isArray(tool.role) ? tool.role.join(', ').toLowerCase() : tool.role.toLowerCase()}</span>
                     )}
                     {tool.process && (
-                      <span className="tag process">Process: {Array.isArray(tool.process) ? tool.process.join(', ') : tool.process}</span>
+                      <span className="tag process">{Array.isArray(tool.process) ? tool.process.join(', ').toLowerCase() : tool.process.toLowerCase()}</span>
                     )}
                   </div>
                 </div>
