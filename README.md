@@ -1,11 +1,16 @@
+# WebDevAI - AI TOOLS FOR WEB DEVELOPMENT
 
-# AI TOOLS FOR WEB DEVELOPMENT
+**Student Name:** Van An Nguyen  
+**Project Links:**
+- [Wireframe (Figma)](https://www.figma.com/design/Vay785WOS6CNvpkh5tiaPs/Web-Design-2?node-id=0-1&p=f&t=aNlGtEKgr00ytHxj-0)
+- [GitHub Repository](https://github.com/nguyenvanan2730/WebDevAI)
+- [Live Website](https://main.d1jjvzlcbpom02.amplifyapp.com/)
 
 ## Project Overview
 
 ### Objective  
 This platform helps you find the newest AI tools to make web development faster and easier.
-No matter what stage you’re working on — planning, design, coding, or testing — and no matter your role, you’ll find tools that fit your needs.
+No matter what stage you're working on — planning, design, coding, or testing — and no matter your role, you'll find tools that fit your needs.
 
 ---
 
